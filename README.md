@@ -16,6 +16,27 @@
         <li>Concatenação de Strings: Implementação da função para concatenar duas strings.</li>
         <li>Juros Simples e Juros Compostos: Implementação das operações de cálculo de juros simples e juros compostos.</li>
     </ol>
+   <h2>Como Usar</h2>
+<ol>
+    <li>Clone o repositório:</li>
+</ol>
+<pre><code>git clone https://github.com/seu_usuario/repo-operacoes-matematicas.git</code></pre>
+<ol start="2">
+    <li>Abra o código-fonte no VisualG.</li>
+    <li>Execute o programa e siga as instruções para utilizar as operações desejadas.</li>
+    <li>Após fazer alterações nos arquivos, adicione-os ao controle de versão:</li>
+</ol>
+<pre><code>git add .</code></pre>
+<ol start="5">
+    <li>Faça um commit das mudanças com uma mensagem descritiva:</li>
+</ol>
+<pre><code>git commit -m "Adiciona implementação da função de cálculo fatorial"</code></pre>
+<ol start="6">
+    <li>Envie as alterações para o repositório remoto:</li>
+</ol>
+<pre><code>git push origin main</code></pre>
+<p>Substitua "main" pelo nome do seu branch principal, caso seja diferente.</p>
+
 
 </body>
 </html>
