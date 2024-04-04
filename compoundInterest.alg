@@ -1,9 +1,8 @@
-+algoritmo "compound interest"
-
+algoritmo "compound interest"
+//teste comentario git
 Var
    montante, capital, i, j: real
    t, taxa: inteiro
-
 
 Inicio
     escreval ("Insira o valor do Capital inicial: ")
