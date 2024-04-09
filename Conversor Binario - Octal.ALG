@@ -21,7 +21,7 @@ Inicio
 // de cada algaritimo do numero binario para fazer a conversão
 
           escreval("")
-          escreval("Quantos algarismos tem o numero binario que será convertido?")
+          escreval("Quantos algarismos tem o numero binario que sera convertido?")
           escreva("resposta: ")
           leia(alg)
           alg <- alg - 1
@@ -43,8 +43,8 @@ Inicio
           alg <- alg - 1
 
 // Os demais algarismos vão ser calculados dentro do laço de repetição. O laço se repete até que a posição seja menor que 0
-          enquanto alg >= 0 faça
-                 escreva("Escreva o próximo algarismo: ")
+          enquanto alg >= 0 faca
+                 escreva("Escreva o proximo algarismo: ")
                  leia(Num)
                  SegVal <- SegVal + Num * 2 ^ (alg)
                  alg <- alg - 1
@@ -56,34 +56,34 @@ Inicio
 
 //Para calcular o numero octal, basta somar os restos da divisão do numero decimal por oito
           
-          enquanto dec >= 1 faça
+          enquanto dec >= 1 faca
 
             SegVal <- dec % 8
 
 // O numero octal é calculado de traz para frente, então o primeiro numero a ser calculado, vai ficar a direita
 
-            se SegVal = 0 então
+            se SegVal = 0 entao
               oct <- "0" + oct
             fimse
-            se SegVal = 1 então
+            se SegVal = 1 entao
               oct <- "1" + oct
             fimse
-            se SegVal = 2 então
+            se SegVal = 2 entao
               oct <- "2" + oct
             fimse
-            se SegVal = 3 então
+            se SegVal = 3 entao
               oct <- "3" + oct
             fimse
-            se SegVal = 4 então
+            se SegVal = 4 entao
               oct <- "4" + oct
             fimse
-            se SegVal = 5 então
+            se SegVal = 5 entao
               oct <- "5" + oct
             fimse
-            se SegVal = 6 então
+            se SegVal = 6 entao
               oct <- "6" + oct
             fimse
-            se SegVal = 7 então
+            se SegVal = 7 entao
               oct <- "7" + oct
             fimse
 

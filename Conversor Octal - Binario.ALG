@@ -23,16 +23,16 @@ Inicio
           leia(alg)
           
 
-          enquanto alg > 0 faça
+          enquanto alg > 0 faca
 
             escreva("Escreva o primeiro algarismo: ")
             leia(Num)
 
-            enquanto Num >= 1 faça
+            enquanto Num >= 1 faca
 
               SegVal <- Num % 2
 
-                se SegVal = 0 então
+                se SegVal = 0 entao
                   bi <- "0" + Bi
                 senao
                   bi <- "1" + Bi
