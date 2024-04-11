@@ -37,6 +37,25 @@
 <pre><code>git push origin main</code></pre>
 <p>Substitua "main" pelo nome do seu branch principal, caso seja diferente.</p>
 
+## Tecnologias Utilizadas
+
+ ![VisualG](https://img.shields.io/badge/VisualG-333333?style=for-the-badge&logo=visualstudio)
+ ![Git](https://img.shields.io/badge/Git-333333?style=for-the-badge&logo=git)
+ ![GitHub](https://img.shields.io/badge/GitHub-333333?style=for-the-badge&logo=github)
+
+ ## Boas práticas
+
+ 1. Sempre nomeie arquivos, funções ou funcionalidades utilizando camelCase é uma convenção de nomenclatura, onde as palavras são unidas sem espaços e cada palavra subsequente é capitalizada, exceto a primeira, como por exemplo o próprio nome da convenção: camelCase.
+ 2. Ao dar nome aos arquivos, funções ou ao fazer os commits, faça em inglês para exercitar o idioma e também é amplamente aceito como a língua padrão na indústria de tecnologia e programação. Usar nomes em inglês ajuda a manter a consistência e a interoperabilidade entre diferentes projetos e equipes ao redor do mundo.
+ 3. Ao realizar os commits utilize o pradrão: emoji + tipo do commit + breve descrição do que foi feito, se tiver dúvidas, dê uma olhada no repositório: 
+[**Padrões de Commits**](https://github.com/arafaellacruz/padroes-de-commits)
+
+## Contato
+
+Se você tiver alguma dúvida, sugestão ou apenas quiser trocar uma ideia, sinta-se à vontade para me enviar um e-mail em [steamduckss@gmail.com](mailto:steamduckss@gmail.com). 
+Estamos ansiosos para ouvir de você!
+
+
 
 </body>
 </html>
