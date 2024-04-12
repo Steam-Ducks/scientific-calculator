@@ -20,38 +20,36 @@ algoritmo "convert binary to decimal"
 //Então o binário 101101 = 45
 
 
-// Referência: https://www.cuemath.com/numbers/binary-to-decimal/
-
-
 var
-
-    decimal, potencia, index: inteiro
+    potencia, index: inteiro
+    decimal: inteiro
     binario: caractere
 
 inicio
-
     decimal <- 0
     potencia <- 0
 
     escreva("Digite um número binário para converter: ")
     leia(binario)
 
-    //Começamos pelo último numero binário. compr() retorna o tamanho de um texto
-    //subtraímos 1 para que o numero não ultrapasse o index do texto.
-    para index <- compr(binario) - 1 ate 0 passo -1 faca
-            // quando o caracter atual for 1, então vamos somar ele elevado a potencia atual
-            se binario[index] = "1" entao
-                decimal <- (decimal + (2 ^ potencia))
-            fimse
-            
-            //aumentamos em 1 a potencia para utilizar na proxima iteração do loop
-            potencia <- potencia + 1
-        fimpara
+    // Começamos pelo último número binário.
+    // Compr() retorna o tamanho de um texto.
+    // Subtraímos 1 para que o número não ultrapasse o índice do texto.
+    para index <- compr(binario) ate 1 passo -1 faca
 
-    //ao fim do loop, teremos todos os numeros somados na variavel decimal, que vera representar corretamente a conversao
-    
+        // Quando o caractere atual for '1', somamos ele elevado à potência atual.
+        se  copia(binario, index, 1) = "1" entao
+            decimal <- int(decimal + (2 ^ potencia))
+        fimse
 
+        // Aumentamos em 1 a potência para utilizar na próxima iteração do loop.
+        potencia <- potencia + 1
+    fimpara
 
-    escreval ("O número decimal é: " + decimal)
+    // Ao fim do loop, teremos todos os números somados na variável 'decimal',
+    // que irá representar corretamente a conversão.
+
+    escreval("O número decimal é: ", decimal)
+    escreval("")
 
 fimalgoritmo
