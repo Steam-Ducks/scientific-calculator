@@ -17,7 +17,7 @@ i <- 1
       Escreva("Digite a porcentagem da taxa: ")
       Leia(taxa)
 
-      Escreva("Por último, informe os anos decorridos: ")
+      Escreva("Por Ãºltimo, informe os anos decorridos: ")
       leia (temp)
 
       taxa <- taxa /100
@@ -30,7 +30,7 @@ i <- 1
 
       Escreval ("Deseja continuar? ")
 
-      Escreval ("Aperte: 1- Para SIM / 2- Para NÃO ")
+      Escreval ("Aperte: 1- Para SIM / 2- Para NÃƒO ")
       Leia (i)
 
    fimenquanto
