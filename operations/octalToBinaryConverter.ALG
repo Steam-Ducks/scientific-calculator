@@ -29,7 +29,7 @@ Inicio
       // então se o numero for 1010 as posições são respectivamente 3210
 
       escreval("")
-      escreval("Quantos algarismos tem o numero binario que será convertido?")
+      escreval("Quantos algarismos tem o numero octal que será convertido?")
       escreva("resposta: ")
       leia(alg)
       alg <- alg - 1
