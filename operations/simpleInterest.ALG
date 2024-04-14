@@ -1,4 +1,4 @@
-Algoritmo "CalcJuros"
+Algoritmo "jurosSimples"
 
 Var
 juros, valor, taxa: real
@@ -10,6 +10,8 @@ Inicio
 i <- 1
 
    enquanto i < 2 faca
+
+      Escreval("-----------------Juros Simples-----------------")
 
       Escreva("Digite o valor inicial do emprestimo, ou investimento: ")
       Leia(valor)
