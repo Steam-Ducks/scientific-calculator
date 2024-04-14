@@ -5,17 +5,17 @@ Algoritmo "semnome"
 // Autor(a)    : Rafaella Letícia Rodrigues Cruz
 // Data atual  : 31/03/2024
 Var
-n1, n2, soma: real
+numero1, numero2, soma: real
 
 Inicio
 escreval("==== SOMA ====")
-escreval("Informe o primeiro número: ")
-leia(n1)
-escreval("Informe o segundo número: ")
-leia(n2)
+escreval("Informe o primeiro numero: ")
+leia(numero1)
+escreval("Informe o segundo numero: ")
+leia(numero2)
 
-soma <- n1 + n2
-escreval("O resultado da soma entre ", n1, " e ", n2, " é ", soma)
+soma <- numero1 + numero2
+escreval("O resultado da soma entre ", numero1, " e ", numero2, " é ", soma)
 
 
 Fimalgoritmo
