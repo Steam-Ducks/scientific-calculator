@@ -8,7 +8,7 @@ Var
 
 
    i,segval,Num,alg,dec: Real
-   oct: caracter
+   bi: caracter
 
 
 
@@ -22,7 +22,7 @@ Inicio
 
    enquanto i < 2 faca
       SegVal <- 0
-      oct <- ""
+      bi <- ""
       //Para transformarmos o binario em decimal, devemos multiplicar cada dígito
       //pela potência de 2 relativa à posição por ele ocupada e somar os resultados
       //A posição é contada de trás para frente até o numero 0
@@ -42,7 +42,7 @@ Inicio
 
       //a equação a baixo está fazendo a formula e guardando na variavel SegVal
 
-      SegVal <- SegVal + Num * 2 ^ (alg)
+      SegVal <- SegVal + Num * 8 ^ (alg)
 
       //Para calcular o próximo digito, tiramos um numero da variavel alg pois
       //estamos a utilizando como index das posições
@@ -55,19 +55,18 @@ Inicio
       enquanto alg >= 0 faça
          escreva("Escreva o próximo algarismo: ")
          leia(Num)
-         SegVal <- SegVal + Num * 2 ^ (alg)
+         SegVal <- SegVal + Num * 8 ^ (alg)
          alg <- alg - 1
       fimenquanto
 
       dec <- SegVal
-      escreval(dec)
-      
+
       enquanto dec >= 1 faça
 
          //O binario é a sobra dos numero dividido por dois. O simbolo de porcentagem
          //faz a divisão do numero por 2, porem pega o resto da operação
 
-         SegVal <- dec % 8
+         SegVal <- dec % 2
 
          //O grande problema é que o numero binario é escrito ao contrato de como ele é
          //calculado, então se o resultado da divizão for 0101, lemos o numero como 1010
@@ -76,44 +75,26 @@ Inicio
          //de forma que os numeros vão sendo concatenados a esquerda
 
          se SegVal = 0 então
-               oct <- "0" + oct
-            fimse
-            se SegVal = 1 então
-               oct <- "1" + oct
-            fimse
-            se SegVal = 2 então
-               oct <- "2" + oct
-            fimse
-            se SegVal = 3 então
-               oct <- "3" + oct
-            fimse
-            se SegVal = 4 então
-               oct <- "4" + oct
-            fimse
-            se SegVal = 5 então
-               oct <- "5" + oct
-            fimse
-            se SegVal = 6 então
-               oct <- "6" + oct
-            fimse
-            se SegVal = 7 então
-               oct <- "7" + oct
-            fimse
+            bi <- "0" + bi
+         senao
+            bi <- "1" + bi
+         fimse
 
-            dec <- dec / 8
+
+         dec <- dec / 2
 
       fimenquanto
 
-      escreval("Numero convertido: ",oct)
+      escreval("Numero convertido: ",bi)
       escreval("")
 
 
-Escreval()
-escreval("============================================")
-Escreval()
-Escreval ("Aperte: 1- Para SIM / 2- Para NÃO ")
-Leia (i)
+      Escreval()
+      escreval("============================================")
+      Escreval()
+      Escreval ("Aperte: 1- Para SIM / 2- Para NÃO ")
+      Leia (i)
 
-fimenquanto
+   fimenquanto
 
 Fimalgoritmo
