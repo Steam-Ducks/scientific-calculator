@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>SPRINT 1 - Repositório de Operações Matemáticas</h1>
-    <p>Este repositório contém implementações de diversas operações matemáticas em VisualG, com o objetivo de exercitar a lógica de programação realizando uma prévia das operações que estarão disponíveis futuramente em nosso projeto de Calculadora Cientifica.</p>
+    <p>Como alunos do 1º semestre de Banco de Dados na FATEC SJC, este repositório contém implementações de diversas operações matemáticas em VisualG, com o objetivo de exercitar a lógica de programação realizando uma prévia das operações que estarão disponíveis futuramente em nosso projeto de Calculadora Cientifica.</p>
     <h2>Operações Disponíveis</h2>
     <ol>
         <li>Operações Básicas: Implementações das operações básicas de soma, multiplicação, subtração e divisão.</li>
@@ -18,17 +18,17 @@
     </ol>
    
    ## Integrantes 
-   <ol>
-      <li> </Alexander Silva Lima </li>
-Carlos Daniel Alves dos Santos
-Isabelly de Sousa Rodrigues
-Lucas Heck Acosta
-Luiz Henrique Rabello Ferreira
-Matheus Gabriel Barbosa Leite
-Rafaella Letícia Rodrigues Cruz 
-Samuel Vinicius Araújo do Prado
-Theo da Rosa Smidt
-</ol>
+  
+- Alexander Silva Lima 
+- Carlos Daniel Alves dos Santos
+- Isabelly de Sousa Rodrigues
+- Lucas Heck Acosta
+- Luiz Henrique Rabello Ferreira
+- Matheus Gabriel Barbosa Leite
+- Rafaella Letícia Rodrigues Cruz 
+- Samuel Vinicius Araújo do Prado
+- Theo da Rosa Smidt
+
    <h2>Como Usar</h2>
 <ol>
     <li>Clone o repositório:</li>
