@@ -1,7 +1,7 @@
 algoritmo "convert binary to decimal"
 
 //Para converter de binário para decimal precisamos somar a os numeros elevados ao seu index
-//A sequencia binaria se da assim: 
+//A sequencia binaria se da assim:
 // 2^8 2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
 
 //um numero binário consiste de 0s e 1s
@@ -24,13 +24,37 @@ var
     potencia, index: inteiro
     decimal: inteiro
     binario: caractere
+    valido: logico
+    letraAtual: caractere
 
 inicio
     decimal <- 0
     potencia <- 0
+    valido <- falso
 
-    escreva("Digite um número binário para converter: ")
-    leia(binario)
+// Validar input ----------------------------------------------------------------------------------------------
+
+// Input comeca como invalido é perguntado repetidademente até que um input valido seja fornecido
+    enquanto valido = falso faca
+        valido <- verdadeiro // assumimos que o input sera valido
+        escreva("Digite um número binário para converter: ")
+        leia(binario)
+
+        // Percorremos o input letra a letra
+        para index <- 1 ate compr(binario) faca
+            letraAtual <- copia(binario, index, 1)
+            //caso a letra nao seja 1 ou 0, entao o input nao pode ser marcado como binario
+            se (letraAtual <> "1") e (letraAtual <> "0") entao
+                valido <- falso
+            fimse
+        fimpara
+        se valido = falso entao
+            escreval("Binario invalido!")
+        fimse
+    fimenquanto
+
+
+// converter base -----------------------------------------------------------------------------------------------
 
     // Começamos pelo último número binário.
     // Compr() retorna o tamanho de um texto.
