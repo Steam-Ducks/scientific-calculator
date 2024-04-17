@@ -4,6 +4,7 @@ algoritmo "convert binary to decimal"
 //A sequencia binaria se da assim:
 // 2^8 2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
 
+
 //um numero binário consiste de 0s e 1s
 //sendo assim uma sequencia pode ser 101101
 
