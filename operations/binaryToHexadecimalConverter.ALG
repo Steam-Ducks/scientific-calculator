@@ -3,8 +3,7 @@ Algoritmo "Conversor Binario para hexadecimal"
 Var
 
     potencia, index, num_digitos, decimal: inteiro
-    binario: caractere
-    hexadecimal: caractere
+    hexadecimal, binario: caractere
 
 Inicio
 
@@ -15,23 +14,23 @@ Inicio
     hexadecimal <- ""
 
     //Recebe o valor Binario a ser convertido em Hexadecimal
-    escreva("Digite um número binário para converter: ")
+    escreva("Digite um numero binario para converter: ")
     leia(binario)
 
     num_digitos <- compr(binario)
 
-    // Começamos pelo último dígito binário.
+    // Come�amos pelo ultimo digito binario.
     para index <- num_digitos ate 1 passo -1 faca
 
-        // Quando o caractere atual for '1', somamos ele elevado à potência atual.
+        // Quando o caractere atual for '1', somamos ele elevado a� potencia atual.
         se copia(binario, index, 1) = "1" entao
             decimal <- int(decimal + (2 ^ potencia))
         fimse
 
-        // Incrementa a potência para a próxima iteração.
+        // Incrementa a potencia para a proxima itera��oo.
         potencia <- potencia + 1
 
-        // A cada 4 dígitos binários ou no último dígito, convertemos para hexadecimal.
+        // A cada 4 digitos binarios ou no ultimo digito, convertemos para hexadecimal.
         se (potencia = 4) ou (index = 1) entao
             // Converte o decimal acumulado para hexadecimal.
             escolha decimal
@@ -69,12 +68,12 @@ Inicio
             hexadecimal <- "F" + hexadecimal
             fimescolha
 
-            // Reinicia variáveis para o próximo grupo de 4 dígitos.
+            // Reinicia variaveis para o proximo grupo de 4 digitos.
             decimal <- 0
             potencia <- 0
         fimse
 
     fimpara
     //Mostra o valor convertido de Binario para Hexadecimal
-    escreval("O número binário ", binario, " em hexadecimal é: ", hexadecimal)
+    escreval("O numero binario ", binario, " em hexadecimal �: ", hexadecimal)
 Fimalgoritmo

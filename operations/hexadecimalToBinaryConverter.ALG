@@ -13,9 +13,9 @@ Inicio
     binario <- ""
     num_digitos <- compr(hexadecimal)
 
-    // Loop para percorrer cada dígito hexadecimal.
+    // Loop para percorrer cada digito hexadecimal.
     para index <- 1 ate num_digitos faca
-        // Obtém o caractere hexadecimal atual.
+        // Obtem o caractere hexadecimal atual.
         parte_hexadecimal <- copia(hexadecimal, index, 1)
 
         // Converte o caractere hexadecimal para inteiro.
@@ -56,6 +56,6 @@ Inicio
 
     fimpara
     // Mostra o resultado da conversao
-    escreval("O número hexadecimal ", hexadecimal, " em binário é: ", caracpnum(binario))
+    escreval("O numero hexadecimal ", hexadecimal, " em binario �: ", caracpnum(binario))
 
 Fimalgoritmo
