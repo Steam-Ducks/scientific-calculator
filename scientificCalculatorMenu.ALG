@@ -1,7 +1,7 @@
 Algoritmo "semnome"
-// Disciplina   : [Linguagem e LÛgica de ProgramaÁ„o]
+// Disciplina   : [Linguagem e L√≥gica de Programa√ß√£o]
 // Professor   : Antonio Carlos Nicolodi
-// DescriÁ„o   : Aqui vocÍ descreve o que o programa faz! (funÁ„o)
+// Descri√ß√£o   : Aqui voc√™ descreve o que o programa faz! (fun√ß√£o)
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 12/04/2024
 Var
@@ -21,7 +21,7 @@ Inicio
    ESCREVAL("::                                                    ::")
    ESCREVAL("::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
    ESCREVAL()
-   ESCREVAL("Digite a funÁ„o que deseja utilizar:")
+   ESCREVAL("Digite a fun√ß√£o que deseja utilizar:")
    ESCREVAL()
    ESCREVAL(" 1 <- SOMA")
    ESCREVAL(" 2 <- SUBTRACAO")
@@ -43,39 +43,39 @@ Inicio
 
    escolha Func
    Caso 1
-      ESCREVAL("========== FUN«√O SOMA ==========")
-      escreval ("Insira os valores , e eles ser„o automaticamente multiplicados, ")
+      ESCREVAL("========== FUN√á√ÉO SOMA ==========")
+      escreval ("Insira os valores , e eles ser√£o automaticamente multiplicados, ")
       escreval ("para finalizar, pressione '='.")
       repete <- 1
-      ENQUANTO repete = 1 faÁa
+      ENQUANTO repete = 1 fa√ßa
          escreval()
          escreva ("Valor: ")
-         // Atribui o valor inserido a vari·vel 'valorString'
+         // Atribui o valor inserido a vari√°vel 'valorString'
          leia (valorAcumulado)
 
          repita
-            // Pede para o usu·rio inserir um valor
+            // Pede para o usu√°rio inserir um valor
             escreva ("Valor:", valorAcumulado," + ")
-            // Atribui o valor inserido a vari·vel 'valorString'
+            // Atribui o valor inserido a vari√°vel 'valorString'
             leia (valorString)
-            // Define o valor da vari·vel 'valorAcumuladoString' como 'valorAcumulado'
+            // Define o valor da vari√°vel 'valorAcumuladoString' como 'valorAcumulado'
             valorAcumuladoString <- valorAcumulado
-            // Realiza a convers„o da vari·vel caractere 'valorString' para inteiro
+            // Realiza a convers√£o da vari√°vel caractere 'valorString' para inteiro
             valor <- caracpnum (valorString)
             valorAcumulado <- valorAcumulado + valor
-            // Exibe o resultado para o usu·rio da multiplicaÁ„o para o usu·rio
+            // Exibe o resultado para o usu√°rio da multiplica√ß√£o para o usu√°rio
             escreval ("Resultado:",valorAcumulado)
-            // CondiÁ„o para que quando o usu·rio pressionar '=' o programa ir· finalizar e exibir o resultado da multiplicaÁ„o
+            // Condi√ß√£o para que quando o usu√°rio pressionar '=' o programa ir√° finalizar e exibir o resultado da multiplica√ß√£o
             escreval ()
-         atÈ valorString = "="
+         at√© valorString = "="
 
          ESCREVAL()
-         ESCREVAL("O Resultado da soma È: ", valorAcumulado)
+         ESCREVAL("O Resultado da soma √©: ", valorAcumulado)
          ESCREVAL("=============================================================")
          ESCREVAL()
          ESCREVAL("Deseja calcular outro valor? ")
          ESCREVAL("1 <- Sim")
-         ESCREVAL("2 <- N„o")
+         ESCREVAL("2 <- N√£o")
          ESCREVA("Resposta: ")
          Leia(repete)
          ESCREVAL("=============================================================")
@@ -86,39 +86,39 @@ Inicio
 
    Caso 2
 
-      escreval("========== FUN«√O SUBTRA«√O ==========")
-      escreval ("Insira os valores , e eles ser„o automaticamente multiplicados, ")
+      escreval("========== FUN√á√ÉO SUBTRA√á√ÉO ==========")
+      escreval ("Insira os valores , e eles ser√£o automaticamente multiplicados, ")
       escreval ("para finalizar, pressione '='.")
       repete <- 1
-      ENQUANTO repete = 1 faÁa
+      ENQUANTO repete = 1 fa√ßa
          escreval()
          escreva ("Valor: ")
-         // Atribui o valor inserido a vari·vel 'valorString'
+         // Atribui o valor inserido a vari√°vel 'valorString'
          leia (valorAcumulado)
 
          repita
-            // Pede para o usu·rio inserir um valor
+            // Pede para o usu√°rio inserir um valor
             escreva ("Valor:",valorAcumulado," - ")
-            // Atribui o valor inserido a vari·vel 'valorString'
+            // Atribui o valor inserido a vari√°vel 'valorString'
             leia (valorString)
-            // Define o valor da vari·vel 'valorAcumuladoString' como 'valorAcumulado'
+            // Define o valor da vari√°vel 'valorAcumuladoString' como 'valorAcumulado'
             valorAcumuladoString <- valorAcumulado
-            // Realiza a convers„o da vari·vel caractere 'valorString' para inteiro
+            // Realiza a convers√£o da vari√°vel caractere 'valorString' para inteiro
             valor <- caracpnum (valorString)
             valorAcumulado <- valorAcumulado - valor
-            // Exibe o resultado para o usu·rio da multiplicaÁ„o para o usu·rio
+            // Exibe o resultado para o usu√°rio da multiplica√ß√£o para o usu√°rio
             escreval ("Resultado:",valorAcumulado)
-            // CondiÁ„o para que quando o usu·rio pressionar '=' o programa ir· finalizar e exibir o resultado da multiplicaÁ„o
+            // Condi√ß√£o para que quando o usu√°rio pressionar '=' o programa ir√° finalizar e exibir o resultado da multiplica√ß√£o
             escreval ()
-         atÈ valorString = "="
+         at√© valorString = "="
 
          ESCREVAL()
-         ESCREVAL("O Resultado da subtraÁ„o È: ", valorAcumulado)
+         ESCREVAL("O Resultado da subtra√ß√£o √©: ", valorAcumulado)
          ESCREVAL("=============================================================")
          ESCREVAL()
          ESCREVAL("Deseja calcular outro valor? ")
          ESCREVAL("1 <- Sim")
-         ESCREVAL("2 <- N„o")
+         ESCREVAL("2 <- N√£o")
          ESCREVA("Resposta: ")
          Leia(repete)
          ESCREVAL("=============================================================")
@@ -127,43 +127,43 @@ Inicio
 
    Caso 3
 
-      escreval ("========== FunÁ„o MultiplicaÁ„o ==========")
-      escreval ("Insira os valores , e eles ser„o automaticamente multiplicados, ")
+      escreval ("========== Fun√ß√£o Multiplica√ß√£o ==========")
+      escreval ("Insira os valores , e eles ser√£o automaticamente multiplicados, ")
       escreval ("para finalizar, pressione '='.")
       repete <- 1
-      ENQUANTO repete = 1 faÁa
+      ENQUANTO repete = 1 fa√ßa
 
          ESCREVAL()
          escreval ("")
 
-         // LaÁo de repetiÁ„o para que o usu·rio insira os valores para serem multiplicados
+         // La√ßo de repeti√ß√£o para que o usu√°rio insira os valores para serem multiplicados
          escreva ("Valor: ")
-         // Atribui o valor inserido a vari·vel 'valorString'
+         // Atribui o valor inserido a vari√°vel 'valorString'
          leia (valorAcumulado)
 
          repita
-            // Pede para o usu·rio inserir um valor
+            // Pede para o usu√°rio inserir um valor
             escreva ("Valor:",valorAcumulado," * ")
-            // Atribui o valor inserido a vari·vel 'valorString'
+            // Atribui o valor inserido a vari√°vel 'valorString'
             leia (valorString)
-            // Define o valor da vari·vel 'valorAcumuladoString' como 'valorAcumulado'
+            // Define o valor da vari√°vel 'valorAcumuladoString' como 'valorAcumulado'
             valorAcumuladoString <- valorAcumulado
-            // Realiza a convers„o da vari·vel caractere 'valorString' para inteiro
+            // Realiza a convers√£o da vari√°vel caractere 'valorString' para inteiro
             valor <- caracpnum (valorString)
             valorAcumulado <- valorAcumulado * valor
-            // Exibe o resultado para o usu·rio da multiplicaÁ„o para o usu·rio
+            // Exibe o resultado para o usu√°rio da multiplica√ß√£o para o usu√°rio
             escreval ("Resultado:",valorAcumulado)
-            // CondiÁ„o para que quando o usu·rio pressionar '=' o programa ir· finalizar e exibir o resultado da multiplicaÁ„o
+            // Condi√ß√£o para que quando o usu√°rio pressionar '=' o programa ir√° finalizar e exibir o resultado da multiplica√ß√£o
             escreval ()
-         atÈ valorString = "="
+         at√© valorString = "="
 
          ESCREVAL()
-         ESCREVAL("O Resultado da multiplicaÁ„o È: ", valorAcumulado)
+         ESCREVAL("O Resultado da multiplica√ß√£o √©: ", valorAcumulado)
          ESCREVAL("=============================================================")
          ESCREVAL()
          ESCREVAL("Deseja calcular outro valor? ")
          ESCREVAL("1 <- Sim")
-         ESCREVAL("2 <- N„o")
+         ESCREVAL("2 <- N√£o")
          ESCREVA("Resposta: ")
          Leia(repete)
          ESCREVAL("=============================================================")
@@ -173,51 +173,51 @@ Inicio
 
    Caso 4
 
-      escreval ("========== FunÁ„o Divis„o ==========")
+      escreval ("========== Fun√ß√£o Divis√£o ==========")
       repete <- 1
-      ENQUANTO repete = 1 faÁa
+      ENQUANTO repete = 1 fa√ßa
 
          ESCREVAL()
-         escreval ("Insira os valores , e eles ser„o automaticamente multiplicados, ")
+         escreval ("Insira os valores , e eles ser√£o automaticamente multiplicados, ")
          escreval ("para finalizar, pressione '='.")
          escreval ("")
 
-         // LaÁo de repetiÁ„o para que o usu·rio insira os valores para serem multiplicados
+         // La√ßo de repeti√ß√£o para que o usu√°rio insira os valores para serem multiplicados
          escreva ("Valor: ")
-         // Atribui o valor inserido a vari·vel 'valorString'
+         // Atribui o valor inserido a vari√°vel 'valorString'
          leia (valorAcumulado)
 
          repita
-            // Pede para o usu·rio inserir um valor
+            // Pede para o usu√°rio inserir um valor
             escreva ("Valor:", valorAcumulado, " / ")
-            // Atribui o valor inserido a vari·vel 'valorString'
+            // Atribui o valor inserido a vari√°vel 'valorString'
             leia (valorString)
 
-            // condiÁıes para finalizar a operaÁ„o, se utilizar "=" ou dividir por zero
+            // condi√ß√µes para finalizar a opera√ß√£o, se utilizar "=" ou dividir por zero
             se (valorString = "=") ou (valorString = "0")entao
                interrompa
             fimse
-            // Define o valor da vari·vel 'valorAcumuladoString' como 'valorAcumulado'
+            // Define o valor da vari√°vel 'valorAcumuladoString' como 'valorAcumulado'
 
             se valorString <> "1" entao
                valorAcumuladoString <- valorAcumulado
-               // Realiza a convers„o da vari·vel caractere 'valorString' para inteiro
+               // Realiza a convers√£o da vari√°vel caractere 'valorString' para inteiro
                valor <- caracpnum (valorString)
                valorAcumulado <- valorAcumulado / valor
-               // Exibe o resultado para o usu·rio da multiplicaÁ„o para o usu·rio
+               // Exibe o resultado para o usu√°rio da multiplica√ß√£o para o usu√°rio
                escreval ("Resultado:",valorAcumulado)
-               // CondiÁ„o para que quando o usu·rio pressionar '=' o programa ir· finalizar e exibir o resultado da multiplicaÁ„o
+               // Condi√ß√£o para que quando o usu√°rio pressionar '=' o programa ir√° finalizar e exibir o resultado da multiplica√ß√£o
                escreval ()
             fimse
-         atÈ valorString = "="
+         at√© valorString = "="
 
          ESCREVAL()
-         ESCREVAL("O Resultado da divis„o È: ", valorAcumulado)
+         ESCREVAL("O Resultado da divis√£o √©: ", valorAcumulado)
          ESCREVAL("=============================================================")
          ESCREVAL()
          ESCREVAL("Deseja calcular outro valor? ")
          ESCREVAL("1 <- Sim")
-         ESCREVAL("2 <- N„o")
+         ESCREVAL("2 <- N√£o")
          ESCREVA("Resposta: ")
          Leia(repete)
          ESCREVAL("=============================================================")
@@ -227,9 +227,9 @@ Inicio
 
    Caso 5
 
-      escreval ("========== FunÁ„o Fatorial ==========")
+      escreval ("========== Fun√ß√£o Fatorial ==========")
       repete <- 1
-      ENQUANTO repete = 1 faÁa
+      ENQUANTO repete = 1 fa√ßa
 
 
          escreva("Insira um valor: ")
@@ -242,12 +242,12 @@ Inicio
          ate (fatorial <= 1)
 
          ESCREVAL()
-         ESCREVAL("O Resultado do fatorial È: ", Valor)
+         ESCREVAL("O Resultado do fatorial √©: ", Valor)
          ESCREVAL("=============================================================")
          ESCREVAL()
          ESCREVAL("Deseja calcular outro valor? ")
          ESCREVAL("1 <- Sim")
-         ESCREVAL("2 <- N„o")
+         ESCREVAL("2 <- N√£o")
          ESCREVA("Resposta: ")
          Leia(repete)
          ESCREVAL("=============================================================")
@@ -259,22 +259,22 @@ Inicio
    Caso 6
 
       escreval ("========== FUNCAO DE SEGUNDO GRAU ==========")
-      //a precis„o define a quantidade de casas decimais que a raiz sera decomposta
+      //a precis√£o define a quantidade de casas decimais que a raiz sera decomposta
       precisao <- 0.000001
 
-      // laÁo de repetiÁ„o para a opÁ„o de fazer novamente
+      // la√ßo de repeti√ß√£o para a op√ß√£o de fazer novamente
       repete <- 1
-      ENQUANTO repete = 1 faÁa
+      ENQUANTO repete = 1 fa√ßa
          limpatela
 
          //mensagem para o usuario identificar os valores
-         escreval ("Calculo de funÁ„o do segundo grau!")
+         escreval ("Calculo de fun√ß√£o do segundo grau!")
          escreval ()
-         escreval ("identifique os valores da funÁ„o:")
+         escreval ("identifique os valores da fun√ß√£o:")
          escreval ("f(x) = A.x^2 + B.x + C ")
          escreval ()
 
-         //entrada dos valores da funÁ„o
+         //entrada dos valores da fun√ß√£o
          escreval ("-----------------------------------")
          escreva ("entre com o valor de A: ")
          leia (eq_a)
@@ -287,24 +287,24 @@ Inicio
          //calculo do valor de delta
          delta <- (eq_b*eq_b)-4*eq_a*eq_c
          escreval()
-         escreval("o valor de delta È: ",delta)
+         escreval("o valor de delta √©: ",delta)
 
-         //calculo das raizes da funÁ„o
-         se delta < 0 ent„o
-            escreval ("n„o existem raizes reais da funÁ„o")
+         //calculo das raizes da fun√ß√£o
+         se delta < 0 ent√£o
+            escreval ("n√£o existem raizes reais da fun√ß√£o")
             escreval ()
-         sen„o
-            //para calcular a raiz quadrada utilizamos o mÈtodo de mÈdia aproimada
-            //para comeÁar decompomos a raiz por 2
+         sen√£o
+            //para calcular a raiz quadrada utilizamos o m√©todo de m√©dia aproimada
+            //para come√ßar decompomos a raiz por 2
             raiz <- delta / 2
 
-            //procedimento de decomposiÁ„o da raiz
-            Enquanto raiz > precisao FaÁa
+            //procedimento de decomposi√ß√£o da raiz
+            Enquanto raiz > precisao Fa√ßa
                nraiz <- (raiz + delta / raiz) / 2
-               Se (raiz - nraiz) < precisao Ent„o
+               Se (raiz - nraiz) < precisao Ent√£o
                   raiz <- nraiz
-                  //assim que a raiz for decomposta atÈ a casa decimal definida
-                  //precis„o, interrompemos o processo
+                  //assim que a raiz for decomposta at√© a casa decimal definida
+                  //precis√£o, interrompemos o processo
                   Interrompa
                FimSe
                //definimos o valor de raiz de delta!
@@ -314,19 +314,19 @@ Inicio
 
             R1 <- ((-eq_b) + (rdelta))/(2*eq_a)
             R2 <- ((-eq_b) - (rdelta))/(2*eq_a)
-            escreval ("a raiz x' È: ", R1:4:2)
+            escreval ("a raiz x' √©: ", R1:4:2)
             escreval ()
-            escreval ("a raiz x'' È: ", R2:4:2)
+            escreval ("a raiz x'' √©: ", R2:4:2)
             escreval ()
          fimse
 
-         //opÁ„o do usu·rio para fazer a operaÁ„o novamente
+         //op√ß√£o do usu√°rio para fazer a opera√ß√£o novamente
 
          ESCREVAL("=============================================================")
          ESCREVAL()
          ESCREVAL("Deseja calcular outro valor? ")
          ESCREVAL("1 <- Sim")
-         ESCREVAL("2 <- N„o")
+         ESCREVAL("2 <- N√£o")
          ESCREVA("Resposta: ")
          Leia(repete)
          ESCREVAL("=============================================================")
@@ -336,12 +336,12 @@ Inicio
    Caso 7
 
       repete <- 1
-      Enquanto repete = 1 faÁa
+      Enquanto repete = 1 fa√ßa
          limpatela
 
          escreval ("======= CONVERSAO DE BASE NUMERICA: B10 X B2 / B2 X B10 =======")
          Escreval("")
-         Escreval("Qual funÁ„o deseja utilizar?")
+         Escreval("Qual fun√ß√£o deseja utilizar?")
          Escreval("1 <- Decimal para Binario")
          Escreval("2 <- Binario para Decimal")
          Escreval("")
@@ -364,13 +364,13 @@ Inicio
                enquanto (numero > 0) faca
                   //Salvamos o resto da divisao por 2
                   resto <- numero MOD 2
-                  //adicionamos o 1 ou 0 ao bin√°rio
+                  //adicionamos o 1 ou 0 ao bin√É¬°rio
                   bi <- Numpcarac(resto) + bi
                   //dividimos o numero por 2
                   numero <- numero div 2
                fimenquanto
             fimse
-            //Ao fim do loop teremos uma sequencia de 1s e 0s que representa a convers√£o do n√∫mero inicial
+            //Ao fim do loop teremos uma sequencia de 1s e 0s que representa a convers√É¬£o do n√É¬∫mero inicial
 
 
             escreval("Numero convertido: ", bi)
@@ -385,7 +385,7 @@ Inicio
 
             // Validar input ----------------------------------------------------------------------------------------------
 
-            // Input comeca como invalido √© perguntado repetidademente at√© que um input valido seja fornecido
+            // Input comeca como invalido √É¬© perguntado repetidademente at√É¬© que um input valido seja fornecido
             enquanto valido = falso faca
 
                escreval("===== Conversor Binario -> Decimal =====")
@@ -411,31 +411,31 @@ Inicio
 
 // converter base -----------------------------------------------------------------------------------------------
 
-    // Come√ßamos pelo √∫ltimo n√∫mero bin√°rio.
+    // Come√É¬ßamos pelo √É¬∫ltimo n√É¬∫mero bin√É¬°rio.
     // Compr() retorna o tamanho de um texto.
-    // Subtra√≠mos 1 para que o n√∫mero n√£o ultrapasse o √≠ndice do texto.
+    // Subtra√É¬≠mos 1 para que o n√É¬∫mero n√É¬£o ultrapasse o √É¬≠ndice do texto.
     para index <- compr(binario) ate 1 passo -1 faca
 
-        // Quando o caractere atual for '1', somamos ele elevado √† pot√™ncia atual.
+        // Quando o caractere atual for '1', somamos ele elevado √É¬† pot√É¬™ncia atual.
         se  copia(binario, index, 1) = "1" entao
             decimal <- int(decimal + (2 ^ potencia))
         fimse
 
-        // Aumentamos em 1 a pot√™ncia para utilizar na pr√≥xima itera√ß√£o do loop.
+        // Aumentamos em 1 a pot√É¬™ncia para utilizar na pr√É¬≥xima itera√É¬ß√É¬£o do loop.
         potencia <- potencia + 1
     fimpara
 
-    // Ao fim do loop, teremos todos os n√∫meros somados na vari√°vel 'decimal',
-    // que ir√° representar corretamente a convers√£o.
+    // Ao fim do loop, teremos todos os n√É¬∫meros somados na vari√É¬°vel 'decimal',
+    // que ir√É¬° representar corretamente a convers√É¬£o.
 
-    escreval("O n√∫mero decimal √©: ", decimal)
+    escreval("O n√É¬∫mero decimal √É¬©: ", decimal)
     escreval("")
          fimse
          ESCREVAL("=============================================================")
          ESCREVAL()
          ESCREVAL("Deseja calcular outro valor? ")
          ESCREVAL("1 <- Sim")
-         ESCREVAL("2 <- N„o")
+         ESCREVAL("2 <- N√£o")
          ESCREVA("Resposta: ")
          Leia(repete)
 
@@ -445,27 +445,27 @@ Inicio
 
 
       repete <- 1
-      Enquanto repete = 1 faÁa
+      Enquanto repete = 1 fa√ßa
          limpatela
 
          escreval ("======= CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2 =======")
          Escreval("")
-         Escreval("Qual funÁ„o deseja utilizar?")
+         Escreval("Qual fun√ß√£o deseja utilizar?")
          Escreval("1 <- Binario para Octal")
-         Escreval("2 <- Octal para Bin·rio")
+         Escreval("2 <- Octal para Bin√°rio")
          Escreval("")
          Escreva("Digite a sua resposta: ")
          Leia(Fun)
 
          limpatela
 
-         //====================================FunÁ„o 1==================================
+         //====================================Fun√ß√£o 1==================================
          se Fun = 1 entao
 
             oct <- ""
             escreval("===== Conversor Binario -> Octal =====")
             escreval("")
-            escreval("Quantos algarismos tem o numero binario que ser· convertido?")
+            escreval("Quantos algarismos tem o numero binario que ser√° convertido?")
             escreva("resposta: ")
             leia(alg)
             alg <- alg - 1
@@ -477,8 +477,8 @@ Inicio
 
             alg <- alg - 1
 
-            enquanto alg >= 0 faÁa
-               escreva("Escreva o prÛximo algarismo: ")
+            enquanto alg >= 0 fa√ßa
+               escreva("Escreva o pr√≥ximo algarismo: ")
                leia(Num)
                SegVal <- SegVal + Num * 2 ^ (alg)
                alg <- alg - 1
@@ -486,32 +486,32 @@ Inicio
 
             dec <- SegVal
 
-            enquanto dec >= 1 faÁa
+            enquanto dec >= 1 fa√ßa
 
                SegVal <- dec % 8
 
-               se SegVal = 0 ent„o
+               se SegVal = 0 ent√£o
                   oct <- "0" + oct
                fimse
-               se SegVal = 1 ent„o
+               se SegVal = 1 ent√£o
                   oct <- "1" + oct
                fimse
-               se SegVal = 2 ent„o
+               se SegVal = 2 ent√£o
                   oct <- "2" + oct
                fimse
-               se SegVal = 3 ent„o
+               se SegVal = 3 ent√£o
                   oct <- "3" + oct
                fimse
-               se SegVal = 4 ent„o
+               se SegVal = 4 ent√£o
                   oct <- "4" + oct
                fimse
-               se SegVal = 5 ent„o
+               se SegVal = 5 ent√£o
                   oct <- "5" + oct
                fimse
-               se SegVal = 6 ent„o
+               se SegVal = 6 ent√£o
                   oct <- "6" + oct
                fimse
-               se SegVal = 7 ent„o
+               se SegVal = 7 ent√£o
                   oct <- "7" + oct
                fimse
 
@@ -524,7 +524,7 @@ Inicio
 
 
          Fimse
-         //====================================FunÁ„o 2==================================
+         //====================================Fun√ß√£o 2==================================
 
          se Fun = 2 entao
 
@@ -543,20 +543,20 @@ Inicio
             leia(Num)
             alg <- alg - 1
 
-            //a equaÁ„o a baixo est· fazendo a formula e guardando na variavel SegVal
+            //a equa√ß√£o a baixo est√° fazendo a formula e guardando na variavel SegVal
 
             SegVal <- SegVal + Num * 8 ^ (alg)
 
-            //Para calcular o prÛximo digito, tiramos um numero da variavel alg pois
-            //estamos a utilizando como index das posiÁıes
+            //Para calcular o pr√≥ximo digito, tiramos um numero da variavel alg pois
+            //estamos a utilizando como index das posi√ß√µes
 
             alg <- alg - 1
 
-            //o laÁo a seguir vai repetir o calculo atÈ que alg que È o index seja
-            //menor que 0 que È a ˙ltima posiÁ„o do binario
+            //o la√ßo a seguir vai repetir o calculo at√© que alg que √© o index seja
+            //menor que 0 que √© a √∫ltima posi√ß√£o do binario
 
-            enquanto alg >= 0 faÁa
-               escreva("Escreva o prÛximo algarismo: ")
+            enquanto alg >= 0 fa√ßa
+               escreva("Escreva o pr√≥ximo algarismo: ")
                leia(Num)
                SegVal <- SegVal + Num * 8 ^ (alg)
                alg <- alg - 1
@@ -564,20 +564,20 @@ Inicio
 
             dec <- SegVal
 
-            enquanto dec >= 1 faÁa
+            enquanto dec >= 1 fa√ßa
 
-               //O binario È a sobra dos numero dividido por dois. O simbolo de porcentagem
-               //faz a divis„o do numero por 2, porem pega o resto da operaÁ„o
+               //O binario √© a sobra dos numero dividido por dois. O simbolo de porcentagem
+               //faz a divis√£o do numero por 2, porem pega o resto da opera√ß√£o
 
                SegVal <- dec % 2
 
-               //O grande problema È que o numero binario È escrito ao contrato de como ele È
-               //calculado, ent„o se o resultado da diviz„o for 0101, lemos o numero como 1010
+               //O grande problema √© que o numero binario √© escrito ao contrato de como ele √©
+               //calculado, ent√£o se o resultado da diviz√£o for 0101, lemos o numero como 1010
 
                //Por isso, transformei as sobras em texto e fui concatenando na variavel bi
-               //de forma que os numeros v„o sendo concatenados a esquerda
+               //de forma que os numeros v√£o sendo concatenados a esquerda
 
-               se SegVal = 0 ent„o
+               se SegVal = 0 ent√£o
                   bi <- "0" + bi
                senao
                   bi <- "1" + bi
@@ -598,7 +598,7 @@ Inicio
          ESCREVAL()
          ESCREVAL("Deseja calcular outro valor? ")
          ESCREVAL("1 <- Sim")
-         ESCREVAL("2 <- N„o")
+         ESCREVAL("2 <- N√£o")
          ESCREVA("Resposta: ")
          Leia(repete)
 
@@ -617,7 +617,36 @@ Inicio
 
 
    Caso 11
+      
+      index <- 1
 
+      enquanto index < 2 faca
+
+         Escreval("------------------Juros Simples------------------")
+
+         Escreva("Digite o valor inicial do emprestimo, ou investimento: ")
+         Leia(emprest)
+
+         Escreva("Digite a porcentagem da taxa: ")
+         Leia(taxa)
+
+         Escreva("Por √∫ltimo, informe os anos decorridos: ")
+         leia (temp)
+
+         taxa <- taxa /100
+
+         juros <- emprest * taxa * temp
+
+         Escreval("O valor dos juros e de: ",juros)
+
+         Escreval("-----------------------------------------------")
+
+         Escreval ("Deseja continuar? ")
+
+         Escreval ("Aperte: 1- Para SIM / 2- Para N√ÉO ")
+         Leia (index)
+
+      fimenquanto
 
    fimescolha
 
