@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>SPRINT 1 - Repositório de Operações Matemáticas</h1>
+    <h1>Calculadora Científica - Repositório de Operações Matemáticas</h1>
     <p>Como alunos do 1º semestre de Banco de Dados na FATEC SJC, este repositório contém implementações de diversas operações matemáticas em VisualG, com o objetivo de exercitar a lógica de programação realizando uma prévia das operações que estarão disponíveis futuramente em nosso projeto de Calculadora Cientifica.</p>
     <h2>Operações Disponíveis</h2>
     <ol>
