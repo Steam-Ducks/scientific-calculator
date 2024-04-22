@@ -37,26 +37,21 @@ Inicio
 
    repita
 
-      escreval("::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-      escreval("::                                                    ::")
-      escreval(":                CALCULADORA CIENTIFICA                :")
-      escreval("::                                                    ::")
-      escreval("::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+
+      escreval(":============== CALCULADORA CIENTIFICA ==============:")
+
       escreval()
       escreval("Digite a função que deseja utilizar:")
       escreval()
-      escreval(" 1 <- SOMA")
-      escreval(" 2 <- SUBTRACAO")
-      escreval(" 3 <- MULTIPLICACAO")
-      escreval(" 4 <- DIVISAO")
-      escreval(" 5 <- FATORIAL")
-      escreval(" 6 <- FUNCAO DE SEGUNDO GRAU")
-      escreval(" 7 <- CONVERSAO DE BASE NUMERICA: B10 X B2 / B2 X B10")
-      escreval(" 8 <- CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2")
-      escreval(" 9 <- CONVERSAO DE BASE NUMERICA: B2 X B16 / B16 X B2")
-      escreval("10 <- CONCATENACAO DE STRINGS")
-      escreval("11 <- CALCULO DE JUROS ")
-      escreval("12 <- SAIR")
+      escreval(" [1] OPERAÇÕES BÁSICAS")
+      escreval(" [2] FATORIAL")
+      escreval(" [3] FUNÇÃO DE SEGUNDO GRAU")
+      escreval(" [4] CONVERSAO DE BASE NUMERICA: B10 X B2 / B2 X B10")
+      escreval(" [5] CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2")
+      escreval(" [6] CONVERSAO DE BASE NUMERICA: B2 X B16 / B16 X B2")
+      escreval(" [7] CONCATENACAO DE STRINGS")
+      escreval(" [8] CALCULO DE JUROS ")
+      escreval(" [9] SAIR")
       escreval()
       escreva("RESPOSTA: ")
       leia(func)
@@ -66,206 +61,188 @@ Inicio
       escolha func
 
       Caso 1
-
-         escreval("========== FUNÇÃO SOMA ==========")
-         escreval ("Insira os valores , e eles serão automaticamente somados")
-         escreval ()
-         escreval ("para finalizar, pressione '='.")
          repete <- 1
          enquanto repete = 1 faca
-            escreval()
-            escreva ("Valor: ")
-            // Atribui o valor inserido a variável 'valorString'
-            leia (valorAcumulado)
-
+            limpatela
             repita
-               // Pede para o usuário inserir um valor
-               escreva ("Valor:", valorAcumulado," + ")
-               // Atribui o valor inserido a variável 'valorString'
-               leia (valorString)
-               // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
-               valorAcumuladoString <- valorAcumulado
-               // Realiza a conversão da variável caractere 'valorString' para inteiro
-               valor <- caracpnum (valorString)
-               valorAcumulado <- valorAcumulado + valor
-               // Exibe o resultado para o usuário da multiplicação para o usuário
-               escreval ("Resultado:",valorAcumulado)
-               // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
-               escreval ()
-            até valorString = "="
+               escreval ("======= CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2 =======")
+               escreval("")
+               escreval("Qual função deseja utilizar?")
+               escreval("[1] ADIÇÃO")
+               escreval("[2] SUBTRAÇÃO")
+               escreval("[3] MULTIPLICAÇÃO")
+               escreval("[4] DIVISÃO")
+               escreval("[5] VOLTAR AO MENU")
+               escreval("")
+               escreva("Digite a sua resposta: ")
+               leia(fun)
+            ate (fun = 1) ou (fun = 2) ou (fun = 3) ou (fun = 4) ou (fun = 5)
+            limpatela
 
-            escreval()
-            escreval("O Resultado da soma é: ", valorAcumulado)
+            escolha fun
+
+            Caso 5
+
+               limpatela
+               interrompa
+
+            Caso 1
+
+               escreval("========== FUNÇÃO SOMA ==========")
+               escreval ("Insira os valores , e eles serão automaticamente somados")
+               escreval ()
+               escreval ("para finalizar, pressione '='.")
+               escreval()
+               escreva ("Valor: ")
+               // Atribui o valor inserido a variável 'valorString'
+               leia (valorAcumulado)
+
+               repita
+                  // Pede para o usuário inserir um valor
+                  escreva ("Valor:", valorAcumulado," + ")
+                  // Atribui o valor inserido a variável 'valorString'
+                  leia (valorString)
+                  // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
+                  valorAcumuladoString <- valorAcumulado
+                  // Realiza a conversão da variável caractere 'valorString' para inteiro
+                  valor <- caracpnum (valorString)
+                  valorAcumulado <- valorAcumulado + valor
+                  // Exibe o resultado para o usuário da multiplicação para o usuário
+                  escreval ("Resultado:",valorAcumulado)
+                  // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
+                  escreval ()
+               até valorString = "="
+               escreval()
+               escreval("O Resultado da soma é: ", valorAcumulado)
+
+            Caso 2
+
+               escreval("========== FUNÇÃO SUBTRAÇÃO ==========")
+               escreval ("Insira os valores , e eles serão automaticamente subtraidos")
+               escreval ()
+               escreval ("para finalizar, pressione '='.")
+               escreval()
+               escreva ("Valor: ")
+               // Atribui o valor inserido a variável 'valorString'
+               leia (valorAcumulado)
+
+               repita
+                  // Pede para o usuário inserir um valor
+                  escreva ("Valor:",valorAcumulado," - ")
+                  // Atribui o valor inserido a variável 'valorString'
+                  leia (valorString)
+                  // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
+                  valorAcumuladoString <- valorAcumulado
+                  // Realiza a conversão da variável caractere 'valorString' para inteiro
+                  valor <- caracpnum (valorString)
+                  valorAcumulado <- valorAcumulado - valor
+                  // Exibe o resultado para o usuário da multiplicação para o usuário
+                  escreval ("Resultado:",valorAcumulado)
+                  // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
+                  escreval ()
+               até valorString = "="
+
+               escreval()
+               escreval("O Resultado da subtração é: ", valorAcumulado)
+
+
+            Caso 3
+
+               escreval ("========== Função Multiplicação ==========")
+               escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
+               escreval ("para finalizar, pressione '=' ou multiplique por zero.")
+               ESCREVAL()
+               escreval ("")
+
+               // Laço de repetição para que o usuário insira os valores para serem multiplicados
+               escreva ("Valor: ")
+               // Atribui o valor inserido a variável 'valorString'
+               leia (valorAcumulado)
+
+               repita
+                  // Pede para o usuário inserir um valor
+                  escreva ("Valor:",valorAcumulado," * ")
+                  // Atribui o valor inserido a variável 'valorString'
+                  leia (valorString)
+                  se (valorString = "=") ou (valorString = "0") entao
+                     escreval ("O Resultado é:", valorAcumulado)
+                     interrompa
+                  fimse
+                  // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
+                  valorAcumuladoString <- valorAcumulado
+                  // Realiza a conversão da variável caractere 'valorString' para inteiro
+                  valor <- caracpnum (valorString)
+                  valorAcumulado <- valorAcumulado * valor
+                  // Exibe o resultado para o usuário da multiplicação para o usuário
+                  escreval ("Resultado:",valorAcumulado)
+                  // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
+                  escreval ()
+               até (valorString = "=") ou (valorString = "0")
+
+               escreval()
+               escreval("O Resultado da multiplicação é: ", valorAcumulado)
+
+            Caso 4
+
+
+               escreval ("========== Função Divisão ==========")
+               ESCREVAL()
+               escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
+               escreval ("para finalizar, pressione '=' ou divida por zero.")
+               escreval ("")
+
+               // Laço de repetição para que o usuário insira os valores para serem multiplicados
+               escreva ("Valor: ")
+               // Atribui o valor inserido a variável 'valorString'
+               leia (valorAcumulado)
+
+               repita
+                  // Pede para o usuário inserir um valor
+                  escreva ("Valor:", valorAcumulado, " / ")
+                  // Atribui o valor inserido a variável 'valorString'
+                  leia (valorString)
+
+                  // condições para finalizar a operação, se utilizar "=" ou dividir por zero
+                  se (valorString = "=") ou (valorString = "0")entao
+                     interrompa
+                  fimse
+                  // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
+
+                  se valorString <> "1" entao
+                     valorAcumuladoString <- valorAcumulado
+                     // Realiza a conversão da variável caractere 'valorString' para inteiro
+                     valor <- caracpnum (valorString)
+                     valorAcumulado <- valorAcumulado / valor
+                     // Exibe o resultado para o usuário da multiplicação para o usuário
+                     escreval ("Resultado:",valorAcumulado)
+                     // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
+                     escreval ()
+                  fimse
+               até valorString = "="
+
+               escreval()
+               escreval("O Resultado da divisão é: ", valorAcumulado)
+
+            fimescolha
             repita
                escreval("=============================================================")
                escreval()
                escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
+               escreval("[1] Sim")
+               escreval("[2] Não")
                escreva("Resposta: ")
                leia(repete)
             ate (repete = 1) ou (repete = 2)
-
+            limpatela
          fimenquanto
          limpatela
 
       Caso 2
 
-         escreval("========== FUNÇÃO SUBTRAÇÃO ==========")
-         escreval ("Insira os valores , e eles serão automaticamente subtraidos")
-         escreval ()
-         escreval ("para finalizar, pressione '='.")
-         repete <- 1
-         enquanto repete = 1 faca
-            escreval()
-            escreva ("Valor: ")
-            // Atribui o valor inserido a variável 'valorString'
-            leia (valorAcumulado)
-
-            repita
-               // Pede para o usuário inserir um valor
-               escreva ("Valor:",valorAcumulado," - ")
-               // Atribui o valor inserido a variável 'valorString'
-               leia (valorString)
-               // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
-               valorAcumuladoString <- valorAcumulado
-               // Realiza a conversão da variável caractere 'valorString' para inteiro
-               valor <- caracpnum (valorString)
-               valorAcumulado <- valorAcumulado - valor
-               // Exibe o resultado para o usuário da multiplicação para o usuário
-               escreval ("Resultado:",valorAcumulado)
-               // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
-               escreval ()
-            até valorString = "="
-
-            escreval()
-            escreval("O Resultado da subtração é: ", valorAcumulado)
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
-
-         fimenquanto
-         limpatela
-         
-      Caso 3
-
-         escreval ("========== Função Multiplicação ==========")
-         escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
-         escreval ("para finalizar, pressione '=' ou multiplique por zero.")
-         repete <- 1
-         enquanto repete = 1 faca
-
-            ESCREVAL()
-            escreval ("")
-
-            // Laço de repetição para que o usuário insira os valores para serem multiplicados
-            escreva ("Valor: ")
-            // Atribui o valor inserido a variável 'valorString'
-            leia (valorAcumulado)
-
-            repita
-               // Pede para o usuário inserir um valor
-               escreva ("Valor:",valorAcumulado," * ")
-               // Atribui o valor inserido a variável 'valorString'
-               leia (valorString)
-               se (valorString = "=") ou (valorString = "0") entao
-                  escreval ("O Resultado é:", valorAcumulado)
-                  interrompa
-               fimse
-               // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
-               valorAcumuladoString <- valorAcumulado
-               // Realiza a conversão da variável caractere 'valorString' para inteiro
-               valor <- caracpnum (valorString)
-               valorAcumulado <- valorAcumulado * valor
-               // Exibe o resultado para o usuário da multiplicação para o usuário
-               escreval ("Resultado:",valorAcumulado)
-               // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
-               escreval ()
-            até (valorString = "=") ou (valorString = "0")
-
-            escreval()
-            escreval("O Resultado da multiplicação é: ", valorAcumulado)
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
-
-         fimenquanto
-         limpatela
-         
-      Caso 4
-      
          repete <- 1
          enquanto repete = 1 faça
-
-            escreval ("========== Função Divisão ==========")
-            ESCREVAL()
-            escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
-            escreval ("para finalizar, pressione '=' ou divida por zero.")
-            escreval ("")
-
-            // Laço de repetição para que o usuário insira os valores para serem multiplicados
-            escreva ("Valor: ")
-            // Atribui o valor inserido a variável 'valorString'
-            leia (valorAcumulado)
-
-            repita
-               // Pede para o usuário inserir um valor
-               escreva ("Valor:", valorAcumulado, " / ")
-               // Atribui o valor inserido a variável 'valorString'
-               leia (valorString)
-
-               // condições para finalizar a operação, se utilizar "=" ou dividir por zero
-               se (valorString = "=") ou (valorString = "0")entao
-                  interrompa
-               fimse
-               // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
-
-               se valorString <> "1" entao
-                  valorAcumuladoString <- valorAcumulado
-                  // Realiza a conversão da variável caractere 'valorString' para inteiro
-                  valor <- caracpnum (valorString)
-                  valorAcumulado <- valorAcumulado / valor
-                  // Exibe o resultado para o usuário da multiplicação para o usuário
-                  escreval ("Resultado:",valorAcumulado)
-                  // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
-                  escreval ()
-               fimse
-            até valorString = "="
-
-            escreval()
-            escreval("O Resultado da divisão é: ", valorAcumulado)
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
-
-         fimenquanto
-         limpatela
-
-      Caso 5
-
-         escreval ("========== Função Fatorial ==========")
-         repete <- 1
-         enquanto repete = 1 faça
-
-
+            limpatela
+            escreval ("========== Função Fatorial ==========")
             escreva("Insira um valor: ")
             leia(valor)
             fatorial <- valor-1
@@ -282,30 +259,28 @@ Inicio
                escreval("=============================================================")
                escreval()
                escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
+               escreval("[1] Sim")
+               escreval("[2] Não")
                escreva("Resposta: ")
                leia(repete)
             ate (repete = 1) ou (repete = 2)
 
          fimenquanto
          limpatela
-         
-      Caso 6
 
-         escreval ("========== FUNCAO DE SEGUNDO GRAU ==========")
-         //a precisão define a quantidade de casas decimais que a raiz sera decomposta
-         precisao <- 0.000001
+      Caso 3
 
-         // laço de repetição para a opção de fazer novamente
          repete <- 1
          enquanto repete = 1 faca
             limpatela
+            escreval ("========== FUNCAO DE SEGUNDO GRAU ==========")
+            //a precisão define a quantidade de casas decimais que a raiz sera decomposta
+            precisao <- 0.000001
 
-            //mensagem para o usuario identificar os valores
-            escreval ("Calculo de função do segundo grau!")
+            // laço de repetição para a opção de fazer novamente
             escreval ()
             escreval ("identifique os valores da função:")
+            escreval ()
             escreval ("f(x) = A.x^2 + B.x + C ")
             escreval ()
 
@@ -362,16 +337,16 @@ Inicio
                escreval("=============================================================")
                escreval()
                escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
+               escreval("[1] Sim")
+               escreval("[2] Não")
                escreva("Resposta: ")
                leia(repete)
             ate (repete = 1) ou (repete = 2)
 
          fimenquanto
          limpatela
-         
-      Caso 7
+
+      Caso 4
 
          repete <- 1
          enquanto repete = 1 faça
@@ -380,9 +355,9 @@ Inicio
                escreval ("======= CONVERSAO DE BASE NUMERICA: B10 X B2 / B2 X B10 =======")
                escreval("")
                escreval("Qual função deseja utilizar?")
-               escreval("1 <- Decimal para Binario")
-               escreval("2 <- Binario para Decimal")
-               escreval("3 <- Voltar ao Menu")
+               escreval("[1] Decimal para Binario")
+               escreval("[2] Binario para Decimal")
+               escreval("[3] Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
                leia(fun)
@@ -478,16 +453,16 @@ Inicio
                escreval("=============================================================")
                escreval()
                escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
+               escreval("[1] Sim")
+               escreval("[2] Não")
                escreva("Resposta: ")
                leia(repete)
             ate (repete = 1) ou (repete = 2)
 
          fimenquanto
          limpatela
-         
-      Caso 8
+
+      Caso 5
 
          repete <- 1
          enquanto repete = 1 faca
@@ -497,9 +472,9 @@ Inicio
                escreval ("======= CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2 =======")
                escreval("")
                escreval("Qual função deseja utilizar?")
-               escreval("1 <- Binario para Octal")
-               escreval("2 <- Octal para Binário")
-               escreval("3 <-  Voltar ao Menu")
+               escreval("[1] Binario para Octal")
+               escreval("[2] Octal para Binário")
+               escreval("[3]  Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
                leia(fun)
@@ -651,28 +626,30 @@ Inicio
                escreval("=============================================================")
                escreval()
                escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
+               escreval("[1] Sim")
+               escreval("[2] Não")
                escreva("Resposta: ")
                leia(repete)
             ate (repete = 1) ou (repete = 2)
 
          fimenquanto
          limpatela
-         
-      Caso 9
+
+      Caso 6
+
 
          repete <- 1
          enquanto repete = 1 faça
 
+            limpatela
             repita
                limpatela
                escreval ("======= CONVERSAO DE BASE NUMERICA: B2 X B16 / B16 X B2 =======")
                escreval("")
                escreval("Qual função deseja utilizar?")
-               escreval("1 <- Binario para Hexadecimal")
-               escreval("2 <- Hexadecimal para Binário")
-               escreval("3 <- Voltar ao Menu")
+               escreval("[1] Binario para Hexadecimal")
+               escreval("[2] Hexadecimal para Binário")
+               escreval("[3] Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
                leia(fun)
@@ -821,8 +798,8 @@ Inicio
                escreval("=============================================================")
                escreval()
                escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
+               escreval("[1] Sim")
+               escreval("[2] Não")
                escreva("Resposta: ")
                leia(repete)
             ate (repete = 1) ou (repete = 2)
@@ -830,7 +807,7 @@ Inicio
          fimenquanto
          limpatela
 
-      Caso 10
+      Caso 7
 
          repete <- 1
          enquanto repete = 1 faca
@@ -852,8 +829,8 @@ Inicio
                escreval("=============================================================")
                escreval()
                escreval("Deseja realizar a operação novamente? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
+               escreval("[1] Sim")
+               escreval("[2] Não")
                escreva("Resposta: ")
                leia(repete)
             ate (repete = 1) ou (repete = 2)
@@ -861,7 +838,7 @@ Inicio
          fimenquanto
          limpatela
 
-      Caso 11
+      Caso 8
 
          repete <- 1
          enquanto repete = 1 faca
@@ -869,9 +846,9 @@ Inicio
                escreval ("======= CÁLCULO DE JUROS =======")
                escreval("")
                escreval("Qual função deseja utilizar?")
-               escreval("1 <- Juros Simples")
-               escreval("2 <- Juros Compostos")
-               escreval("3 <- Voltar ao Menu")
+               escreval("[1] Juros Simples")
+               escreval("[2] Juros Compostos")
+               escreval("[3] Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
                leia(fun)
@@ -883,6 +860,7 @@ Inicio
             fimse
 
             se fun = 1 entao
+            limpatela
                escreval("========== CALCULO DE JUROS SIMPLES ==========")
 
                escreva("Digite o valor inicial do emprestimo ou investimento: ")
@@ -902,7 +880,7 @@ Inicio
             fimse
 
             se fun = 2 entao
-
+               limpatela
                escreval ("Insira o valor do emprestimo ou investimento: ")
                leia (valor)
                escreval ()
@@ -927,8 +905,8 @@ Inicio
                escreval("=============================================================")
                escreval()
                escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
+               escreval("[1]Sim")
+               escreval("[2] Não")
                escreva("Resposta: ")
                leia(repete)
             ate (repete = 1) ou (repete = 2)
@@ -936,7 +914,7 @@ Inicio
          fimenquanto
          limpatela
 
-      caso 12
+      caso 9
 
          interrompa
 
