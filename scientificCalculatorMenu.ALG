@@ -33,6 +33,19 @@ Var
    taxa, juros, montante: real
    temp: inteiro
 
+Procedimento Repetir()
+Inicio
+   repita
+      escreval("=============================================================")
+      escreval()
+      escreval("Deseja calcular outro valor? ")
+      escreval("1 <- Sim")
+      escreval("2 <- Não")
+      escreva("Resposta: ")
+      leia(repete)
+   ate (repete = 1) ou (repete = 2)
+Fimprocedimento
+
 Inicio
 
    repita
@@ -96,15 +109,7 @@ Inicio
 
             escreval()
             escreval("O Resultado da soma é: ", valorAcumulado)
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
@@ -140,19 +145,11 @@ Inicio
 
             escreval()
             escreval("O Resultado da subtração é: ", valorAcumulado)
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
-         
+
       Caso 3
 
          escreval ("========== Função Multiplicação ==========")
@@ -191,21 +188,13 @@ Inicio
 
             escreval()
             escreval("O Resultado da multiplicação é: ", valorAcumulado)
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
-         
+
       Caso 4
-      
+
          repete <- 1
          enquanto repete = 1 faça
 
@@ -246,15 +235,7 @@ Inicio
 
             escreval()
             escreval("O Resultado da divisão é: ", valorAcumulado)
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
@@ -278,19 +259,11 @@ Inicio
             escreval()
             escreval("O Resultado do fatorial é: ", valor)
             escreval()
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
-         
+
       Caso 6
 
          escreval ("========== FUNCAO DE SEGUNDO GRAU ==========")
@@ -358,19 +331,11 @@ Inicio
 
             //opção do usuário para fazer a operação novamente
 
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
-         
+
       Caso 7
 
          repete <- 1
@@ -474,19 +439,11 @@ Inicio
                escreval("")
             fimse
 
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
-         
+
       Caso 8
 
          repete <- 1
@@ -647,19 +604,11 @@ Inicio
 
             fimse
 
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
-         
+
       Caso 9
 
          repete <- 1
@@ -817,15 +766,7 @@ Inicio
             fimse
 
             escreval
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
@@ -848,15 +789,7 @@ Inicio
             escreval("A concatenação das duas strings é:")
             escreval (concat)
             escreval
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja realizar a operação novamente? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
@@ -921,18 +854,10 @@ Inicio
                escreval ("Total em Juros: R$", juros:8:2)
 
             fimse
-
             escreval ()
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("1 <- Sim")
-               escreval("2 <- Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
             limpatela
+            
          fimenquanto
          limpatela
 
