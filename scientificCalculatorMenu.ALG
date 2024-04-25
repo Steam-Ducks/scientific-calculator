@@ -15,7 +15,7 @@ Var
 
    // Variaveis para a operação de função do segundo grau
 
-   valorA, valorB, valorC, delta, raizDelta, raizFun1, raizFun2: real
+   valorA, valorB, valorC, delta, raizDelta, raizquadrada, raizFun1, raizFun2: real
    raiz, numRaiz, precisao: real
 
    //Variaveis utilizadas nas conversoes numericas
@@ -32,6 +32,45 @@ Var
    //Variaveis utilizadas no calculo de Juros
    taxa, juros, montante: real
    temp: inteiro
+
+Procedimento Repetir()
+Inicio
+
+   repita
+      escreval("=============================================================")
+      escreval()
+      escreval("Deseja calcular outro valor? ")
+      escreval("[1] Sim")
+      escreval("[2] Não")
+      escreva("Resposta: ")
+      leia(repete)
+   ate (repete = 1) ou (repete = 2)
+
+Fimprocedimento
+
+Funcao RaizQuad (R: real):real
+Inicio
+   //a precisão define a quantidade de casas decimais que a raiz sera decomposta
+   precisao <- 0.000001
+   //para calcular a raiz quadrada utilizamos o método de média aproimada
+   //para começar decompomos a raiz por 2
+   raiz <- R / 2
+
+   //procedimento de decomposição da raiz
+   enquanto raiz > precisao faca
+      numRaiz <- (raiz + R / raiz) / 2
+      se (raiz - numRaiz) < precisao então
+         raiz <- numRaiz
+         //assim que a raiz for decomposta até a casa decimal definida
+         //precisão, interrompemos o processo
+         interrompa
+      fimse
+      //definimos o valor de raiz de delta!
+      raiz <- numRaiz
+      raizquadrada  <- raiz
+      Retorne raizquadrada
+   fimenquanto
+FimFuncao
 
 Inicio
 
@@ -224,15 +263,7 @@ Inicio
                escreval("O Resultado da divisão é: ", valorAcumulado)
 
             fimescolha
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("[1] Sim")
-               escreval("[2] Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
             limpatela
          fimenquanto
          limpatela
@@ -274,8 +305,8 @@ Inicio
          enquanto repete = 1 faca
             limpatela
             escreval ("========== FUNCAO DE SEGUNDO GRAU ==========")
-            //a precisão define a quantidade de casas decimais que a raiz sera decomposta
-            precisao <- 0.000001
+
+
 
             // laço de repetição para a opção de fazer novamente
             escreval ()
@@ -304,24 +335,7 @@ Inicio
                escreval ("não existem raizes reais da função")
                escreval ()
             senão
-               //para calcular a raiz quadrada utilizamos o método de média aproimada
-               //para começar decompomos a raiz por 2
-               raiz <- delta / 2
-
-               //procedimento de decomposição da raiz
-               enquanto raiz > precisao faca
-                  numRaiz <- (raiz + delta / raiz) / 2
-                  se (raiz - numRaiz) < precisao então
-                     raiz <- numRaiz
-                     //assim que a raiz for decomposta até a casa decimal definida
-                     //precisão, interrompemos o processo
-                     interrompa
-                  fimse
-                  //definimos o valor de raiz de delta!
-                  raiz <- numRaiz
-                  raizDelta  <- raiz
-               fimenquanto
-
+               raizDelta <- RaizQuad (delta)
                raizFun1 <- ((-valorB) + (raizDelta))/(2*valorA)
                raizFun2 <- ((-valorB) - (raizDelta))/(2*valorA)
                escreval ("a raiz x' é: ", raizFun1:4:2)
@@ -333,15 +347,7 @@ Inicio
 
             //opção do usuário para fazer a operação novamente
 
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("[1] Sim")
-               escreval("[2] Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
@@ -449,15 +455,7 @@ Inicio
                escreval("")
             fimse
 
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("[1] Sim")
-               escreval("[2] Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
@@ -622,15 +620,7 @@ Inicio
 
             fimse
 
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("[1] Sim")
-               escreval("[2] Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
@@ -794,15 +784,7 @@ Inicio
             fimse
 
             escreval
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("[1] Sim")
-               escreval("[2] Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
@@ -825,15 +807,7 @@ Inicio
             escreval("A concatenação das duas strings é:")
             escreval (concat)
             escreval
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja realizar a operação novamente? ")
-               escreval("[1] Sim")
-               escreval("[2] Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
 
          fimenquanto
          limpatela
@@ -860,7 +834,7 @@ Inicio
             fimse
 
             se fun = 1 entao
-            limpatela
+               limpatela
                escreval("========== CALCULO DE JUROS SIMPLES ==========")
 
                escreva("Digite o valor inicial do emprestimo ou investimento: ")
@@ -901,15 +875,7 @@ Inicio
             fimse
 
             escreval ()
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("[1]Sim")
-               escreval("[2] Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
+            Repetir()
             limpatela
          fimenquanto
          limpatela
