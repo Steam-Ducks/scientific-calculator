@@ -16,7 +16,7 @@ Var
    // Variaveis para a operação de função do segundo grau
 
    valorA, valorB, valorC, delta, raizDelta, raizFun1, raizFun2: real
-   raiz, numRaiz, precisao: real
+   raiz, numRaiz, precisao, raizquadrada: real
 
    //Variaveis utilizadas nas conversoes numericas
 
@@ -45,6 +45,30 @@ Inicio
       leia(repete)
    ate (repete = 1) ou (repete = 2)
 Fimprocedimento
+
+Funcao RaizQuad (R: real):real
+Inicio
+   //a precisão define a quantidade de casas decimais que a raiz sera decomposta
+   precisao <- 0.000001
+   //para calcular a raiz quadrada utilizamos o método de média aproimada
+   //para começar decompomos a raiz por 2
+   raiz <- R / 2
+
+   //procedimento de decomposição da raiz
+   enquanto raiz > precisao faca
+      numRaiz <- (raiz + R / raiz) / 2
+      se (raiz - numRaiz) < precisao então
+         raiz <- numRaiz
+         //assim que a raiz for decomposta até a casa decimal definida
+         //precisão, interrompemos o processo
+         interrompa
+      fimse
+      //definimos o valor de raiz de delta!
+      raiz <- numRaiz
+      raizquadrada  <- raiz
+      Retorne raizquadrada
+   fimenquanto
+FimFuncao
 
 Inicio
 
@@ -267,8 +291,6 @@ Inicio
       Caso 6
 
          escreval ("========== FUNCAO DE SEGUNDO GRAU ==========")
-         //a precisão define a quantidade de casas decimais que a raiz sera decomposta
-         precisao <- 0.000001
 
          // laço de repetição para a opção de fazer novamente
          repete <- 1
@@ -302,24 +324,8 @@ Inicio
                escreval ("não existem raizes reais da função")
                escreval ()
             senão
-               //para calcular a raiz quadrada utilizamos o método de média aproimada
-               //para começar decompomos a raiz por 2
-               raiz <- delta / 2
 
-               //procedimento de decomposição da raiz
-               enquanto raiz > precisao faca
-                  numRaiz <- (raiz + delta / raiz) / 2
-                  se (raiz - numRaiz) < precisao então
-                     raiz <- numRaiz
-                     //assim que a raiz for decomposta até a casa decimal definida
-                     //precisão, interrompemos o processo
-                     interrompa
-                  fimse
-                  //definimos o valor de raiz de delta!
-                  raiz <- numRaiz
-                  raizDelta  <- raiz
-               fimenquanto
-
+               raizDelta <- RaizQuad(delta)
                raizFun1 <- ((-valorB) + (raizDelta))/(2*valorA)
                raizFun2 <- ((-valorB) - (raizDelta))/(2*valorA)
                escreval ("a raiz x' é: ", raizFun1:4:2)
@@ -857,7 +863,7 @@ Inicio
             escreval ()
             Repetir()
             limpatela
-            
+
          fimenquanto
          limpatela
 
