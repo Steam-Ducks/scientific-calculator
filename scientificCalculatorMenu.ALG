@@ -104,7 +104,7 @@ Inicio
          enquanto repete = 1 faca
             limpatela
             repita
-               escreval ("======= CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2 =======")
+               escreval ("======= OPERAÇÕES BÁSICAS =======")
                escreval("")
                escreval("Qual função deseja utilizar?")
                escreval("[1] ADIÇÃO")
@@ -187,7 +187,7 @@ Inicio
 
             Caso 3
 
-               escreval ("========== Função Multiplicação ==========")
+               escreval ("========== FUNÇÃO MULTIPLICAÇÃO ==========")
                escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
                escreval ("para finalizar, pressione '=' ou multiplique por zero.")
                ESCREVAL()
@@ -224,7 +224,7 @@ Inicio
             Caso 4
 
 
-               escreval ("========== Função Divisão ==========")
+               escreval ("========== FUNÇÃO DIVISÃO ==========")
                ESCREVAL()
                escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
                escreval ("para finalizar, pressione '=' ou divida por zero.")
@@ -273,7 +273,7 @@ Inicio
          repete <- 1
          enquanto repete = 1 faça
             limpatela
-            escreval ("========== Função Fatorial ==========")
+            escreval ("========== FUNÇÃO FATORIAL ==========")
             escreva("Insira um valor: ")
             leia(valor)
             fatorial <- valor-1
@@ -855,6 +855,7 @@ Inicio
 
             se fun = 2 entao
                limpatela
+               escreval("========== CALCULO DE JUROS COMPOSTOS ==========")
                escreval ("Insira o valor do emprestimo ou investimento: ")
                leia (valor)
                escreval ()
