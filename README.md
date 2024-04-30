@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Calculadora Científica - Repositório de Operações Matemáticas</h1>
-    <p>Como alunos do 1º semestre de Banco de Dados na FATEC SJC, este repositório contém implementações de diversas operações matemáticas em VisualG, com o objetivo de exercitar a lógica de programação realizando uma prévia das operações que estarão disponíveis futuramente em nosso projeto de Calculadora Cientifica.</p>
+    <h1>Calculadora Científica </h1>
+    <p>Como estudantes do 1º semestre do curso de Banco de Dados na FATEC SJC, estamos dedicados ao desenvolvimento do projeto "Calculadora Científica" neste repositório. O projeto visa oferecer implementações de uma ampla variedade de operações matemáticas, inicialmente em VisualG (Sprint 1 e Sprint 2) e em Typescript (Sprint 1 e Sprint 2).</p>
     <h2>Operações Disponíveis</h2>
     <ol>
         <li>Operações Básicas: Implementações das operações básicas de soma, multiplicação, subtração e divisão.</li>
@@ -23,7 +23,17 @@
   <img src="assets/integrantes.png" alt="Equipe e funções" width="600px" />
 </div>
 
-   <h2>Como Usar</h2>
+## Tecnologias Utilizadas
+
+![VisualG](https://img.shields.io/badge/VisualG-333333?style=for-the-badge&logo=visualstudio)
+![Git](https://img.shields.io/badge/Git-333333?style=for-the-badge&logo=git)
+![GitHub](https://img.shields.io/badge/GitHub-333333?style=for-the-badge&logo=github)
+![TypeScript](https://img.shields.io/badge/TypeScript-333333?style=for-the-badge&logo=typescript)
+![Trello](https://img.shields.io/badge/Trello-333333?style=for-the-badge&logo=trello)
+![Scrum](https://img.shields.io/badge/Scrum-333333?style=for-the-badge&logo=scrum)
+![Discord](https://img.shields.io/badge/Discord-333333?style=for-the-badge&logo=discord)
+
+## Como Usar
 <ol>
     <li>Clone o repositório:</li>
 </ol>
@@ -42,12 +52,6 @@
     <li>Envie as alterações para o repositório remoto:</li>
 </ol>
 <pre><code>git push origin main</code></pre>
-
-## Tecnologias Utilizadas
-
- ![VisualG](https://img.shields.io/badge/VisualG-333333?style=for-the-badge&logo=visualstudio)
- ![Git](https://img.shields.io/badge/Git-333333?style=for-the-badge&logo=git)
- ![GitHub](https://img.shields.io/badge/GitHub-333333?style=for-the-badge&logo=github)
 
  ## Boas práticas
 
