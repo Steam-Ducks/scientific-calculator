@@ -9,24 +9,20 @@ Var
    func, fun : inteiro
 
    //Variavel utilizada nas operações basicas, fatorial e juros
-
    valor, valorAcumulado, valorAcumuladoString, fatorial: real
    valorString: caractere
 
    // Variaveis para a operação de função do segundo grau
-
    valorA, valorB, valorC, delta, raizDelta, raizFun1, raizFun2: real
    raiz, numRaiz, precisao, raizquadrada: real
 
    //Variaveis utilizadas nas conversoes numericas
-
    binario, numero, index, potencia, numDigitos: inteiro
    algarismo, octalReal, decimal, resto: real
    letraAtual, hexadecimal, parteHexadec, binarioString, octal: caractere
    valido: logico
 
    //Variaveis utilizadas na Concatenação de Strings
-
    string1, string2, concat : caractere
 
    //Variaveis utilizadas no calculo de Juros
