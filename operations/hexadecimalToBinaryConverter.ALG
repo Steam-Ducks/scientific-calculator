@@ -40,19 +40,26 @@ Inicio
             binario <- binario + "1000"
             caso "9"
             binario <- binario + "1001"
-            caso "A"
-            binario <- binario + "1010"
-            caso "B"
-            binario <- binario + "1011"
-            caso "C"
-            binario <- binario + "1100"
-            caso "D"
-            binario <- binario + "1101"
-            caso "E"
-            binario <- binario + "1110"
-            caso "F"
-            binario <- binario + "1111"
         fimescolha
+
+        se (parte_hexadecimal = "A") ou (parte_hexadecimal = "a") entao
+            binario <- binario + "1010"
+        fimse
+        se (parte_hexadecimal = "B") ou (parte_hexadecimal = "b") entao
+            binario <- binario + "1011"
+        fimse
+        se (parte_hexadecimal = "C") ou (parte_hexadecimal = "c") entao
+            binario <- binario + "1100"
+        fimse
+        se (parte_hexadecimal = "D") ou (parte_hexadecimal = "d") entao
+            binario <- binario + "1101"
+        fimse
+        se (parte_hexadecimal = "E") ou (parte_hexadecimal = "e") entao
+            binario <- binario + "1110"
+        fimse
+        se (parte_hexadecimal = "F") ou (parte_hexadecimal = "f") entao
+            binario <- binario + "1111"
+        fimse
 
     fimpara
     // Mostra o resultado da conversao
