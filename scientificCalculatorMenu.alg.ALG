@@ -2,25 +2,19 @@ Algoritmo "CALCULADORA CIENTIFICA - STEAM DUCKS"
 
 Var
 
-   // Variavel para a opção de realizar novamente a operação
+   // Variavel para a op??o de realizar novamente a opera??o
    repete: inteiro
 
-   // Variavel que armazena a opção do menu escolhida
+   // Variavel que armazena a op??o do menu escolhida
    func, fun : inteiro
 
-   //Variavel utilizada nas operações basicas, fatorial e juros
+   //Variavel utilizada nas opera??es basicas, fatorial e juros
    valor, valorAcumulado, valorAcumuladoString, fatorial: real
    valorString: caractere
 
-   // Variaveis para a operação de função do segundo grau
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
+   // Variaveis para a opera??o de fun??o do segundo grau
    valorA, valorB, valorC, delta, raizDelta, raizFun1, raizFun2: real
    raiz, numRaiz, precisao, raizquadrada: real
-=======
-
-   valorA, valorB, valorC, delta, raizDelta, raizquadrada, raizFun1, raizFun2: real
-   raiz, numRaiz, precisao: real
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
 
    //Variaveis utilizadas nas conversoes numericas
    binario, numero, index, potencia, numDigitos: inteiro
@@ -28,7 +22,7 @@ Var
    letraAtual, hexadecimal, parteHexadec, binarioString, octal: caractere
    valido: logico
 
-   //Variaveis utilizadas na Concatenação de Strings
+   //Variaveis utilizadas na Concatena??o de Strings
    string1, string2, concat : caractere
 
    //Variaveis utilizadas no calculo de Juros
@@ -37,45 +31,32 @@ Var
 
 Procedimento Repetir()
 Inicio
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
-=======
-
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
    repita
       escreval("=============================================================")
       escreval()
       escreval("Deseja calcular outro valor? ")
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
       escreval("1 <- Sim")
-      escreval("2 <- Não")
+      escreval("2 <- Nao")
       escreva("Resposta: ")
       leia(repete)
    ate (repete = 1) ou (repete = 2)
-=======
-      escreval("[1] Sim")
-      escreval("[2] Não")
-      escreva("Resposta: ")
-      leia(repete)
-   ate (repete = 1) ou (repete = 2)
-
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
 Fimprocedimento
 
 Funcao RaizQuad (R: real):real
 Inicio
-   //a precisão define a quantidade de casas decimais que a raiz sera decomposta
+   //a precis?o define a quantidade de casas decimais que a raiz sera decomposta
    precisao <- 0.000001
-   //para calcular a raiz quadrada utilizamos o método de média aproimada
-   //para começar decompomos a raiz por 2
+   //para calcular a raiz quadrada utilizamos o m?todo de m?dia aproimada
+   //para come?ar decompomos a raiz por 2
    raiz <- R / 2
 
-   //procedimento de decomposição da raiz
+   //procedimento de decomposi??o da raiz
    enquanto raiz > precisao faca
       numRaiz <- (raiz + R / raiz) / 2
-      se (raiz - numRaiz) < precisao então
+      se (raiz - numRaiz) < precisao ent?o
          raiz <- numRaiz
-         //assim que a raiz for decomposta até a casa decimal definida
-         //precisão, interrompemos o processo
+         //assim que a raiz for decomposta at? a casa decimal definida
+         //precis?o, interrompemos o processo
          interrompa
       fimse
       //definimos o valor de raiz de delta!
@@ -89,23 +70,28 @@ Inicio
 
    repita
 
-
-      escreval(":============== CALCULADORA CIENTIFICA ==============:")
-
+      escreval("::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+      escreval("::                                                    ::")
+      escreval(":                CALCULADORA CIENTIFICA                :")
+      escreval("::                                                    ::")
+      escreval("::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
       escreval()
-      escreval("Digite a função que deseja utilizar:")
+      escreval("Digite a funcao que deseja utilizar:")
       escreval()
-      escreval(" [1] OPERAÇÕES BÁSICAS")
-      escreval(" [2] FATORIAL")
-      escreval(" [3] FUNÇÃO DE SEGUNDO GRAU")
-      escreval(" [4] CONVERSAO DE BASE NUMERICA: B10 X B2 / B2 X B10")
-      escreval(" [5] CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2")
-      escreval(" [6] CONVERSAO DE BASE NUMERICA: B2 X B16 / B16 X B2")
-      escreval(" [7] CONCATENACAO DE STRINGS")
-      escreval(" [8] CALCULO DE JUROS ")
-      escreval(" [9] SAIR")
+      escreval(" 1 <- SOMA")
+      escreval(" 2 <- SUBTRACAO")
+      escreval(" 3 <- MULTIPLICACAO")
+      escreval(" 4 <- DIVISAO")
+      escreval(" 5 <- FATORIAL")
+      escreval(" 6 <- FUNCAO DE SEGUNDO GRAU")
+      escreval(" 7 <- CONVERSAO DE BASE NUMERICA: B10 X B2 / B2 X B10")
+      escreval(" 8 <- CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2")
+      escreval(" 9 <- CONVERSAO DE BASE NUMERICA: B2 X B16 / B16 X B2")
+      escreval("10 <- CONCATENACAO DE STRINGS")
+      escreval("11 <- CALCULO DE JUROS ")
+      escreval("12 <- SAIR")
       escreval()
-      escreva("RESPOSTA: ")
+      escreva("Opção desejada: ")
       leia(func)
 
       limpatela
@@ -113,214 +99,72 @@ Inicio
       escolha func
 
       Caso 1
-         repete <- 1
-         enquanto repete = 1 faca
-            limpatela
-            repita
-               escreval ("======= OPERAÇÕES BÁSICAS =======")
-               escreval("")
-               escreval("Qual função deseja utilizar?")
-               escreval("[1] ADIÇÃO")
-               escreval("[2] SUBTRAÇÃO")
-               escreval("[3] MULTIPLICAÇÃO")
-               escreval("[4] DIVISÃO")
-               escreval("[5] VOLTAR AO MENU")
-               escreval("")
-               escreva("Digite a sua resposta: ")
-               leia(fun)
-            ate (fun = 1) ou (fun = 2) ou (fun = 3) ou (fun = 4) ou (fun = 5)
-            limpatela
 
-            escolha fun
-
-            Caso 5
-
-               limpatela
-               interrompa
-
-            Caso 1
-
-               escreval("========== FUNÇÃO SOMA ==========")
-               escreval ("Insira os valores , e eles serão automaticamente somados")
-               escreval ()
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
-            até valorString = "="
-
-            escreval()
-            escreval("O Resultado da soma é: ", valorAcumulado)
-            Repetir()
-=======
-               escreval ("para finalizar, pressione '='.")
-               escreval()
-               escreva ("Valor: ")
-               // Atribui o valor inserido a variável 'valorString'
-               leia (valorAcumulado)
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
-
-               repita
-                  // Pede para o usuário inserir um valor
-                  escreva ("Valor:", valorAcumulado," + ")
-                  // Atribui o valor inserido a variável 'valorString'
-                  leia (valorString)
-                  // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
-                  valorAcumuladoString <- valorAcumulado
-                  // Realiza a conversão da variável caractere 'valorString' para inteiro
-                  valor <- caracpnum (valorString)
-                  valorAcumulado <- valorAcumulado + valor
-                  // Exibe o resultado para o usuário da multiplicação para o usuário
-                  escreval ("Resultado:",valorAcumulado)
-                  // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
-                  escreval ()
-               até valorString = "="
-               escreval()
-               escreval("O Resultado da soma é: ", valorAcumulado)
-
-            Caso 2
-
-               escreval("========== FUNÇÃO SUBTRAÇÃO ==========")
-               escreval ("Insira os valores , e eles serão automaticamente subtraidos")
-               escreval ()
-               escreval ("para finalizar, pressione '='.")
-               escreval()
-               escreva ("Valor: ")
-               // Atribui o valor inserido a variável 'valorString'
-               leia (valorAcumulado)
-
-               repita
-                  // Pede para o usuário inserir um valor
-                  escreva ("Valor:",valorAcumulado," - ")
-                  // Atribui o valor inserido a variável 'valorString'
-                  leia (valorString)
-                  // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
-                  valorAcumuladoString <- valorAcumulado
-                  // Realiza a conversão da variável caractere 'valorString' para inteiro
-                  valor <- caracpnum (valorString)
-                  valorAcumulado <- valorAcumulado - valor
-                  // Exibe o resultado para o usuário da multiplicação para o usuário
-                  escreval ("Resultado:",valorAcumulado)
-                  // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
-                  escreval ()
-               até valorString = "="
-
-               escreval()
-               escreval("O Resultado da subtração é: ", valorAcumulado)
-
-
-            Caso 3
-
-               escreval ("========== FUNÇÃO MULTIPLICAÇÃO ==========")
-               escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
-               escreval ("para finalizar, pressione '=' ou multiplique por zero.")
-               ESCREVAL()
-               escreval ("")
-
-               // Laço de repetição para que o usuário insira os valores para serem multiplicados
-               escreva ("Valor: ")
-               // Atribui o valor inserido a variável 'valorString'
-               leia (valorAcumulado)
-
-               repita
-                  // Pede para o usuário inserir um valor
-                  escreva ("Valor:",valorAcumulado," * ")
-                  // Atribui o valor inserido a variável 'valorString'
-                  leia (valorString)
-                  se (valorString = "=") ou (valorString = "0") entao
-                     escreval ("O Resultado é:", valorAcumulado)
-                     interrompa
-                  fimse
-                  // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
-                  valorAcumuladoString <- valorAcumulado
-                  // Realiza a conversão da variável caractere 'valorString' para inteiro
-                  valor <- caracpnum (valorString)
-                  valorAcumulado <- valorAcumulado * valor
-                  // Exibe o resultado para o usuário da multiplicação para o usuário
-                  escreval ("Resultado:",valorAcumulado)
-                  // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
-                  escreval ()
-               até (valorString = "=") ou (valorString = "0")
-
-               escreval()
-               escreval("O Resultado da multiplicação é: ", valorAcumulado)
-
-            Caso 4
-
-
-               escreval ("========== FUNÇÃO DIVISÃO ==========")
-               ESCREVAL()
-               escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
-               escreval ("para finalizar, pressione '=' ou divida por zero.")
-               escreval ("")
-
-               // Laço de repetição para que o usuário insira os valores para serem multiplicados
-               escreva ("Valor: ")
-               // Atribui o valor inserido a variável 'valorString'
-               leia (valorAcumulado)
-
-               repita
-                  // Pede para o usuário inserir um valor
-                  escreva ("Valor:", valorAcumulado, " / ")
-                  // Atribui o valor inserido a variável 'valorString'
-                  leia (valorString)
-
-                  // condições para finalizar a operação, se utilizar "=" ou dividir por zero
-                  se (valorString = "=") ou (valorString = "0")entao
-                     interrompa
-                  fimse
-                  // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
-
-                  se valorString <> "1" entao
-                     valorAcumuladoString <- valorAcumulado
-                     // Realiza a conversão da variável caractere 'valorString' para inteiro
-                     valor <- caracpnum (valorString)
-                     valorAcumulado <- valorAcumulado / valor
-                     // Exibe o resultado para o usuário da multiplicação para o usuário
-                     escreval ("Resultado:",valorAcumulado)
-                     // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
-                     escreval ()
-                  fimse
-               até valorString = "="
-
-               escreval()
-               escreval("O Resultado da divisão é: ", valorAcumulado)
-
-            fimescolha
-            Repetir()
-            limpatela
-         fimenquanto
-         limpatela
-
-      Caso 2
-
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
-         escreval("========== FUNÇÃO SUBTRAÇÃO ==========")
-         escreval ("Insira os valores , e eles serão automaticamente subtraidos")
+         escreval("========== FUNCAO SOMA ==========")
+         escreval ("Insira os valores , e eles serao automaticamente somados")
          escreval ()
          escreval ("para finalizar, pressione '='.")
          repete <- 1
          enquanto repete = 1 faca
             escreval()
             escreva ("Valor: ")
-            // Atribui o valor inserido a variável 'valorString'
+            // Atribui o valor inserido a vari?vel 'valorString'
             leia (valorAcumulado)
 
             repita
-               // Pede para o usuário inserir um valor
-               escreva ("Valor:",valorAcumulado," - ")
-               // Atribui o valor inserido a variável 'valorString'
+               // Pede para o usu?rio inserir um valor
+               escreva ("Valor:", valorAcumulado," + ")
+               // Atribui o valor inserido a vari?vel 'valorString'
                leia (valorString)
-               // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
+               // Define o valor da vari?vel 'valorAcumuladoString' como 'valorAcumulado'
                valorAcumuladoString <- valorAcumulado
-               // Realiza a conversão da variável caractere 'valorString' para inteiro
+               // Realiza a convers?o da vari?vel caractere 'valorString' para inteiro
                valor <- caracpnum (valorString)
-               valorAcumulado <- valorAcumulado - valor
-               // Exibe o resultado para o usuário da multiplicação para o usuário
+               valorAcumulado <- valorAcumulado + valor
+               // Exibe o resultado para o usu?rio da multiplica??o para o usu?rio
                escreval ("Resultado:",valorAcumulado)
-               // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
+               // Condi??o para que quando o usu?rio pressionar '=' o programa ir? finalizar e exibir o resultado da multiplica??o
                escreval ()
-            até valorString = "="
+            ate valorString = "="
 
             escreval()
-            escreval("O Resultado da subtração é: ", valorAcumulado)
+            escreval("O Resultado da soma : ", valorAcumulado)
+            Repetir()
+
+         fimenquanto
+         limpatela
+
+      Caso 2
+
+         escreval("========== FUNCAO SUBTRACAO ==========")
+         escreval ("Insira os valores , e eles serao automaticamente subtraídos")
+         escreval ()
+         escreval ("para finalizar, pressione '='.")
+         repete <- 1
+         enquanto repete = 1 faca
+            escreval()
+            escreva ("Valor: ")
+            // Atribui o valor inserido a vari?vel 'valorString'
+            leia (valorAcumulado)
+
+            repita
+               // Pede para o usu?rio inserir um valor
+               escreva ("Valor:",valorAcumulado," - ")
+               // Atribui o valor inserido a vari?vel 'valorString'
+               leia (valorString)
+               // Define o valor da vari?vel 'valorAcumuladoString' como 'valorAcumulado'
+               valorAcumuladoString <- valorAcumulado
+               // Realiza a convers?o da vari?vel caractere 'valorString' para inteiro
+               valor <- caracpnum (valorString)
+               valorAcumulado <- valorAcumulado - valor
+               // Exibe o resultado para o usu?rio da multiplica??o para o usu?rio
+               escreval ("Resultado:",valorAcumulado)
+               // Condi??o para que quando o usu?rio pressionar '=' o programa ir? finalizar e exibir o resultado da multiplica??o
+               escreval ()
+            at? valorString = "="
+
+            escreval()
+            escreval("O Resultado da subtracao ?: ", valorAcumulado)
             Repetir()
 
          fimenquanto
@@ -328,8 +172,8 @@ Inicio
 
       Caso 3
 
-         escreval ("========== Função Multiplicação ==========")
-         escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
+         escreval ("========== FUNCAO MULTIPLICACAO ==========")
+         escreval ("Insira os valores , e eles serao automaticamente multiplicados, ")
          escreval ("para finalizar, pressione '=' ou multiplique por zero.")
          repete <- 1
          enquanto repete = 1 faca
@@ -337,33 +181,33 @@ Inicio
             ESCREVAL()
             escreval ("")
 
-            // Laço de repetição para que o usuário insira os valores para serem multiplicados
+            // La?o de repeti??o para que o usu?rio insira os valores para serem multiplicados
             escreva ("Valor: ")
-            // Atribui o valor inserido a variável 'valorString'
+            // Atribui o valor inserido a vari?vel 'valorString'
             leia (valorAcumulado)
 
             repita
-               // Pede para o usuário inserir um valor
+               // Pede para o usu?rio inserir um valor
                escreva ("Valor:",valorAcumulado," * ")
-               // Atribui o valor inserido a variável 'valorString'
+               // Atribui o valor inserido a vari?vel 'valorString'
                leia (valorString)
                se (valorString = "=") ou (valorString = "0") entao
-                  escreval ("O Resultado é:", valorAcumulado)
+                  escreval ("O Resultado :", valorAcumulado)
                   interrompa
                fimse
-               // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
+               // Define o valor da vari?vel 'valorAcumuladoString' como 'valorAcumulado'
                valorAcumuladoString <- valorAcumulado
-               // Realiza a conversão da variável caractere 'valorString' para inteiro
+               // Realiza a convers?o da vari?vel caractere 'valorString' para inteiro
                valor <- caracpnum (valorString)
                valorAcumulado <- valorAcumulado * valor
-               // Exibe o resultado para o usuário da multiplicação para o usuário
+               // Exibe o resultado para o usu?rio da multiplica??o para o usu?rio
                escreval ("Resultado:",valorAcumulado)
-               // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
+               // Condi??o para que quando o usu?rio pressionar '=' o programa ir? finalizar e exibir o resultado da multiplica??o
                escreval ()
-            até (valorString = "=") ou (valorString = "0")
+            at? (valorString = "=") ou (valorString = "0")
 
             escreval()
-            escreval("O Resultado da multiplicação é: ", valorAcumulado)
+            escreval("O Resultado da multiplicacao: ", valorAcumulado)
             Repetir()
 
          fimenquanto
@@ -372,45 +216,45 @@ Inicio
       Caso 4
 
          repete <- 1
-         enquanto repete = 1 faça
+         enquanto repete = 1 fa?a
 
-            escreval ("========== Função Divisão ==========")
+            escreval ("========== FUNCAO DIVISAO ==========")
             ESCREVAL()
-            escreval ("Insira os valores , e eles serão automaticamente multiplicados, ")
+            escreval ("Insira os valores , e eles ser?o automaticamente multiplicados, ")
             escreval ("para finalizar, pressione '=' ou divida por zero.")
             escreval ("")
 
-            // Laço de repetição para que o usuário insira os valores para serem multiplicados
+            // La?o de repeti??o para que o usu?rio insira os valores para serem multiplicados
             escreva ("Valor: ")
-            // Atribui o valor inserido a variável 'valorString'
+            // Atribui o valor inserido a vari?vel 'valorString'
             leia (valorAcumulado)
 
             repita
-               // Pede para o usuário inserir um valor
+               // Pede para o usu?rio inserir um valor
                escreva ("Valor:", valorAcumulado, " / ")
-               // Atribui o valor inserido a variável 'valorString'
+               // Atribui o valor inserido a vari?vel 'valorString'
                leia (valorString)
 
-               // condições para finalizar a operação, se utilizar "=" ou dividir por zero
+               // condi??es para finalizar a opera??o, se utilizar "=" ou dividir por zero
                se (valorString = "=") ou (valorString = "0")entao
                   interrompa
                fimse
-               // Define o valor da variável 'valorAcumuladoString' como 'valorAcumulado'
+               // Define o valor da vari?vel 'valorAcumuladoString' como 'valorAcumulado'
 
                se valorString <> "1" entao
                   valorAcumuladoString <- valorAcumulado
-                  // Realiza a conversão da variável caractere 'valorString' para inteiro
+                  // Realiza a convers?o da vari?vel caractere 'valorString' para inteiro
                   valor <- caracpnum (valorString)
                   valorAcumulado <- valorAcumulado / valor
-                  // Exibe o resultado para o usuário da multiplicação para o usuário
+                  // Exibe o resultado para o usu?rio da multiplica??o para o usu?rio
                   escreval ("Resultado:",valorAcumulado)
-                  // Condição para que quando o usuário pressionar '=' o programa irá finalizar e exibir o resultado da multiplicação
+                  // Condi??o para que quando o usu?rio pressionar '=' o programa ir? finalizar e exibir o resultado da multiplica??o
                   escreval ()
                fimse
-            até valorString = "="
+            ate valorString = "="
 
             escreval()
-            escreval("O Resultado da divisão é: ", valorAcumulado)
+            escreval("O Resultado da divisao ?: ", valorAcumulado)
             Repetir()
 
          fimenquanto
@@ -418,17 +262,11 @@ Inicio
 
       Caso 5
 
-         escreval ("========== Função Fatorial ==========")
+         escreval ("========== FUNCAO FATORIAL ==========")
          repete <- 1
-         enquanto repete = 1 faça
+         enquanto repete = 1 faca
 
 
-=======
-         repete <- 1
-         enquanto repete = 1 faça
-            limpatela
-            escreval ("========== FUNÇÃO FATORIAL ==========")
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
             escreva("Insira um valor: ")
             leia(valor)
             fatorial <- valor-1
@@ -439,9 +277,8 @@ Inicio
             ate (fatorial <= 1)
 
             escreval()
-            escreval("O Resultado do fatorial é: ", valor)
+            escreval("O Resultado do fatorial: ", valor)
             escreval()
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
             Repetir()
 
          fimenquanto
@@ -450,38 +287,20 @@ Inicio
       Caso 6
 
          escreval ("========== FUNCAO DE SEGUNDO GRAU ==========")
-=======
-            repita
-               escreval("=============================================================")
-               escreval()
-               escreval("Deseja calcular outro valor? ")
-               escreval("[1] Sim")
-               escreval("[2] Não")
-               escreva("Resposta: ")
-               leia(repete)
-            ate (repete = 1) ou (repete = 2)
 
-         fimenquanto
-         limpatela
-
-      Caso 3
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
-
+         // la?o de repeti??o para a op??o de fazer novamente
          repete <- 1
          enquanto repete = 1 faca
             limpatela
-            escreval ("========== FUNCAO DE SEGUNDO GRAU ==========")
 
-
-
-            // laço de repetição para a opção de fazer novamente
+            //mensagem para o usuario identificar os valores
+            escreval ("Calculo de funcao do segundo grau!")
             escreval ()
-            escreval ("identifique os valores da função:")
-            escreval ()
+            escreval ("identifique os valores da funcao:")
             escreval ("f(x) = A.x^2 + B.x + C ")
             escreval ()
 
-            //entrada dos valores da função
+            //entrada dos valores da fun??o
             escreval ("-----------------------------------")
             escreva ("entre com o valor de A: ")
             leia (valorA)
@@ -494,51 +313,43 @@ Inicio
             //calculo do valor de delta
             delta <- (valorB*valorB)-4*valorA*valorC
             escreval()
-            escreval("o valor de delta é: ",delta)
+            escreval("o valor de delta : ",delta)
 
-            //calculo das raizes da função
-            se delta < 0 então
-               escreval ("não existem raizes reais da função")
+            //calculo das raizes da fun??o
+            se delta < 0 ent?o
+               escreval ("nao existem raizes reais da funcao")
                escreval ()
-            senão
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
+            sen?o
 
                raizDelta <- RaizQuad(delta)
-=======
-               raizDelta <- RaizQuad (delta)
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
                raizFun1 <- ((-valorB) + (raizDelta))/(2*valorA)
                raizFun2 <- ((-valorB) - (raizDelta))/(2*valorA)
-               escreval ("a raiz x' é: ", raizFun1:4:2)
+               escreval ("a raiz x' ?: ", raizFun1:4:2)
                escreval ()
-               escreval ("a raiz x'' é: ", raizFun2:4:2)
+               escreval ("a raiz x'' ?: ", raizFun2:4:2)
                escreval ()
 
             fimse
 
-            //opção do usuário para fazer a operação novamente
+            //opcao do usu?rio para fazer a operacao novamente
 
             Repetir()
 
          fimenquanto
          limpatela
 
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
       Caso 7
-=======
-      Caso 4
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
 
          repete <- 1
-         enquanto repete = 1 faça
+         enquanto repete = 1 faca
             limpatela
             repita
                escreval ("======= CONVERSAO DE BASE NUMERICA: B10 X B2 / B2 X B10 =======")
                escreval("")
-               escreval("Qual função deseja utilizar?")
-               escreval("[1] Decimal para Binario")
-               escreval("[2] Binario para Decimal")
-               escreval("[3] Voltar ao Menu")
+               escreval("Qual fun??o deseja utilizar?")
+               escreval("1 <- Decimal para Binario")
+               escreval("2 <- Binario para Decimal")
+               escreval("3 <- Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
                leia(fun)
@@ -565,13 +376,13 @@ Inicio
                   enquanto (numero > 0) faca
                      //Salvamos o resto da divisao por 2
                      resto <- numero MOD 2
-                     //adicionamos o 1 ou 0 ao binÃ¡rio
+                     //adicionamos o 1 ou 0 ao binário
                      binarioString <- Numpcarac(resto) + binarioString
                      //dividimos o numero por 2
                      numero <- numero div 2
                   fimenquanto
                fimse
-               //Ao fim do loop teremos uma sequencia de 1s e 0s que representa a conversÃ£o do nÃºmero inicial
+               //Ao fim do loop teremos uma sequencia de 1s e 0s que representa a conversão do número inicial
                escreval("Numero convertido: ", binarioString)
                escreval("")
             fimse
@@ -584,7 +395,7 @@ Inicio
 
                // Validar input ----------------------------------------------------------------------------------------------
 
-               // Input comeca como invalido é perguntado repetidademente até que um input valido seja fornecido
+               // Input comeca como invalido ? perguntado repetidademente at? que um input valido seja fornecido
                enquanto valido = falso faca
 
                   escreval("===== Conversor Binario -> Decimal =====")
@@ -609,24 +420,24 @@ Inicio
 
                // converter base -----------------------------------------------------------------------------------------------
 
-               // Começamos pelo ultimo numero binario.
+               // Come?amos pelo ultimo numero binario.
                // Compr() retorna o tamanho de um texto.
                // Subtraimos 1 para que o numero nao ultrapasse o indice do texto.
                para index <- compr(binarioString) ate 1 passo -1 faca
 
-                  // Quando o caractere atual for '1', somamos ele elevado Ã  potÃªncia atual.
+                  // Quando o caractere atual for '1', somamos ele elevado à potência atual.
                   se  copia(binarioString, index, 1) = "1" entao
                      decimal <- int(decimal + (2 ^ potencia))
                   fimse
 
-                  // Aumentamos em 1 a potÃªncia para utilizar na prÃ³xima iteraÃ§Ã£o do loop.
+                  // Aumentamos em 1 a potência para utilizar na próxima iteração do loop.
                   potencia <- potencia + 1
                fimpara
 
-               // Ao fim do loop, teremos todos os nÃºmeros somados na variÃ¡vel 'decimal',
-               // que irÃ¡ representar corretamente a conversÃ£o.
+               // Ao fim do loop, teremos todos os números somados na variável 'decimal',
+               // que irá representar corretamente a conversão.
 
-               escreval("O numero decimal é: ", decimal)
+               escreval("O numero decimal ?: ", decimal)
                escreval("")
             fimse
 
@@ -635,11 +446,7 @@ Inicio
          fimenquanto
          limpatela
 
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
       Caso 8
-=======
-      Caso 5
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
 
          repete <- 1
          enquanto repete = 1 faca
@@ -648,10 +455,10 @@ Inicio
             repita
                escreval ("======= CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2 =======")
                escreval("")
-               escreval("Qual função deseja utilizar?")
-               escreval("[1] Binario para Octal")
-               escreval("[2] Octal para Binário")
-               escreval("[3]  Voltar ao Menu")
+               escreval("Qual fun??o deseja utilizar?")
+               escreval("1 <- Binario para Octal")
+               escreval("2 <- Octal para Bin?rio")
+               escreval("3 <-  Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
                leia(fun)
@@ -664,13 +471,13 @@ Inicio
 
             limpatela
 
-            //====================================Função 1==================================
+            //====================================Fun??o 1==================================
             se Fun = 1 entao
 
                octal <- ""
                escreval("===== Conversor Binario -> Octal =====")
                escreval("")
-               escreval("Quantos algarismos tem o numero binario que será convertido?")
+               escreval("Quantos algarismos tem o numero binario que sera convertido?")
                escreva("resposta: ")
                leia(algarismo)
                algarismo <- algarismo - 1
@@ -682,8 +489,8 @@ Inicio
 
                algarismo <- algarismo - 1
 
-               enquanto algarismo >= 0 faça
-                  escreva("Escreva o próximo algarismo: ")
+               enquanto algarismo >= 0 fa?a
+                  escreva("Escreva o proximo algarismo: ")
                   leia(numero)
                   octalReal <- octalReal + numero * 2 ^ (algarismo)
                   algarismo <- algarismo - 1
@@ -691,32 +498,32 @@ Inicio
 
                decimal <- octalReal
 
-               enquanto decimal >= 1 faça
+               enquanto decimal >= 1 fa?a
 
                   octalReal <- decimal % 8
 
-                  se octalReal = 0 então
+                  se octalReal = 0 ent?o
                      octal <- "0" + octal
                   fimse
-                  se octalReal = 1 então
+                  se octalReal = 1 ent?o
                      octal <- "1" + octal
                   fimse
-                  se octalReal = 2 então
+                  se octalReal = 2 ent?o
                      octal <- "2" + octal
                   fimse
-                  se octalReal = 3 então
+                  se octalReal = 3 ent?o
                      octal <- "3" + octal
                   fimse
-                  se octalReal = 4 então
+                  se octalReal = 4 ent?o
                      octal <- "4" + octal
                   fimse
-                  se octalReal = 5 então
+                  se octalReal = 5 ent?o
                      octal <- "5" + octal
                   fimse
-                  se octalReal = 6 então
+                  se octalReal = 6 ent?o
                      octal <- "6" + octal
                   fimse
-                  se octalReal = 7 então
+                  se octalReal = 7 ent?o
                      octal <- "7" + octal
                   fimse
 
@@ -729,7 +536,7 @@ Inicio
 
 
             fimse
-            //====================================Função 2==================================
+            //====================================Funcao 2==================================
 
             se fun = 2 entao
 
@@ -748,20 +555,20 @@ Inicio
                leia(numero)
                algarismo <- algarismo - 1
 
-               //a equação a baixo está fazendo a formula e guardando na variavel SegVal
+               //a equa??o a baixo est? fazendo a formula e guardando na variavel SegVal
 
                octalReal <- octalReal + numero * 8 ^ (algarismo)
 
-               //Para calcular o próximo digito, tiramos um numero da variavel alg pois
-               //estamos a utilizando como index das posições
+               //Para calcular o pr?ximo digito, tiramos um numero da variavel alg pois
+               //estamos a utilizando como index das posi??es
 
                algarismo <- algarismo - 1
 
-               //o laço a seguir vai repetir o calculo até que alg que é o index seja
-               //menor que 0 que é a última posição do binario
+               //o la?o a seguir vai repetir o calculo at? que alg que ? o index seja
+               //menor que 0 que ? a ?ltima posi??o do binario
 
                enquanto algarismo >= 0 faca
-                  escreva("Escreva o próximo algarismo: ")
+                  escreva("Escreva o proximo algarismo: ")
                   leia(numero)
                   octalReal <- octalReal + numero * 8 ^ (algarismo)
                   algarismo <- algarismo - 1
@@ -771,18 +578,18 @@ Inicio
 
                enquanto decimal >= 1 faca
 
-                  //O binario é a sobra dos numero dividido por dois. O simbolo de porcentagem
-                  //faz a divisão do numero por 2, porem pega o resto da operação
+                  //O binario ? a sobra dos numero dividido por dois. O simbolo de porcentagem
+                  //faz a divis?o do numero por 2, porem pega o resto da opera??o
 
                   octalReal <- decimal % 2
 
-                  //O grande problema é que o numero binario é escrito ao contrato de como ele é
-                  //calculado, então se o resultado da divizão for 0101, lemos o numero como 1010
+                  //O grande problema ? que o numero binario ? escrito ao contrato de como ele ?
+                  //calculado, ent?o se o resultado da diviz?o for 0101, lemos o numero como 1010
 
                   //Por isso, transformei as sobras em texto e fui concatenando na variavel bi
-                  //de forma que os numeros vão sendo concatenados a esquerda
+                  //de forma que os numeros v?o sendo concatenados a esquerda
 
-                  se octalReal = 0 então
+                  se octalReal = 0 entao
                      binarioString <- "0" + binarioString
                   senao
                      binarioString <- "1" + binarioString
@@ -804,25 +611,19 @@ Inicio
          fimenquanto
          limpatela
 
-<<<<<<< HEAD:scientificCalculatorMenu.alg.ALG
       Caso 9
-=======
-      Caso 6
-
->>>>>>> b8b9d4fd28514ccee40ef19b49e1a66d9bd95eef:scientificCalculatorMenu.ALG
 
          repete <- 1
-         enquanto repete = 1 faça
+         enquanto repete = 1 faca
 
-            limpatela
             repita
                limpatela
                escreval ("======= CONVERSAO DE BASE NUMERICA: B2 X B16 / B16 X B2 =======")
                escreval("")
-               escreval("Qual função deseja utilizar?")
-               escreval("[1] Binario para Hexadecimal")
-               escreval("[2] Hexadecimal para Binário")
-               escreval("[3] Voltar ao Menu")
+               escreval("Qual funcao deseja utilizar?")
+               escreval("1 <- Binario para Hexadecimal")
+               escreval("2 <- Hexadecimal para Bin?rio")
+               escreval("3 <- Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
                leia(fun)
@@ -835,7 +636,7 @@ Inicio
 
             limpatela
 
-            //====================================Função 1==================================
+            //====================================Fun??o 1==================================
             se Fun = 1 entao
                escreval("===== Conversor Binario -> Hexadecimal =====")
                escreval
@@ -850,15 +651,15 @@ Inicio
 
                numDigitos <- compr(binarioString)
 
-               // Começamos pelo ultimo digito binario.
+               // Come?amos pelo ultimo digito binario.
                para index <- numDigitos ate 1 passo -1 faca
 
-                  // Quando o caractere atual for '1', somamos ele elevado a  potencia atual.
+                  // Quando o caractere atual for '1', somamos ele elevado a? potencia atual.
                   se copia(binarioString, index, 1) = "1" entao
                      decimal <- int(decimal + (2 ^ potencia))
                   fimse
 
-                  // Incrementa a potencia para a proxima iteraçãoo.
+                  // Incrementa a potencia para a proxima itera??oo.
                   potencia <- potencia + 1
 
                   // A cada 4 digitos binarios ou no ultimo digito, convertemos para hexadecimal.
@@ -906,7 +707,7 @@ Inicio
 
                fimpara
                //Mostra o valor convertido de Binario para Hexadecimal
-               escreval("O numero binario ", binarioString, " em hexadecimal é: ", hexadecimal)
+               escreval("O numero binario ", binarioString, " em hexadecimal ?: ", hexadecimal)
             fimse
 
             se fun = 2 entao
@@ -963,7 +764,7 @@ Inicio
 
                fimpara
                // Mostra o resultado da conversao
-               escreval("O numero hexadecimal ", hexadecimal, " em binario é: ", binario)
+               escreval("O numero hexadecimal ", hexadecimal, " em binario: ", binario)
             fimse
 
             escreval
@@ -972,22 +773,22 @@ Inicio
          fimenquanto
          limpatela
 
-      Caso 7
+      Caso 10
 
          repete <- 1
          enquanto repete = 1 faca
 
-            escreval("========== CONCATENAÇÃO DE DUAS STRINGS ==========")
+            escreval("========== CONCATENACAO DE DUAS STRINGS ==========")
             escreval ()
-            escreval("Digite o conteúdo da primeira String:")
+            escreval("Digite o conteudo da primeira String:")
             leia(string1)
-            escreval("Digite o conteúdo da segunda String:")
+            escreval("Digite o conteudo da segunda String:")
             leia(string2)
 
 
             concat <- string1 + " " + string2
 
-            escreval("A concatenação das duas strings é:")
+            escreval("A concatenacao das duas strings:")
             escreval (concat)
             escreval
             Repetir()
@@ -995,17 +796,17 @@ Inicio
          fimenquanto
          limpatela
 
-      Caso 8
+      Caso 11
 
          repete <- 1
          enquanto repete = 1 faca
             repita
-               escreval ("======= CÁLCULO DE JUROS =======")
+               escreval ("======= CALCULO DE JUROS =======")
                escreval("")
-               escreval("Qual função deseja utilizar?")
-               escreval("[1] Juros Simples")
-               escreval("[2] Juros Compostos")
-               escreval("[3] Voltar ao Menu")
+               escreval("Qual funcao deseja utilizar?")
+               escreval("1 <- Juros Simples")
+               escreval("2 <- Juros Compostos")
+               escreval("3 <- Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
                leia(fun)
@@ -1017,7 +818,6 @@ Inicio
             fimse
 
             se fun = 1 entao
-               limpatela
                escreval("========== CALCULO DE JUROS SIMPLES ==========")
 
                escreva("Digite o valor inicial do emprestimo ou investimento: ")
@@ -1037,8 +837,7 @@ Inicio
             fimse
 
             se fun = 2 entao
-               limpatela
-               escreval("========== CALCULO DE JUROS COMPOSTOS ==========")
+
                escreval ("Insira o valor do emprestimo ou investimento: ")
                leia (valor)
                escreval ()
@@ -1064,14 +863,14 @@ Inicio
          fimenquanto
          limpatela
 
-      caso 9
+      caso 12
 
          interrompa
 
       Outrocaso
 
          limpatela
-         escreval ("Opção Inválida, escolha uma opção presente no menu!")
+         escreval ("Opcao Invalida, escolha uma opcao presente no menu!")
          escreval ()
 
       fimescolha
