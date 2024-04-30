@@ -17,17 +17,11 @@
         <li>Juros Simples e Juros Compostos: Implementação das operações de cálculo de juros simples e juros compostos.</li>
     </ol>
    
-   ## Integrantes 
+## Integrantes do projeto
   
-- Alexander Silva Lima 
-- Carlos Daniel Alves dos Santos
-- Isabelly de Sousa Rodrigues
-- Lucas Heck Acosta
-- Luiz Henrique Rabello Ferreira
-- Matheus Gabriel Barbosa Leite
-- Rafaella Letícia Rodrigues Cruz 
-- Samuel Vinicius Araújo do Prado
-- Theo da Rosa Smidt
+<div align="center">
+  <img src="assets/integrantes.png" alt="Equipe e funções" width="600px" />
+</div>
 
    <h2>Como Usar</h2>
 <ol>
