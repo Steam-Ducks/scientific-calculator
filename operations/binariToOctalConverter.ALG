@@ -1,108 +1,85 @@
-Algoritmo "Conversor Binario -> Octal"
-// Disciplina   : [Linguagem e Lógica de Programação]
-// Professor   : Antonio Carlos Nicolodi
-// Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 3/31/2024
+Algoritmo "Conversor Binario para Octal"
+
 Var
 
-   dec,SegVal:real
-   Fun,alg,num,i: inteiro
-   oct: caracter
+   parte_octal, binario, octal: caractere
+   num_digitos, index, Num: inteiro
+   SegVal, valPos, dec: real
 
 Inicio
 
-   // Este algaritimo vai primeiramente ler o numero binario, transforma-lo em decimal e após isso converte-lo para octal
+   // Coleta o numero biario
+   escreva("Digite um numero binario: ")
+   leia(binario)
+   num_digitos <- compr(binario)
+   valPos <- num_digitos
 
-   escreval("===== Conversor Binario -> Octal =====")
+   // Loop para percorrer cada digito octal.
+   para index <- 1 ate num_digitos faca
+      // Obtem o caractere octal atual.
+      parte_octal <- copia(binario, index, 1)
 
+      // Converte o caractere octal para inteiro.
+      escolha parte_octal
+      caso "0"
+         Num <- 0
+      caso "1"
+         Num <- 1
+      fimescolha
 
-   i <- 1
+      //Aqui seleconamos o valor da posi��o do numero binario
+      valPos <- valPos - 1
 
-   enquanto i < 2 faca
-   oct <- ""
-   SegVal <- 0
-      // Primeiramente o algoritimo vai perguntar quantos caracteres o numero binario que será convertido tem.
-      // Isso é por que para transformar um numero binario em decimal, utilizamos uma formula que utiliza a posição
-      // de cada algaritimo do numero binario para fazer a conversão
+      //E fazemos a convers�o de caracter por caracter
+      SegVal <- SegVal + Num * 2 ^ (valPos)
 
-      escreval("")
-      escreval("Quantos algarismos tem o numero binario que sera convertido?")
-      escreva("resposta: ")
-      leia(alg)
-      alg <- alg - 1
+   fimpara
 
-      // A posição de cada algarismo é informado pelo usuario e armazenado na variavel alg. As posições são contadas de 0 a n
-      // Por conta disso, a posição do último algaritimo vai ser um menor do que o total informado pelo usuario.
+   //Movemos o numero decimal para a variavel decimal
+   dec <- SegVal
 
-      // Para que a primeira vez em que o algoritimo pedir o numero, esteja escrito "Escreva o primeiro numero", o primeiro algarismo
-      // é solicitado fora do laço de repetição
-      escreva("Escreva o primeiro algarismo: ")
-      leia(Num)
+   enquanto dec >= 1 fa�a
 
-      // A formula de binario para decimal é bem simples, fazemos a soma de cada algarismo do numero decimal após multiplicar por dois elevado a posição do algarismo.
-      // Algarismo * 2 ^ posição.     A posição é contada de forma regressiva até 0, por exemplo um numero binario de 4 algarismos é contado da seguinte forma => 3210
+      //O binario � a sobra dos numero dividido por dois. O simbolo de porcentagem
+      //faz a divis�o do numero por 2, porem pega o resto da opera��o
 
-      SegVal <- SegVal + Num * 2 ^ (alg)
+      SegVal <- dec % 8
 
-      //Para calcular a proxima posição, subitraimos 1 da posição atual
-      alg <- alg - 1
+      //O grande problema � que o numero binario � escrito ao contrato de como ele �
+      //calculado, ent�o se o resultado da diviz�o for 0101, lemos o numero como 1010
 
-      // Os demais algarismos vão ser calculados dentro do laço de repetição. O laço se repete até que a posição seja menor que 0
-      enquanto alg >= 0 faca
-         escreva("Escreva o proximo algarismo: ")
-         leia(Num)
-         SegVal <- SegVal + Num * 2 ^ (alg)
-         alg <- alg - 1
-      fimenquanto
+      //Por isso, transformei as sobras em texto e fui concatenando na variavel bi
+      //de forma que os numeros v�o sendo concatenados a esquerda
 
-      // Com o numero binario traduzido para decimal, conseguimos calcular o numero octal
-
-      dec <- SegVal
-
-      //Para calcular o numero octal, basta somar os restos da divisão do numero decimal por oito
-
-      enquanto dec >= 1 faca
-
-         SegVal <- dec % 8
-
-         // O numero octal é calculado de traz para frente, então o primeiro numero a ser calculado, vai ficar a direita
-
-         se SegVal = 0 entao
-            oct <- "0" + oct
-         fimse
-         se SegVal = 1 entao
-            oct <- "1" + oct
-         fimse
-         se SegVal = 2 entao
-            oct <- "2" + oct
-         fimse
-         se SegVal = 3 entao
-            oct <- "3" + oct
-         fimse
-         se SegVal = 4 entao
-            oct <- "4" + oct
-         fimse
-         se SegVal = 5 entao
-            oct <- "5" + oct
-         fimse
-         se SegVal = 6 entao
-            oct <- "6" + oct
-         fimse
-         se SegVal = 7 entao
-            oct <- "7" + oct
-         fimse
-
-         dec <- dec / 8
-
-      fimenquanto
-
-      escreval("Numero convertido: ",oct)
-      escreval("")
-
-      Escreval ("Aperte: 1- Para SIM / 2- Para N�O ")
-      Leia (i)
+      se SegVal = 0 ent�o
+         octal <- "0" + octal
+      fimse
+      se SegVal = 1 ent�o
+         octal <- "1" + octal
+      fimse
+      se SegVal = 2 ent�o
+         octal <- "2" + octal
+      fimse
+      se SegVal = 3 ent�o
+         octal <- "3" + octal
+      fimse
+      se SegVal = 4 ent�o
+         octal <- "4" + octal
+      fimse
+      se SegVal = 5 ent�o
+         octal <- "5" + octal
+      fimse
+      se SegVal = 6 ent�o
+         octal <- "6" + octal
+      fimse
+      se SegVal = 7 ent�o
+         octal <- "7" + octal
+      fimse
       
-      fimenquanto
+      dec <- dec / 8
+   fimenquanto
+
+   escreval("Numero convertido: ",octal)
+   escreval("=========================================")
 
 Fimalgoritmo
