@@ -141,7 +141,7 @@ Inicio
             valorAcumulado <- 0
             limpatela
             escreval("========== FUNCAO SUBTRACAO ==========")
-            escreval ("Insira os valores e eles serao automaticamente subtraídos")
+            escreval ("Insira os valores e eles serao automaticamente subtrai�dos")
             escreval ()
             escreval ("Quantos numeros deseja subtrair?")
             leia (vezes)
@@ -199,7 +199,7 @@ Inicio
                      leia (valorAcumulado)
                      escreval()
                      se valorAcumulado = 0 entao
-                        escreval("TODO VALOR MULTIPLICADO POR ZERO É ZERO!!")
+                        escreval("TODO VALOR MULTIPLICADO POR ZERO NAO ZERO!!")
                      fimse
                   ate valorAcumulado <> 0
                   valor <- 1
@@ -212,7 +212,7 @@ Inicio
                      leia (valor)
                      escreval()
                      se valor = 0 entao
-                        escreval("TODO VALOR MULTIPLICADO POR ZERO É ZERO!!")
+                        escreval("TODO VALOR MULTIPLICADO POR ZERO NAO ZERO!!")
                         escreval()
                      fimse
                   ate valor <> 0
@@ -248,7 +248,7 @@ Inicio
                      leia (valorAcumulado)
                      escreval()
                      se valorAcumulado = 0 entao
-                        escreval("ZERO DIVIDIDO POR QUALQUER VALOR É IGUAL A ZERO")
+                        escreval("ZERO DIVIDIDO POR QUALQUER VALOR SE TORNA IGUAL A ZERO")
                      fimse
                   ate valorAcumulado <> 0
                   valor <- 1
@@ -261,7 +261,7 @@ Inicio
                      leia (valor)
                      escreval()
                      se valor = 0 entao
-                        escreval("É IMPOSSIVEL REALIZAR A DIVISÃO POR ZERO")
+                        escreval("NAO IMPOSSIVEL REALIZAR A DIVISAO POR ZERO")
                         escreval()
                      fimse
                   ate valor <> 0
@@ -303,7 +303,7 @@ Inicio
                ate (fatorial <= 1)
             fimse
             escreval()
-            escreval("O Resultado do fatorial de", valorFat, " é :", valor)
+            escreval("Resultado Final :", valor)
             escreval()
             Repetir()
 
