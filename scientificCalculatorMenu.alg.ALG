@@ -90,7 +90,7 @@ Inicio
       escreval("[11] CALCULO DE JUROS ")
       escreval("[12] SAIR")
       escreval()
-      escreva("OpÁ„o desejada: ")
+      escreva("Op√ß√£o desejada: ")
       leia(func)
 
       limpatela
@@ -109,7 +109,7 @@ Inicio
             escreval ("Quantos numeros deseja somar?")
             leia (vezes)
             valorAcumulado <- 0
-            para contador de 1 ate vezes faÁa
+            para contador de 1 ate vezes fa√ßa
                se valorAcumulado = 0 entao
                   escreval()
                   escreva ("Valor: ")
@@ -141,12 +141,12 @@ Inicio
             valorAcumulado <- 0
             limpatela
             escreval("========== FUNCAO SUBTRACAO ==========")
-            escreval ("Insira os valores e eles serao automaticamente subtraÌdos")
+            escreval ("Insira os valores e eles serao automaticamente subtra√≠dos")
             escreval ()
             escreval ("Quantos numeros deseja subtrair?")
             leia (vezes)
             valorAcumulado <- 0
-            para contador de 1 ate vezes faÁa
+            para contador de 1 ate vezes fa√ßa
                se (contador = vezes) e (valorAcumulado = 0) entao
                   escreval("Valor: ")
                   escreva (valorAcumulado, " - ")
@@ -190,7 +190,7 @@ Inicio
             escreval ("Quantos numeros deseja multiplicar?")
             leia (vezes)
             valorAcumulado <- 0
-            para contador de 1 ate vezes faÁa
+            para contador de 1 ate vezes fa√ßa
                se valorAcumulado = 0 entao
                   repita
                      escreval()
@@ -199,7 +199,7 @@ Inicio
                      leia (valorAcumulado)
                      escreval()
                      se valorAcumulado = 0 entao
-                        escreval("TODO VALOR MULTIPLICADO POR ZERO … ZERO!!")
+                        escreval("TODO VALOR MULTIPLICADO POR ZERO √â ZERO!!")
                      fimse
                   ate valorAcumulado <> 0
                   valor <- 1
@@ -212,7 +212,7 @@ Inicio
                      leia (valor)
                      escreval()
                      se valor = 0 entao
-                        escreval("TODO VALOR MULTIPLICADO POR ZERO … ZERO!!")
+                        escreval("TODO VALOR MULTIPLICADO POR ZERO √â ZERO!!")
                         escreval()
                      fimse
                   ate valor <> 0
@@ -239,7 +239,7 @@ Inicio
             escreval ("Quantos numeros deseja dividir?")
             leia (vezes)
             valorAcumulado <- 0
-            para contador de 1 ate vezes faÁa
+            para contador de 1 ate vezes fa√ßa
                se valorAcumulado = 0 entao
                   repita
                      escreval()
@@ -248,7 +248,7 @@ Inicio
                      leia (valorAcumulado)
                      escreval()
                      se valorAcumulado = 0 entao
-                        escreval("ZERO DIVIDIDO POR QUALQUER VALOR … IGUAL A ZERO")
+                        escreval("ZERO DIVIDIDO POR QUALQUER VALOR √â IGUAL A ZERO")
                      fimse
                   ate valorAcumulado <> 0
                   valor <- 1
@@ -261,7 +261,7 @@ Inicio
                      leia (valor)
                      escreval()
                      se valor = 0 entao
-                        escreval("… IMPOSSIVEL REALIZAR A DIVIS√O POR ZERO")
+                        escreval("√â IMPOSSIVEL REALIZAR A DIVIS√ÉO POR ZERO")
                         escreval()
                      fimse
                   ate valor <> 0
@@ -303,7 +303,7 @@ Inicio
                ate (fatorial <= 1)
             fimse
             escreval()
-            escreval("O Resultado do fatorial de", valorFat, " È :", valor)
+            escreval("O Resultado do fatorial de", valorFat, " √© :", valor)
             escreval()
             Repetir()
 
@@ -398,13 +398,13 @@ Inicio
                   enquanto (numero > 0) faca
                      //Salvamos o resto da divisao por 2
                      resto <- numero MOD 2
-                     //adicionamos o 1 ou 0 ao bin·rio
+                     //adicionamos o 1 ou 0 ao bin√°rio
                      binarioString <- Numpcarac(resto) + binarioString
                      //dividimos o numero por 2
                      numero <- numero div 2
                   fimenquanto
                fimse
-               //Ao fim do loop teremos uma sequencia de 1s e 0s que representa a convers„o do n˙mero inicial
+               //Ao fim do loop teremos uma sequencia de 1s e 0s que representa a convers√£o do n√∫mero inicial
                escreval("Numero convertido: ", binarioString)
                escreval("")
             fimse
@@ -447,17 +447,17 @@ Inicio
                // Subtraimos 1 para que o numero nao ultrapasse o indice do texto.
                para index <- compr(binarioString) ate 1 passo -1 faca
 
-                  // Quando o caractere atual for '1', somamos ele elevado ‡ potÍncia atual.
+                  // Quando o caractere atual for '1', somamos ele elevado √† pot√™ncia atual.
                   se  copia(binarioString, index, 1) = "1" entao
                      decimal <- int(decimal + (2 ^ potencia))
                   fimse
 
-                  // Aumentamos em 1 a potÍncia para utilizar na prÛxima iteraÁ„o do loop.
+                  // Aumentamos em 1 a pot√™ncia para utilizar na pr√≥xima itera√ß√£o do loop.
                   potencia <- potencia + 1
                fimpara
 
-               // Ao fim do loop, teremos todos os n˙meros somados na vari·vel 'decimal',
-               // que ir· representar corretamente a convers„o.
+               // Ao fim do loop, teremos todos os n√∫meros somados na vari√°vel 'decimal',
+               // que ir√° representar corretamente a convers√£o.
 
                escreval("O numero decimal ?: ", decimal)
                escreval("")
@@ -504,6 +504,9 @@ Inicio
                leia(bi)
                num_digitos <- compr(bi)
                valPos <- num_digitos
+SegVal <- 0
+octal <- ""
+dec <- 0
 
                // Loop para percorrer cada digito octal.
                para index <- 1 ate num_digitos faca
@@ -518,10 +521,10 @@ Inicio
                      Num <- 1
                   fimescolha
 
-                  //Aqui seleconamos o valor da posiÁ„o do numero binario
+                  //Aqui seleconamos o valor da posi√ß√£o do numero binario
                   valPos <- valPos - 1
 
-                  //E fazemos a convers„o de caracter por caracter
+                  //E fazemos a convers√£o de caracter por caracter
                   SegVal <- SegVal + Num * 2 ^ (valPos)
 
                fimpara
@@ -529,41 +532,41 @@ Inicio
                //Movemos o numero decimal para a variavel decimal
                dec <- SegVal
 
-               enquanto dec >= 1 faÁa
+               enquanto dec >= 1 fa√ßa
 
-                  //O binario È a sobra dos numero dividido por dois. O simbolo de porcentagem
-                  //faz a divis„o do numero por 2, porem pega o resto da operaÁ„o
+                  //O binario √© a sobra dos numero dividido por dois. O simbolo de porcentagem
+                  //faz a divis√£o do numero por 2, porem pega o resto da opera√ß√£o
 
                   SegVal <- dec % 8
 
-                  //O grande problema È que o numero binario È escrito ao contrato de como ele È
-                  //calculado, ent„o se o resultado da diviz„o for 0101, lemos o numero como 1010
+                  //O grande problema √© que o numero binario √© escrito ao contrato de como ele √©
+                  //calculado, ent√£o se o resultado da diviz√£o for 0101, lemos o numero como 1010
 
                   //Por isso, transformei as sobras em texto e fui concatenando na variavel bi
-                  //de forma que os numeros v„o sendo concatenados a esquerda
+                  //de forma que os numeros v√£o sendo concatenados a esquerda
 
-                  se SegVal = 0 ent„o
+                  se SegVal = 0 ent√£o
                      octal <- "0" + octal
                   fimse
-                  se SegVal = 1 ent„o
+                  se SegVal = 1 ent√£o
                      octal <- "1" + octal
                   fimse
-                  se SegVal = 2 ent„o
+                  se SegVal = 2 ent√£o
                      octal <- "2" + octal
                   fimse
-                  se SegVal = 3 ent„o
+                  se SegVal = 3 ent√£o
                      octal <- "3" + octal
                   fimse
-                  se SegVal = 4 ent„o
+                  se SegVal = 4 ent√£o
                      octal <- "4" + octal
                   fimse
-                  se SegVal = 5 ent„o
+                  se SegVal = 5 ent√£o
                      octal <- "5" + octal
                   fimse
-                  se SegVal = 6 ent„o
+                  se SegVal = 6 ent√£o
                      octal <- "6" + octal
                   fimse
-                  se SegVal = 7 ent„o
+                  se SegVal = 7 ent√£o
                      octal <- "7" + octal
                   fimse
 
@@ -587,6 +590,9 @@ Inicio
                leia(octal)
                num_digitos <- compr(octal)
                valPos <- num_digitos
+SegVal <- 0
+bi <- ""
+dec <- 0
 
                // Loop para percorrer cada digito octal.
                para index <- 1 ate num_digitos faca
@@ -613,10 +619,10 @@ Inicio
                      Num <- 7
                   fimescolha
 
-                  //Aqui seleconamos o valor da posiÁ„o do numero octal
+                  //Aqui seleconamos o valor da posi√ß√£o do numero octal
                   valPos <- valPos - 1
 
-                  //E fazemos a convers„o de caracter por caracter
+                  //E fazemos a convers√£o de caracter por caracter
                   SegVal <- SegVal + Num * 8 ^ (valPos)
 
                fimpara
@@ -624,20 +630,20 @@ Inicio
                //Movemos o numero decimal para a variavel decimal
                dec <- SegVal
 
-               enquanto dec >= 1 faÁa
+               enquanto dec >= 1 fa√ßa
 
-                  //O binario È a sobra dos numero dividido por dois. O simbolo de porcentagem
-                  //faz a divis„o do numero por 2, porem pega o resto da operaÁ„o
+                  //O binario √© a sobra dos numero dividido por dois. O simbolo de porcentagem
+                  //faz a divis√£o do numero por 2, porem pega o resto da opera√ß√£o
 
                   SegVal <- dec % 2
 
-                  //O grande problema È que o numero binario È escrito ao contrato de como ele È
-                  //calculado, ent„o se o resultado da diviz„o for 0101, lemos o numero como 1010
+                  //O grande problema √© que o numero binario √© escrito ao contrato de como ele √©
+                  //calculado, ent√£o se o resultado da diviz√£o for 0101, lemos o numero como 1010
 
                   //Por isso, transformei as sobras em texto e fui concatenando na variavel bi
-                  //de forma que os numeros v„o sendo concatenados a esquerda
+                  //de forma que os numeros v√£o sendo concatenados a esquerda
 
-                  se SegVal = 0 ent„o
+                  se SegVal = 0 ent√£o
                      bi <- "0" + bi
                   senao
                      bi <- "1" + bi
