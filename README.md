@@ -7,8 +7,19 @@
 <body>
     <h1>Calculadora Científica </h1>
     <p>Como estudantes do 1º semestre do curso de Banco de Dados na FATEC SJC, estamos dedicados ao desenvolvimento do projeto "Calculadora Científica" neste repositório. O projeto visa oferecer implementações de uma ampla variedade de operações matemáticas, inicialmente em VisualG (Sprint 1 e Sprint 2) e em Typescript (Sprint 3 e Sprint 4).</p>
-    <h2>Operações Disponíveis</h2>
-    <ol>
+
+## Índice
+
+♦ [Operações Disponíveis](#operações-disponíveis) <br />
+♦ [Integrantes do projeto](#integrantes-do-projeto) <br />
+♦ [Tecnologias Utilizadas](#tecnologias-utilizadas) <br />
+♦ [Como Usar](#como-usar) <br />
+♦ [Boas práticas](#boas-práticas) <br />
+♦ [Contato](#contato) <br />
+
+    
+## Operações Disponíveis
+   <ol>
         <li>Operações Básicas: Implementações das operações básicas de soma, multiplicação, subtração e divisão.</li>
         <li>Cálculo Fatorial: Implementação da operação de cálculo do fatorial de um número.</li>
         <li>Função de Segundo Grau: Implementação da operação de cálculo de função de segundo grau.</li>
