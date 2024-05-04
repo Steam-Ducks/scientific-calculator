@@ -141,7 +141,7 @@ Inicio
             valorAcumulado <- 0
             limpatela
             escreval("========== FUNCAO SUBTRACAO ==========")
-            escreval ("Insira os valores e eles serao automaticamente subtraídos")
+            escreval ("Insira os valores e eles serao automaticamente subtrai�dos")
             escreval ()
             escreval ("Quantos numeros deseja subtrair?")
             leia (vezes)
@@ -199,7 +199,7 @@ Inicio
                      leia (valorAcumulado)
                      escreval()
                      se valorAcumulado = 0 entao
-                        escreval("TODO VALOR MULTIPLICADO POR ZERO É ZERO!!")
+                        escreval("TODO VALOR MULTIPLICADO POR ZERO NAO ZERO!!")
                      fimse
                   ate valorAcumulado <> 0
                   valor <- 1
@@ -212,7 +212,7 @@ Inicio
                      leia (valor)
                      escreval()
                      se valor = 0 entao
-                        escreval("TODO VALOR MULTIPLICADO POR ZERO É ZERO!!")
+                        escreval("TODO VALOR MULTIPLICADO POR ZERO NAO ZERO!!")
                         escreval()
                      fimse
                   ate valor <> 0
@@ -248,7 +248,7 @@ Inicio
                      leia (valorAcumulado)
                      escreval()
                      se valorAcumulado = 0 entao
-                        escreval("ZERO DIVIDIDO POR QUALQUER VALOR É IGUAL A ZERO")
+                        escreval("ZERO DIVIDIDO POR QUALQUER VALOR SE TORNA IGUAL A ZERO")
                      fimse
                   ate valorAcumulado <> 0
                   valor <- 1
@@ -261,7 +261,7 @@ Inicio
                      leia (valor)
                      escreval()
                      se valor = 0 entao
-                        escreval("É IMPOSSIVEL REALIZAR A DIVISÃO POR ZERO")
+                        escreval("NAO IMPOSSIVEL REALIZAR A DIVISAO POR ZERO")
                         escreval()
                      fimse
                   ate valor <> 0
@@ -303,7 +303,7 @@ Inicio
                ate (fatorial <= 1)
             fimse
             escreval()
-            escreval("O Resultado do fatorial de", valorFat, " é :", valor)
+            escreval("Resultado Final :", valor)
             escreval()
             Repetir()
 
@@ -368,7 +368,7 @@ Inicio
             repita
                escreval ("======= CONVERSAO DE BASE NUMERICA: B10 X B2 / B2 X B10 =======")
                escreval("")
-               escreval("Qual fun??o deseja utilizar?")
+               escreval("Qual funcao deseja utilizar?")
                escreval("1 <- Decimal para Binario")
                escreval("2 <- Binario para Decimal")
                escreval("3 <- Voltar ao Menu")
@@ -477,9 +477,9 @@ Inicio
             repita
                escreval ("======= CONVERSAO DE BASE NUMERICA: B2 X B8 / B8 X B2 =======")
                escreval("")
-               escreval("Qual fun??o deseja utilizar?")
+               escreval("Qual funcao deseja utilizar?")
                escreval("1 <- Binario para Octal")
-               escreval("2 <- Octal para Bin?rio")
+               escreval("2 <- Octal para Binario")
                escreval("3 <-  Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
@@ -504,9 +504,9 @@ Inicio
                leia(bi)
                num_digitos <- compr(bi)
                valPos <- num_digitos
-SegVal <- 0
-octal <- ""
-dec <- 0
+               SegVal <- 0
+               octal <- ""
+               dec <- 0
 
                // Loop para percorrer cada digito octal.
                para index <- 1 ate num_digitos faca
@@ -590,9 +590,9 @@ dec <- 0
                leia(octal)
                num_digitos <- compr(octal)
                valPos <- num_digitos
-SegVal <- 0
-bi <- ""
-dec <- 0
+               SegVal <- 0
+               bi <- ""
+               dec <- 0
 
                // Loop para percorrer cada digito octal.
                para index <- 1 ate num_digitos faca
@@ -671,7 +671,7 @@ dec <- 0
                escreval("")
                escreval("Qual funcao deseja utilizar?")
                escreval("1 <- Binario para Hexadecimal")
-               escreval("2 <- Hexadecimal para Bin?rio")
+               escreval("2 <- Hexadecimal para Binario")
                escreval("3 <- Voltar ao Menu")
                escreval("")
                escreva("Digite a sua resposta: ")
