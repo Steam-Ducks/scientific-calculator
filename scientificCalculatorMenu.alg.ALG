@@ -756,7 +756,7 @@ Inicio
 
                fimpara
                //Mostra o valor convertido de Binario para Hexadecimal
-               escreval("O numero binario ", binarioString, " em hexadecimal ?: ", hexadecimal)
+               escreval("O numero binario ", binarioString, " em hexadecimal: ", hexadecimal)
             fimse
 
             se fun = 2 entao
@@ -795,25 +795,30 @@ Inicio
                      binarioString <- binarioString + "1000"
                   caso "9"
                      binarioString <- binarioString + "1001"
-                  caso "A"
-                     binarioString <- binarioString + "1010"
-                  caso "B"
-                     binarioString <- binarioString + "1011"
-                  caso "C"
-                     binarioString <- binarioString + "1100"
-                  caso "D"
-                     binarioString <- binarioString + "1101"
-                  caso "E"
-                     binarioString <- binarioString + "1110"
-                  caso "F"
-                     binarioString <- binarioString + "1111"
                   fimescolha
-
-                  binario <- caracpnum(binarioString)
+                  
+        se (parteHexadec = "A") ou (parteHexadec = "a") entao
+            binarioString <- binarioString + "1010"
+        fimse
+        se (parteHexadec = "B") ou (parteHexadec = "b") entao
+            binarioString <- binarioString + "1011"
+        fimse
+        se (parteHexadec = "C") ou (parteHexadec = "c") entao
+            binarioString <- binarioString + "1100"
+        fimse
+        se (parteHexadec = "D") ou (parteHexadec = "d") entao
+            binarioString <- binarioString + "1101"
+        fimse
+        se (parteHexadec = "E") ou (parteHexadec = "e") entao
+            binarioString <- binarioString + "1110"
+        fimse
+        se (parteHexadec = "F") ou (parteHexadec = "f") entao
+            binarioString <- binarioString + "1111"
+        fimse
 
                fimpara
                // Mostra o resultado da conversao
-               escreval("O numero hexadecimal ", hexadecimal, " em binario: ", binario)
+               escreval("O numero hexadecimal ", hexadecimal, " em binario: ", caracpnum(binarioString))
             fimse
 
             escreval
