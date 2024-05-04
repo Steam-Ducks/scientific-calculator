@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Calculadora Científica </h1>
-    <p>Como estudantes do 1º semestre do curso de Banco de Dados na FATEC SJC, estamos dedicados ao desenvolvimento do projeto "Calculadora Científica" neste repositório. O projeto visa oferecer implementações de uma ampla variedade de operações matemáticas, inicialmente em VisualG (Sprint 1 e Sprint 2) e em Typescript (Sprint 3 e Sprint 4).</p>
+
+ 
+<div align="center">
+    <img src="assets/capa-readme.png" alt="capa-readme" width="100%" />
+</div>
+
+<br />
+
+<p>Como estudantes do 1º semestre do curso de Banco de Dados na FATEC SJC, estamos dedicados ao desenvolvimento do projeto "Calculadora Científica" neste repositório. O projeto visa oferecer implementações de uma ampla variedade de operações matemáticas, inicialmente em VisualG (Sprint 1 e Sprint 2) e em Typescript (Sprint 3 e Sprint 4).</p>
 
 ## Índice
 
