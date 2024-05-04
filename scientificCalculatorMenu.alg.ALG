@@ -90,7 +90,7 @@ Inicio
       escreval("[11] CALCULO DE JUROS ")
       escreval("[12] SAIR")
       escreval()
-      escreva("Opção desejada: ")
+      escreva("Opcao desejada: ")
       leia(func)
 
       limpatela
@@ -109,7 +109,7 @@ Inicio
             escreval ("Quantos numeros deseja somar?")
             leia (vezes)
             valorAcumulado <- 0
-            para contador de 1 ate vezes faça
+            para contador de 1 ate vezes faca
                se valorAcumulado = 0 entao
                   escreval()
                   escreva ("Valor: ")
@@ -146,7 +146,7 @@ Inicio
             escreval ("Quantos numeros deseja subtrair?")
             leia (vezes)
             valorAcumulado <- 0
-            para contador de 1 ate vezes faça
+            para contador de 1 ate vezes faca
                se (contador = vezes) e (valorAcumulado = 0) entao
                   escreval("Valor: ")
                   escreva (valorAcumulado, " - ")
@@ -190,7 +190,7 @@ Inicio
             escreval ("Quantos numeros deseja multiplicar?")
             leia (vezes)
             valorAcumulado <- 0
-            para contador de 1 ate vezes faça
+            para contador de 1 ate vezes faca
                se valorAcumulado = 0 entao
                   repita
                      escreval()
@@ -239,7 +239,7 @@ Inicio
             escreval ("Quantos numeros deseja dividir?")
             leia (vezes)
             valorAcumulado <- 0
-            para contador de 1 ate vezes faça
+            para contador de 1 ate vezes faca
                se valorAcumulado = 0 entao
                   repita
                      escreval()
@@ -493,7 +493,7 @@ Inicio
 
             limpatela
 
-            //====================================Fun??o 1==================================
+            //====================================Funcao 1==================================
             se Fun = 1 entao
 
 
@@ -532,7 +532,7 @@ dec <- 0
                //Movemos o numero decimal para a variavel decimal
                dec <- SegVal
 
-               enquanto dec >= 1 faça
+               enquanto dec >= 1 faca
 
                   //O binario é a sobra dos numero dividido por dois. O simbolo de porcentagem
                   //faz a divisão do numero por 2, porem pega o resto da operação
@@ -545,28 +545,28 @@ dec <- 0
                   //Por isso, transformei as sobras em texto e fui concatenando na variavel bi
                   //de forma que os numeros vão sendo concatenados a esquerda
 
-                  se SegVal = 0 então
+                  se SegVal = 0 entao
                      octal <- "0" + octal
                   fimse
-                  se SegVal = 1 então
+                  se SegVal = 1 entao
                      octal <- "1" + octal
                   fimse
-                  se SegVal = 2 então
+                  se SegVal = 2 entao
                      octal <- "2" + octal
                   fimse
-                  se SegVal = 3 então
+                  se SegVal = 3 entao
                      octal <- "3" + octal
                   fimse
-                  se SegVal = 4 então
+                  se SegVal = 4 entao
                      octal <- "4" + octal
                   fimse
-                  se SegVal = 5 então
+                  se SegVal = 5 entao
                      octal <- "5" + octal
                   fimse
-                  se SegVal = 6 então
+                  se SegVal = 6 entao
                      octal <- "6" + octal
                   fimse
-                  se SegVal = 7 então
+                  se SegVal = 7 entao
                      octal <- "7" + octal
                   fimse
 
@@ -630,7 +630,7 @@ dec <- 0
                //Movemos o numero decimal para a variavel decimal
                dec <- SegVal
 
-               enquanto dec >= 1 faça
+               enquanto dec >= 1 faca
 
                   //O binario é a sobra dos numero dividido por dois. O simbolo de porcentagem
                   //faz a divisão do numero por 2, porem pega o resto da operação
@@ -643,7 +643,7 @@ dec <- 0
                   //Por isso, transformei as sobras em texto e fui concatenando na variavel bi
                   //de forma que os numeros vão sendo concatenados a esquerda
 
-                  se SegVal = 0 então
+                  se SegVal = 0 entao
                      bi <- "0" + bi
                   senao
                      bi <- "1" + bi
