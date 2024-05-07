@@ -19,6 +19,7 @@
 
 ♦ [Operações Disponíveis](#operações-disponíveis) <br />
 ♦ [Integrantes do projeto](#integrantes-do-projeto) <br />
+♦ [Backlog do Produto](#backlog-do-produto) <br />
 ♦ [Tecnologias Utilizadas](#tecnologias-utilizadas) <br />
 ♦ [Como Usar](#como-usar) <br />
 ♦ [Boas práticas](#boas-práticas) <br />
@@ -39,6 +40,15 @@
   
 <div align="center">
   <img src="assets/integrantes.png" alt="Equipe e funções" width="600px" />
+</div>
+
+## Backlog do Produto 
+
+<a href="https://docs.google.com/spreadsheets/d/1PA5yh4sCJ6KSowhACZ4_-C3lhVtEf_mpU07Nn4njLW8/edit?usp=sharing">♦ Backlog Dinâmico</a>
+
+
+<div align="center">
+    <img src="assets/backlog-de-produto.png" alt="backlog-do-produto" width="100%" />
 </div>
 
 ## Tecnologias Utilizadas
