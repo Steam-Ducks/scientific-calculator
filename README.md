@@ -93,7 +93,9 @@
 Se você tiver alguma dúvida, sugestão ou apenas quiser trocar uma ideia, sinta-se à vontade para me enviar um e-mail em [steamduckss@gmail.com](mailto:steamduckss@gmail.com). 
 Estamos ansiosos para ouvir de você!
 
-
+<div align="center">
+    <img src="assets/footer.new.png" alt="footer" width="100%" />
+</div>
 
 </body>
 </html>
