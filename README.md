@@ -20,11 +20,11 @@
 ♦ [Operações Disponíveis](#operações-disponíveis) <br />
 ♦ [Integrantes do projeto](#integrantes-do-projeto) <br />
 ♦ [Backlog do Produto](#backlog-do-produto) <br />
+♦ [Validações feitas com o Cliente](#validações-feitas-com-o-cliente) <br />
 ♦ [Tecnologias Utilizadas](#tecnologias-utilizadas) <br />
 ♦ [Como Usar](#como-usar) <br />
 ♦ [Boas práticas](#boas-práticas) <br />
 ♦ [Contato](#contato) <br />
-
     
 ## Operações Disponíveis
    <ol>
@@ -42,14 +42,42 @@
   <img src="assets/integrantes.png" alt="Equipe e funções" width="600px" />
 </div>
 
-## Backlog do Produto 
-
+## Backlog do Produto
 <a href="https://docs.google.com/spreadsheets/d/1PA5yh4sCJ6KSowhACZ4_-C3lhVtEf_mpU07Nn4njLW8/edit?usp=sharing">♦ Backlog Dinâmico</a>
 
+| Sprint | ID | Descrição                                                             | Priorização | Nível de priorização |
+|--------|----|-----------------------------------------------------------------------|-------------|----------------------|
+| 1      | 1  | Operações Básicas (Soma, Subtração, Multiplicação, Divisão)          | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |1       |
+| 1      | 2  | Cálculo Fatorial                                                      | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |2       |
+| 1      | 3  | Função de 2º grau                                                     | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |3      |
+| 1      | 4  | Função de Juros Simples                                               | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |4      |
+| 1      | 5  | Função de Juros Composto                                              | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |5      |
+| 1      | 6  | Conversão de base numérica - B2 X B16 / B16 X B2                      | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |7      |
+| 2      | 7  | Conversão de base numérica - B10 X B2 / B2 X B10                      | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |8      |
+| 2      | 8  | Conversão de base numérica - B2 X B8 / B8 X B2                        | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |9      |
+| 2      | 9  | Função de concatenação de 2 strings                                   | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |6      |
+| 3      | 10 | Conversão para Typescript - Operações Básicas (Soma, Subtração, Multiplicação, Divisão) | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |10      |
+| 3      | 14 | Conversão para Typescript - Cálculo Fatorial                          | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |11      |
+| 3      | 15 | Conversão para Typescript - Função de 2º grau                         | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |12      |
+| 3      | 16 | Conversão para Typescript - Função de Juros Simples                   | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |13      |
+| 3      | 17 | Conversão para Typescript - Função de Juros Composto                  | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |14      |
+| 4      | 18 | Conversão para Typescript - Conversão de base numérica - B2 X B16 / B16 X B2 | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |16      |
+| 4      | 19 | Conversão para Typescript - Conversão de base numérica - B10 X B2 / B2 X B10 | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |17      |
+| 4      | 20 | Conversão para Typescript - Conversão de base numérica - B2 X B8 / B8 X B2 | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |18      |
+| 4      | 21 | Conversão para Typescript - Função de concatenação de 2 strings        | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |15      |
 
-<div align="center">
-    <img src="assets/backlog-de-produto.png" alt="backlog-do-produto" width="100%" />
-</div>
+## Validações feitas com o Cliente
+
+| Sprint | Validações | Respostas |
+|------------|------------|-----------|
+| 1          | Podemos entregar o menu funcional na Sprint 1? | Claro |
+| 1          | As operações matemáticas que precisamos fazer (por enquanto em visualg), nós devemos considerar uma quantidade n de números ou nessa lógica consideramos 2 apenas? | Pode ser uma decisão de vocês, pensem na usabilidade do produto. |
+| 2          | A Interface gráfica é obrigatória? Se sim, existe alguma exigência de como deve ser? | Não é obrigatório, nem requisito. |
+| 2          | Quando formos dividir algo por 0, qual mensagem de erro deve retornar? | Tratar o erro, explicando divisão por 0. |
+| 2          | Opções de menu: 1. Menu geral com todas as opções de operações; 2. Menu compacto com sub-menu de operações básicas. | Menu geral e sub-menu dentro das operações (ex: quantos números quer somar?). |
+| 2          | Problema de caracteres: Visualg não reconhece acentos, tem problema manter o código sem esses acentos? Não influencia na compreensão. | Remover todos os acentos. |
+| 3          | Durante a Sprint 3 podemos acoplar as operações básicas e um só menu? | Sim |
+| 3          | Podemos acoplar em 1 menu, as conversões de base? | Não |
 
 ## Tecnologias Utilizadas
 
