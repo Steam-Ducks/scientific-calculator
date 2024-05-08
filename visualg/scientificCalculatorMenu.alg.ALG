@@ -287,14 +287,14 @@ Inicio
             repita
                escreval("Insira um valor: ")
                leia(valor)
-               se valor < 0 entao
+               se (valor < 0) entao
                   escreval("NAO E POSSIVEL CALCULAR O FATORIAL DE VALORES NEGATIVOS")
                   escreval()
                fimse
             ate valor >= 0
             valorFat <- valor
             fatorial <- valor-1
-            se valor = 0 entao
+            se (valor = 0) ou (valor = 1) entao
                valor <- 1
             senao
                repita
