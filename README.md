@@ -21,6 +21,7 @@
 ♦ [Integrantes do projeto](#integrantes-do-projeto) <br />
 ♦ [Backlog do Produto](#backlog-do-produto) <br />
 ♦ [Validações feitas com o Cliente](#validações-feitas-com-o-cliente) <br />
+♦ [Requisitos de Permanência](#requisitos-de-permanência) <br />
 ♦ [Tecnologias Utilizadas](#tecnologias-utilizadas) <br />
 ♦ [Como Usar](#como-usar) <br />
 ♦ [Boas práticas](#boas-práticas) <br />
@@ -78,6 +79,15 @@
 | 2          | Problema de caracteres: Visualg não reconhece acentos, tem problema manter o código sem esses acentos? Não influencia na compreensão. | Remover todos os acentos. |
 | 3          | Durante a Sprint 3 podemos acoplar as operações básicas e um só menu? | Sim |
 | 3          | Podemos acoplar em 1 menu, as conversões de base? | Não |
+
+## Requisitos de Permanência
+Conversamos sobre alguns pontos importantes para que ninguém seja retirado do grupo e eles podem se atualizar durante o desenvolvimento do projeto.
+- Reunião fixa: todas as quintas-feiras (na primeira aula: 18h45);
+- Cursos obrigatórios: Git e GitHub e Algoritmos (com Guanabara);
+- Faltas: 1 falta por Sprint NO MÁXIMO (SEMPRE justificar ausências);
+- Trello: mantenha seus cards atualizados, se tiver alguma dificuldade, converse com o grupo;
+- Comunicação: sempre se comunique com o grupo pelo Whatsapp, pessoalmente ou pelo Trello, ta dificil, ta travado, descobriu algo legal, COMUNIQUE;
+- Prazos: se atente aos prazos, lembre-se o projeto é importante para nossa conclusão do 1º semestre, estamos contando com você!
 
 ## Tecnologias Utilizadas
 
