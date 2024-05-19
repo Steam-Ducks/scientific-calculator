@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const prompt_sync_1 = __importDefault(require("prompt-sync"));
+const addition_1 = require("./addition");
 const prompt = (0, prompt_sync_1.default)();
 let opcao;
 do {
@@ -24,22 +25,22 @@ do {
     switch (opcao) {
         case '1':
             do {
-                soma();
+                (0, addition_1.soma)();
             } while (repetirOperacao());
             break;
         case '2':
             do {
-                soma();
+                (0, addition_1.soma)();
             } while (repetirOperacao());
             break;
         case '3':
             do {
-                soma();
+                (0, addition_1.soma)();
             } while (repetirOperacao());
             break;
         case '4':
             do {
-                soma();
+                (0, addition_1.soma)();
             } while (repetirOperacao());
             break;
         case '5':
@@ -57,17 +58,4 @@ function repetirOperacao() {
     const resposta = prompt("Deseja repetir a mesma operação? (S/N): ");
     console.log();
     return resposta.toUpperCase() === 'S';
-}
-function soma() {
-    console.log();
-    const quantidade = parseInt(prompt("Quantos números deseja somar? "));
-    console.log();
-    let soma = 0;
-    for (let i = 0; i < quantidade; i++) {
-        const numero = parseFloat(prompt(`Digite o número ${i + 1}: `));
-        soma += numero;
-    }
-    console.log();
-    console.log(`O resultado da soma é: ${soma}`);
-    console.log();
 }
