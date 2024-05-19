@@ -19,7 +19,10 @@ do {
     console.log("[2] SUBTRAÇÃO");
     console.log("[3] MULTIPLICAÇÃO");
     console.log("[4] DIVISÃO");
-    console.log("[5] SAIR");
+    console.log("[5] FATORIAL");
+    console.log("[6] FUNCAO DE SEGUNDO GRAU");
+    console.log("[7] CALCULO DE JUROS");
+    console.log("[8] SAIR");
     console.log();
     opcao = prompt("Opção desejada: ");
     switch (opcao) {
@@ -30,30 +33,39 @@ do {
             break;
         case '2':
             do {
-                (0, addition_1.soma)();
             } while (repetirOperacao());
             break;
         case '3':
             do {
-                (0, addition_1.soma)();
             } while (repetirOperacao());
             break;
         case '4':
             do {
-                (0, addition_1.soma)();
             } while (repetirOperacao());
             break;
         case '5':
+            do {
+            } while (repetirOperacao());
+            break;
+        case '6':
+            do {
+            } while (repetirOperacao());
+            break;
+        case '7':
+            do {
+            } while (repetirOperacao());
+            break;
+        case '8':
             console.log("PROGRAMA ENCERRADO!");
             break;
         default:
             console.log("Opção inválida. Por favor, escolha uma opção válida.");
             break;
     }
-    if (opcao !== '5') {
+    if (opcao !== '8') {
         prompt("Pressione Enter para continuar...");
     }
-} while (opcao !== '5');
+} while (opcao !== '8');
 function repetirOperacao() {
     const resposta = prompt("Deseja repetir a mesma operação? (S/N): ");
     console.log();

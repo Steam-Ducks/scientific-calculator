@@ -1,5 +1,5 @@
 import promptSync from 'prompt-sync';
-import { soma } from './addition';
+import { soma } from './basicOperations/addition';
 const prompt = promptSync();
 
 let opcao: string;
@@ -16,7 +16,10 @@ do {
     console.log("[2] SUBTRAÇÃO");
     console.log("[3] MULTIPLICAÇÃO");
     console.log("[4] DIVISÃO");
-    console.log("[5] SAIR");
+    console.log("[5] FATORIAL");
+    console.log("[6] FUNCAO DE SEGUNDO GRAU");
+    console.log("[7] CALCULO DE JUROS");
+    console.log("[8] SAIR");
     console.log();
     opcao = prompt("Opção desejada: ");
 
@@ -28,20 +31,35 @@ do {
             break;
         case '2':
             do {
-                soma();
+                //funcao subtracao
             } while (repetirOperacao());
             break;
         case '3':
             do {
-                soma();
+                //funcao multiplicacap
             } while (repetirOperacao());
             break;
         case '4':
             do {
-                soma();
+                //funcao divisao
             } while (repetirOperacao());
             break;
         case '5':
+            do {
+                //funcao fatorial
+            } while (repetirOperacao());
+            break;
+        case '6':
+            do {
+                //funcao segundo grau
+            } while (repetirOperacao());
+            break;
+        case '7':
+            do {
+                //funcao juros
+            } while (repetirOperacao());
+            break;
+        case '8':
             console.log("PROGRAMA ENCERRADO!");
             break;
         default:
@@ -49,11 +67,11 @@ do {
             break;
     }
 
-    if (opcao !== '5') {
+    if (opcao !== '8') {
         prompt("Pressione Enter para continuar...");
     }
 
-} while (opcao !== '5');
+} while (opcao !== '8');
 
 function repetirOperacao(): boolean {
     const resposta = prompt("Deseja repetir a mesma operação? (S/N): ");
