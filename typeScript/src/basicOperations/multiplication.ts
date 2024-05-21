@@ -17,6 +17,26 @@ while (true) {
     if (isNaN(val)) {
         console.log("Entrada inválida, por favor insira um número.");
         continue;
+// Função principal para executar a calculadora
+function calculadora(): void {
+    let continuar = true;
+
+    while (continuar) {
+        try {
+            const num1: number = obterNumero("Insira o primeiro número: ");
+            const num2: number = obterNumero("Insira o segundo número: ");
+
+            const resultado: number = multiplicar(num1, num2);
+            console.log(`A multiplicação de ${num1} e ${num2} é: ${resultado}`);
+
+            const resposta: string = prompt("Quer continuar? Sim ou Não: ").toLowerCase();
+
+            if (resposta === "não" || resposta === "nao" || resposta === "n") {
+                continuar = false;
+            }
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     const acValStr: number = acVal;
