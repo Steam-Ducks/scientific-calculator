@@ -1,48 +1,28 @@
-import promptSync from 'prompt-sync';
+let acVal: number = 1;
+let valStr: string;
 
-const prompt = promptSync();
+console.log("========== Multiplicação ==========");
+console.log("Pressione 'F' para finalizar a operação");
 
-// Função para multiplicar dois números
-function multiplicar(a: number, b: number): number {
-    return a * b;
-}
+while (true) {
+    console.log();
+    const valStr: string | null = prompt("Valor: ");
 
-// Função para obter entrada do usuário e validar
-function obterNumero(mensagem: string): number {
-    const input = prompt(mensagem);
-    const numero = Number(input);
-
-    if (isNaN(numero)) {
-        throw new Error("Entrada inválida! Por favor, insira um número.");
+    if (valStr === null || valStr.toLowerCase() === 'f') {
+        break;
     }
 
-    return numero;
-}
+    const val: number = parseInt(valStr, 10);
 
-// Função principal para executar a calculadora
-function calculadora(): void {
-    let continuar = true;
-
-    while (continuar) {
-        try {
-            const num1: number = obterNumero("Insira o primeiro número: ");
-            const num2: number = obterNumero("Insira o segundo número: ");
-
-            const resultado: number = multiplicar(num1, num2);
-            console.log(`A multiplicação de ${num1} e ${num2} é: ${resultado}`);
-
-            const resposta: string = prompt("Quer continuar? Sim ou Não: ").toLowerCase();
-
-            if (resposta === "não" || resposta === "nao" || resposta === "n") {
-                continuar = false;
-            }
-        } catch (error) {
-            console.error(error.message);
-        }
+    if (isNaN(val)) {
+        console.log("Entrada inválida, por favor insira um número.");
+        continue;
     }
+
+    const acValStr: number = acVal;
+    acVal = acVal * val;
+
+    console.log(`Resultado: ${acValStr} X ${val} = ${acVal}`);
 }
 
-// Executar a calculadora
-calculadora();
-
-
+console.log(`Operação finalizada. Resultado final: ${acVal}`);
