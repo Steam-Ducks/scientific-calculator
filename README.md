@@ -44,7 +44,7 @@
 </div>
 
 ## Backlog do Produto
-<a href="https://docs.google.com/spreadsheets/d/1PA5yh4sCJ6KSowhACZ4_-C3lhVtEf_mpU07Nn4njLW8/edit?usp=sharing">♦ Backlog Dinâmico</a>
+<a href="https://docs.google.com/spreadsheets/d/1PA5yh4sCJ6KSowhACZ4_-C3lhVtEf_mpU07Nn4njLW8/edit?usp=sharing" target="_blank">♦ Backlog Dinâmico</a>
 
 | Sprint | ID | Descrição                                                             | Priorização | Nível de priorização |
 |--------|----|-----------------------------------------------------------------------|-------------|----------------------|
