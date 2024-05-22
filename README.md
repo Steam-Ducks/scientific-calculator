@@ -79,6 +79,7 @@
 | 2          | Problema de caracteres: Visualg não reconhece acentos, tem problema manter o código sem esses acentos? Não influencia na compreensão. | Remover todos os acentos. |
 | 3          | Durante a Sprint 3 podemos acoplar as operações básicas e um só menu? | Sim |
 | 3          | Podemos acoplar em 1 menu, as conversões de base? | Não |
+| 3          | Podemos usar a função math.pow ou precisamos cria-la? | Criar a função |
 
 ## Requisitos de Permanência
 Conversamos sobre alguns pontos importantes para que ninguém seja retirado do grupo e eles podem se atualizar durante o desenvolvimento do projeto.
