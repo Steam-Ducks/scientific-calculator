@@ -5,6 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const addition_1 = require("./basicOperations/addition");
+const subtraction_1 = require("./basicOperations/subtraction");
+const compoundInterest_1 = require("./interest/compoundInterest");
 const prompt = (0, prompt_sync_1.default)();
 let opcao;
 do {
@@ -33,6 +35,7 @@ do {
             break;
         case '2':
             do {
+                (0, subtraction_1.subtration)();
             } while (repetirOperacao());
             break;
         case '3':
@@ -53,6 +56,7 @@ do {
             break;
         case '7':
             do {
+                selecionarTipoJuros();
             } while (repetirOperacao());
             break;
         case '8':
@@ -67,7 +71,28 @@ do {
     }
 } while (opcao !== '8');
 function repetirOperacao() {
+    console.log();
     const resposta = prompt("Deseja repetir a mesma operação? (S/N): ");
     console.log();
     return resposta.toUpperCase() === 'S';
+}
+function selecionarTipoJuros() {
+    console.clear();
+    console.log("======= CALCULO DE JUROS =======");
+    console.log("");
+    console.log("Qual funcao deseja utilizar?");
+    console.log("1 <- Juros Simples");
+    console.log("2 <- Juros Compostos");
+    console.log("");
+    const resposta = prompt("Digite a sua resposta: ");
+    switch (resposta) {
+        case "1":
+            break;
+        case "2":
+            (0, compoundInterest_1.compountInterest)();
+            break;
+        default:
+            console.log("Opção inválida. Por favor, escolha uma opção válida.");
+            break;
+    }
 }

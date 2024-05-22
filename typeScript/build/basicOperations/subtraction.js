@@ -20,4 +20,3 @@ function subtration() {
     console.log();
 }
 exports.subtration = subtration;
-subtration();

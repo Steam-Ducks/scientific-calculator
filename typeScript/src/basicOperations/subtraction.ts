@@ -17,4 +17,3 @@ export function subtration(): void {
 
 }
 
-subtration();
