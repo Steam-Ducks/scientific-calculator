@@ -1,38 +1,54 @@
-import promptSync from 'prompt-sync';
+import * as promptSync from 'prompt-sync';
 
-// Função principal para executar a calculadora de multiplicação
-function calculadora(): void {
-    const prompt = promptSync(); // Inicializa o prompt-sync
-    let acVal: number = 1;
-    let continuar = true;
+const prompt = promptSync({ sigint: true });
 
-    console.log("========== Multiplicação ==========");
-    console.log("Pressione 'F' para finalizar a operação");
+function multiplicacao() {
+  let repete = 1;
 
-    while (continuar) {
-        console.log();
-        const valStr: string = prompt("Valor: ");
+  while (repete === 1) {
+    console.log("========== Função Multiplicação ==========");
+    console.log();
+    console.log("Insira os valores, e eles serão automaticamente multiplicados, ");
+    console.log();
+    console.log("para finalizar, pressione '=' ou multiplique por zero.");
+    console.log();
+    console.log("=============================================================");
+    console.log();
 
-        if (valStr.toLowerCase() === 'f') {
-            continuar = false;
-            break;
-        }
+    let valorAcumulado = 1.0;
 
-        const val: number = parseInt(valStr, 10);
+    while (true) {
+      let valorString = prompt(`Valor: ${valorAcumulado} * `);
+      if (valorString === '=' || valorString === '0') {
+        break;
+      }
 
-        if (isNaN(val)) {
-            console.log("Entrada inválida, por favor insira um número.");
-            continue;
-        }
+      let valor = parseFloat(valorString);
+      if (isNaN(valor)) {
+        console.log("Por favor, insira um número válido.");
+        continue;
+      }
 
-        const acValStr: number = acVal;
-        acVal = acVal * val;
+      valorAcumulado *= valor;
 
-        console.log(`Resultado: ${acValStr} X ${val} = ${acVal}`);
+      console.log(`Resultado: ${valorAcumulado}`);
+      console.log();
     }
 
-    console.log(`Operação finalizada. Resultado final: ${acVal}`);
+    console.log();
+    console.log(`O Resultado da multiplicação é: ${valorAcumulado}`);
+    console.log("=============================================================");
+    console.log();
+
+    repete = parseInt(prompt("Deseja calcular outro valor? \n1 <- Sim\n2 <- Não\nResposta: "));
+    console.log("=============================================================");
+    console.log("");
+
+    if (repete !== 1) {
+      console.log("Encerrando o programa...");
+    }
+  }
 }
 
-// Chama a função principal para iniciar a calculadora
-calculadora();
+multiplicacao();
+
