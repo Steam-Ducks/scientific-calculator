@@ -78,6 +78,3 @@ function repetirOperacao(): boolean {
     console.log()
     return resposta.toUpperCase() === 'S';
 }
-
-
-

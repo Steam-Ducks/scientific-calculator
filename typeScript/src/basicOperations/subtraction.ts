@@ -9,10 +9,12 @@ export function subtration(): void {
     let subtration = 0;
     for (let i = 0; i < quantidade; i++) {
         const num = parseFloat(prompt(`Digite o número ${i - 1}: `));
-        subtration += num;
+        subtration -= num;
     }
     console.log()
     console.log(`O resultado da subtração é: ${subtration}`);
     console.log()
 
 }
+
+subtration();
