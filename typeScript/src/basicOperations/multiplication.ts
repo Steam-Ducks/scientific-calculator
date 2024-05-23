@@ -1,6 +1,6 @@
-import * as promptSync from 'prompt-sync';
+import  promptSync from 'prompt-sync';
 
-const prompt = promptSync({ sigint: true });
+const prompt = promptSync();
 
 function multiplicacao() {
   let repete = 1;
