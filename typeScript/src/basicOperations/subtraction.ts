@@ -36,5 +36,3 @@ export function subtraction(): void {
   console.log();
   console.log(`O resultado da subtração é: ${accumulatedValue}`);
 }
-
-subtraction();
