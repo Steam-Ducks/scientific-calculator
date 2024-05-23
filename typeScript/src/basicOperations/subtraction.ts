@@ -13,21 +13,18 @@ export function subtraction(): void {
   for (let i = 1; i <= counter; i++) {
     if (i === counter && accumulatedValue === 0) {
       console.log("Valor: ");
-      process.stdout.write(`${accumulatedValue} - `);
-      value = parseFloat(prompt(""));
+      value = parseFloat(prompt(`${accumulatedValue} - `));
       accumulatedValue -= value;
       break;
     }
 
     if (accumulatedValue === 0) {
       console.log();
-      process.stdout.write("Valor: ");
-      accumulatedValue = parseFloat(prompt(""));
+      accumulatedValue = parseFloat(prompt("Valor: "));
     } else {
       console.log();
       console.log("Valor: ");
-      process.stdout.write(`${accumulatedValue} - `);
-      value = parseFloat(prompt(""));
+      value = parseFloat(prompt(`${accumulatedValue} - `));
     }
 
     accumulatedValue -= value;

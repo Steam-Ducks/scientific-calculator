@@ -1,8 +1,9 @@
 import promptSync from "prompt-sync";
 import { soma } from "./basicOperations/addition";
 import { subtraction } from "./basicOperations/subtraction";
-import { compountInterest } from "./interest/compoundInterest";
+import { multiplicacao } from "./basicOperations/multiplication";
 import { funcaoSegundoGrau } from "./specialOperations/quadraticFunction";
+import { compountInterest } from "./interest/compoundInterest";
 
 const prompt = promptSync();
 
@@ -40,7 +41,7 @@ do {
       break;
     case "3":
       do {
-        //funcao multiplicacap
+        multiplicacao();
       } while (repetirOperacao());
       break;
     case "4":

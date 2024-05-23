@@ -10,6 +10,7 @@ let delta: number, R1: number, R2: number, rdelta: number, precisao: number, rai
 precisao = 0.000001;
 
     // mensagem para o usuário identificar os valores
+    console.log()
     console.log("Cálculo de função do segundo grau!");
     console.log();
     console.log("Identifique os valores da função:");

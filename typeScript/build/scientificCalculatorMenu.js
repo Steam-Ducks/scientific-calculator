@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const addition_1 = require("./basicOperations/addition");
 const subtraction_1 = require("./basicOperations/subtraction");
+const multiplication_1 = require("./basicOperations/multiplication");
+const quadraticFunction_1 = require("./specialOperations/quadraticFunction");
 const compoundInterest_1 = require("./interest/compoundInterest");
 const prompt = (0, prompt_sync_1.default)();
 let opcao;
@@ -28,53 +30,55 @@ do {
     console.log();
     opcao = prompt("Opção desejada: ");
     switch (opcao) {
-        case '1':
+        case "1":
             do {
                 (0, addition_1.soma)();
             } while (repetirOperacao());
             break;
-        case '2':
+        case "2":
             do {
-                (0, subtraction_1.subtration)();
+                (0, subtraction_1.subtraction)();
             } while (repetirOperacao());
             break;
-        case '3':
+        case "3":
             do {
+                (0, multiplication_1.multiplicacao)();
             } while (repetirOperacao());
             break;
-        case '4':
-            do {
-            } while (repetirOperacao());
-            break;
-        case '5':
+        case "4":
             do {
             } while (repetirOperacao());
             break;
-        case '6':
+        case "5":
             do {
             } while (repetirOperacao());
             break;
-        case '7':
+        case "6":
+            do {
+                (0, quadraticFunction_1.funcaoSegundoGrau)();
+            } while (repetirOperacao());
+            break;
+        case "7":
             do {
                 selecionarTipoJuros();
             } while (repetirOperacao());
             break;
-        case '8':
+        case "8":
             console.log("PROGRAMA ENCERRADO!");
             break;
         default:
             console.log("Opção inválida. Por favor, escolha uma opção válida.");
             break;
     }
-    if (opcao !== '8') {
+    if (opcao !== "8") {
         prompt("Pressione Enter para continuar...");
     }
-} while (opcao !== '8');
+} while (opcao !== "8");
 function repetirOperacao() {
     console.log();
     const resposta = prompt("Deseja repetir a mesma operação? (S/N): ");
     console.log();
-    return resposta.toUpperCase() === 'S';
+    return resposta.toUpperCase() === "S";
 }
 function selecionarTipoJuros() {
     console.clear();

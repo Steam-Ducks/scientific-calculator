@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.binarioValido = void 0;
+exports.converterBinarioParaDecimal = void 0;
 const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const prompt = (0, prompt_sync_1.default)();
 function binarioValido() {
@@ -11,6 +11,7 @@ function binarioValido() {
     let binario = "";
     while (!valido) {
         valido = true;
+        console.log();
         binario = prompt("Digite um número binário para converter: ");
         if (binario) {
             for (let index = 0; index < binario.length; index++) {
@@ -27,7 +28,6 @@ function binarioValido() {
     }
     return binario;
 }
-exports.binarioValido = binarioValido;
 function converterBinarioParaDecimal() {
     let binario;
     let decimal = 0;
@@ -41,3 +41,5 @@ function converterBinarioParaDecimal() {
     }
     console.log("O número decimal é: ", decimal);
 }
+exports.converterBinarioParaDecimal = converterBinarioParaDecimal;
+converterBinarioParaDecimal();

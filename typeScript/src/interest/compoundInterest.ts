@@ -12,7 +12,7 @@ export function compountInterest(): void {
     let i: number;
     let juros: number;
 
-
+    console.log()
     capital = parseFloat(prompt("Insira o valor do Capital inicial: "));
     console.log("")
     taxa = parseFloat(prompt("Agora, insira a Taxa de Juros: "));
@@ -22,7 +22,7 @@ export function compountInterest(): void {
     tempo = parseFloat(prompt("Escreva o tempo em meses: "));
     console.log("")
 
-    //-------------------potencição-----------------------------
+    //-------------------potenciação-----------------------------
     let fator = 1 + i;
     let potencia = 1;
     

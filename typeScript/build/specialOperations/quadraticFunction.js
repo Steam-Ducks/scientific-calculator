@@ -10,6 +10,7 @@ function funcaoSegundoGrau() {
     let eq_a, eq_b, eq_c;
     let delta, R1, R2, rdelta, precisao, raiz, nraiz;
     precisao = 0.000001;
+    console.log();
     console.log("Cálculo de função do segundo grau!");
     console.log();
     console.log("Identifique os valores da função:");
@@ -53,4 +54,3 @@ function funcaoSegundoGrau() {
     }
 }
 exports.funcaoSegundoGrau = funcaoSegundoGrau;
-funcaoSegundoGrau();

@@ -8,6 +8,7 @@ function binarioValido(): string {
     while(!valido)
     {
         valido = true
+        console.log()
         binario = prompt("Digite um número binário para converter: ");
         if (binario)
         {
@@ -59,3 +60,5 @@ export function converterBinarioParaDecimal(): void {
     // que irá representar corretamente a conversão.
     console.log("O número decimal é: ", decimal);
 }
+
+converterBinarioParaDecimal();  

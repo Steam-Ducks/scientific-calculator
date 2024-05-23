@@ -1,22 +1,33 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.subtration = void 0;
-const prompt_sync_1 = __importDefault(require("prompt-sync"));
-const prompt = (0, prompt_sync_1.default)();
-function subtration() {
+exports.subtraction = void 0;
+const promptSync = require("prompt-sync");
+const prompt = promptSync();
+function subtraction() {
+    let value = 0;
+    let accumulatedValue = 0;
     console.log();
-    const quantidade = parseInt(prompt("Quantos números deseja subtrair? "));
-    console.log();
-    let subtration = 0;
-    for (let i = 0; i < quantidade; i++) {
-        const num = parseFloat(prompt(`Digite o número ${i - 1}: `));
-        subtration -= num;
+    const counter = parseInt(prompt("Quantos números deseja subtrair? "));
+    accumulatedValue = 0;
+    for (let i = 1; i <= counter; i++) {
+        if (i === counter && accumulatedValue === 0) {
+            console.log("Valor: ");
+            value = parseFloat(prompt(`${accumulatedValue} - `));
+            accumulatedValue -= value;
+            break;
+        }
+        if (accumulatedValue === 0) {
+            console.log();
+            accumulatedValue = parseFloat(prompt("Valor: "));
+        }
+        else {
+            console.log();
+            console.log("Valor: ");
+            value = parseFloat(prompt(`${accumulatedValue} - `));
+        }
+        accumulatedValue -= value;
     }
     console.log();
-    console.log(`O resultado da subtração é: ${subtration}`);
-    console.log();
+    console.log(`O resultado da subtração é: ${accumulatedValue}`);
 }
-exports.subtration = subtration;
+exports.subtraction = subtraction;
