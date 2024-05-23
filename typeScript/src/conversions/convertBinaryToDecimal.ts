@@ -2,7 +2,7 @@ import promptSync from 'prompt-sync';
 
 const prompt = promptSync();
 
-export function binarioValido(): string {
+function binarioValido(): string {
     let valido: boolean = false;
     let binario: string = "";
     while(!valido)
@@ -31,7 +31,7 @@ export function binarioValido(): string {
     return binario
     
 }
-function converterBinarioParaDecimal(): void {
+export function converterBinarioParaDecimal(): void {
 
     let binario: string;
     let decimal: number = 0;
