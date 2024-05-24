@@ -1,5 +1,7 @@
 const prompt = require('prompt-sync')();
 
+
+export function division(): void {
     console.log()
     const quantidade = parseInt(prompt("Quantos números deseja dividir? "));
     console.log()
@@ -11,4 +13,4 @@ const prompt = require('prompt-sync')();
     console.log()
     console.log(`O resultado da divisao é: ${divisao}`);
     console.log()
-
+}

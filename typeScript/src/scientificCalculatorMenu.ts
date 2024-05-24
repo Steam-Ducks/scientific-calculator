@@ -2,6 +2,7 @@ import promptSync from "prompt-sync";
 import { soma } from "./basicOperations/addition";
 import { subtraction } from "./basicOperations/subtraction";
 import { multiplicacao } from "./basicOperations/multiplication";
+import { division } from "./basicOperations/division";
 import { funcaoSegundoGrau } from "./specialOperations/quadraticFunction";
 import { compountInterest } from "./interest/compoundInterest";
 
@@ -46,7 +47,7 @@ do {
       break;
     case "4":
       do {
-        //funcao divisao
+        division();
       } while (repetirOperacao());
       break;
     case "5":
