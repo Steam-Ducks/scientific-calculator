@@ -9,7 +9,7 @@ function binarioValido(): string {
     {
         valido = true
         console.log()
-        binario = prompt("Digite um número binário para converter: ");
+        binario = prompt("Digite um numero binário para converter: ");
         if (binario)
         {
             // Percorremos o input letra a letra
