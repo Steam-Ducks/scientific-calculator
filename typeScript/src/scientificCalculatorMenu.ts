@@ -2,11 +2,11 @@ import promptSync from "prompt-sync";
 import { soma } from "./basicOperations/addition";
 import { subtraction } from "./basicOperations/subtraction";
 import { multiplicacao } from "./basicOperations/multiplication";
-import { division } from "./basicOperations/division";
+import { divisao } from "./basicOperations/division";
 import { funcaoSegundoGrau } from "./specialOperations/quadraticFunction";
 import { compountInterest } from "./interest/compoundInterest";
 
-const prompt = promptSync();
+export const prompt = promptSync();
 
 let opcao: string;
 
@@ -47,7 +47,7 @@ do {
       break;
     case "4":
       do {
-        division();
+        divisao();
       } while (repetirOperacao());
       break;
     case "5":

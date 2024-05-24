@@ -12,7 +12,7 @@ function binarioValido() {
     while (!valido) {
         valido = true;
         console.log();
-        binario = prompt("Digite um número binário para converter: ");
+        binario = prompt("Digite um numero binário para converter: ");
         if (binario) {
             for (let index = 0; index < binario.length; index++) {
                 let letraAtual = binario[index];

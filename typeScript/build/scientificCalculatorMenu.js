@@ -3,13 +3,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.prompt = void 0;
 const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const addition_1 = require("./basicOperations/addition");
 const subtraction_1 = require("./basicOperations/subtraction");
 const multiplication_1 = require("./basicOperations/multiplication");
+const division_1 = require("./basicOperations/division");
 const quadraticFunction_1 = require("./specialOperations/quadraticFunction");
 const compoundInterest_1 = require("./interest/compoundInterest");
-const prompt = (0, prompt_sync_1.default)();
+exports.prompt = (0, prompt_sync_1.default)();
 let opcao;
 do {
     console.clear();
@@ -28,7 +30,7 @@ do {
     console.log("[7] CALCULO DE JUROS");
     console.log("[8] SAIR");
     console.log();
-    opcao = prompt("Opção desejada: ");
+    opcao = (0, exports.prompt)("Opção desejada: ");
     switch (opcao) {
         case "1":
             do {
@@ -47,6 +49,7 @@ do {
             break;
         case "4":
             do {
+                (0, division_1.divisao)();
             } while (repetirOperacao());
             break;
         case "5":
@@ -71,12 +74,12 @@ do {
             break;
     }
     if (opcao !== "8") {
-        prompt("Pressione Enter para continuar...");
+        (0, exports.prompt)("Pressione Enter para continuar...");
     }
 } while (opcao !== "8");
 function repetirOperacao() {
     console.log();
-    const resposta = prompt("Deseja repetir a mesma operação? (S/N): ");
+    const resposta = (0, exports.prompt)("Deseja repetir a mesma operação? (S/N): ");
     console.log();
     return resposta.toUpperCase() === "S";
 }
@@ -88,7 +91,7 @@ function selecionarTipoJuros() {
     console.log("1 <- Juros Simples");
     console.log("2 <- Juros Compostos");
     console.log("");
-    const resposta = prompt("Digite a sua resposta: ");
+    const resposta = (0, exports.prompt)("Digite a sua resposta: ");
     switch (resposta) {
         case "1":
             break;

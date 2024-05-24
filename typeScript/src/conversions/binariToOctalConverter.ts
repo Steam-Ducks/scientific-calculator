@@ -1,7 +1,7 @@
-const prompt = require('prompt-sync')();
-
+    const promptSync = require('prompt-sync');
+    const promp = promptSync();
     console.log()
-    let binario = prompt("Digite um numero binario para convertet ");
+    let binario = promp("Digite um numero binario para convertet ");
     console.log()
 
     let potencia = 0
@@ -9,7 +9,9 @@ const prompt = require('prompt-sync')();
     let octal = 0
     let Resul= ""
 
-    for (let index = binario.length - 1; index >= 0; index--)
+    if(binario)
+    {
+        for (let index = binario.length - 1; index >= 0; index--)
         {
             // Quando o caractere atual for '1', somamos ele elevado à potência atual.
             if (binario[index] === "1")
@@ -18,7 +20,7 @@ const prompt = require('prompt-sync')();
             }
                 // Aumentamos em 1 a potência para utilizar na próxima iteração do loop.
                 potencia++;
-            }
+        }
     
         // Ao fim do loop, teremos todos os números somados na variável 'decimal',
        
@@ -32,9 +34,10 @@ const prompt = require('prompt-sync')();
             }
         while (decimal > 1);
 
+    }
         // O resultado é o numero inverso, a função a baixo separa cada caracter e as reune de forma inversa
         
-        function reverseString(str) {
+        function reverseString(str: string): string {
             return str.split("").reverse().join("");
         }
 
