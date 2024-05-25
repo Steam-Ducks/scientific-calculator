@@ -4,6 +4,7 @@ const prompt = promptSync();
 
 export function fatorial(): void {
     let x : number;
+    console.log("Calculo fatorial!")
     console.log();
     x = parseFloat(prompt("Escreva um número: "));
 
