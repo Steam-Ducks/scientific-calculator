@@ -9,11 +9,21 @@ export function subtraction(): void {
   console.log();
   const counter: number = parseInt(prompt("Quantos números deseja subtrair? "));
 
-  accumulatedValue = 0;
+  if (isNaN(counter) || counter <= 0) {
+    console.log("Por favor, insira um número válido de quantidades.");
+    return;
+  }
+
   for (let i = 1; i <= counter; i++) {
     if (i === counter && accumulatedValue === 0) {
       console.log("Valor: ");
       value = parseFloat(prompt(`${accumulatedValue} - `));
+      if (isNaN(value)) {
+        console.log("Por favor, insira um número válido.");
+        accumulatedValue = 0;
+        i--;
+        continue;
+      }
       accumulatedValue -= value;
       break;
     }
@@ -21,15 +31,27 @@ export function subtraction(): void {
     if (accumulatedValue === 0) {
       console.log();
       accumulatedValue = parseFloat(prompt("Valor: "));
+      if (isNaN(accumulatedValue)) {
+        console.log("Por favor, insira um número válido.");
+        accumulatedValue = 0;
+        i--;
+        continue;
+      }
     } else {
       console.log();
       console.log("Valor: ");
       value = parseFloat(prompt(`${accumulatedValue} - `));
+      if (isNaN(value)) {
+        console.log("Por favor, insira um número válido.");
+        value = 0;
+        i--;
+        continue;
+      }
     }
-
     accumulatedValue -= value;
   }
 
   console.log();
-  console.log(`O resultado da subtração é: ${accumulatedValue}`);
+  const formattedValue = accumulatedValue.toFixed(2);
+  console.log(`O resultado da subtração é: ${formattedValue}`);
 }
