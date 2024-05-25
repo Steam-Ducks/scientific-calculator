@@ -1,17 +1,21 @@
-const promptSync = require('prompt-sync')();
+import promptSync = require("prompt-sync");
 
-let x : number;
+const prompt = promptSync();
 
-console.log("Escreva um número: ");
-x = parseFloat(promptSync(""));
+export function fatorial(): void {
+    let x : number;
+    console.log();
+    x = parseFloat(prompt("Escreva um número: "));
 
-let n = x;
-let resultado = 1;
+    let n = x;
+    let resultado = 1;
 
-if (n <= 0) {
-    while (n >= 1) {
-            resultado *= n;
-            n--;
-        }
+    if (n >= 0) {
+        while (n >= 1) {
+                resultado *= n;
+                n--;
+            }
+    }
+    console.log(`O fatorial de ${x} é ${resultado}.`);
+
 }
-console.log(`O fatorial de ${x} é ${resultado}.`);

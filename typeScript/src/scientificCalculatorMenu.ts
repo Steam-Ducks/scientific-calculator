@@ -5,6 +5,7 @@ import { multiplicacao } from "./basicOperations/multiplication";
 import { divisao } from "./basicOperations/division";
 import { funcaoSegundoGrau } from "./specialOperations/quadraticFunction";
 import { compountInterest } from "./interest/compoundInterest";
+import { fatorial } from "./specialOperations/fatorial";
 
 export const prompt = promptSync();
 
@@ -52,7 +53,7 @@ do {
       break;
     case "5":
       do {
-        //funcao fatorial
+        fatorial();
       } while (repetirOperacao());
       break;
     case "6":

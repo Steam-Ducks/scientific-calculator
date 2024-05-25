@@ -11,6 +11,7 @@ const multiplication_1 = require("./basicOperations/multiplication");
 const division_1 = require("./basicOperations/division");
 const quadraticFunction_1 = require("./specialOperations/quadraticFunction");
 const compoundInterest_1 = require("./interest/compoundInterest");
+const fatorial_1 = require("./specialOperations/fatorial");
 exports.prompt = (0, prompt_sync_1.default)();
 let opcao;
 do {
@@ -54,6 +55,7 @@ do {
             break;
         case "5":
             do {
+                (0, fatorial_1.fatorial)();
             } while (repetirOperacao());
             break;
         case "6":
