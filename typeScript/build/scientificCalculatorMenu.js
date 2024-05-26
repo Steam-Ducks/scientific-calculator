@@ -11,6 +11,7 @@ const multiplication_1 = require("./basicOperations/multiplication");
 const division_1 = require("./basicOperations/division");
 const quadraticFunction_1 = require("./specialOperations/quadraticFunction");
 const compoundInterest_1 = require("./interest/compoundInterest");
+const simpleInterest_1 = require("./interest/simpleInterest");
 const fatorial_1 = require("./specialOperations/fatorial");
 exports.prompt = (0, prompt_sync_1.default)();
 let opcao;
@@ -96,6 +97,7 @@ function selecionarTipoJuros() {
     const resposta = (0, exports.prompt)("Digite a sua resposta: ");
     switch (resposta) {
         case "1":
+            (0, simpleInterest_1.simpleInterest)();
             break;
         case "2":
             (0, compoundInterest_1.compountInterest)();

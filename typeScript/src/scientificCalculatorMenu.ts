@@ -5,6 +5,7 @@ import { multiplicacao } from "./basicOperations/multiplication";
 import { divisao } from "./basicOperations/division";
 import { funcaoSegundoGrau } from "./specialOperations/quadraticFunction";
 import { compountInterest } from "./interest/compoundInterest";
+import { simpleInterest } from "./interest/simpleInterest";
 import { fatorial } from "./specialOperations/fatorial";
 
 export const prompt = promptSync();
@@ -98,6 +99,7 @@ function selecionarTipoJuros(): void {
 
   switch (resposta) {
     case "1":
+      simpleInterest();
       break;
     case "2":
       compountInterest();

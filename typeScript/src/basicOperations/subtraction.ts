@@ -6,7 +6,9 @@ export function subtraction(): void {
   let value: number = 0;
   let accumulatedValue: number = 0;
 
-  console.log();
+  console.log("");
+    console.log("========== SUBTRAÇÃO ==========");
+    console.log("");
   const counter: number = parseInt(prompt("Quantos números deseja subtrair? "));
 
   if (isNaN(counter) || counter <= 0) {

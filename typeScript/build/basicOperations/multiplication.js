@@ -7,9 +7,9 @@ exports.multiplicacao = void 0;
 const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const prompt = (0, prompt_sync_1.default)();
 function multiplicacao() {
-    console.log();
-    console.log("========== Função Multiplicação ==========");
-    console.log();
+    console.log("");
+    console.log("========== MULTIPLICAÇÃO ==========");
+    console.log("");
     console.log("Insira os valores, e eles serão automaticamente multiplicados.");
     console.log();
     console.log("=============================================================");

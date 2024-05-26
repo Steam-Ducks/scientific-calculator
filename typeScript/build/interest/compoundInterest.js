@@ -13,7 +13,9 @@ function compountInterest() {
     let tempo;
     let i;
     let juros;
-    console.log();
+    console.log("");
+    console.log("========== JUROS COMPOSTOS ==========");
+    console.log("");
     capital = parseFloat(prompt("Insira o valor do Capital inicial: "));
     console.log("");
     taxa = parseFloat(prompt("Agora, insira a Taxa de Juros: "));

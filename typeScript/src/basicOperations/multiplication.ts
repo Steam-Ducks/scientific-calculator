@@ -3,9 +3,9 @@ import promptSync from 'prompt-sync';
 const prompt = promptSync();
 
 export function multiplicacao() {
-  console.log()
-  console.log("========== Função Multiplicação ==========");
-  console.log();
+  console.log("");
+  console.log("========== MULTIPLICAÇÃO ==========");
+  console.log("");
   console.log("Insira os valores, e eles serão automaticamente multiplicados.");
   console.log();
   console.log("=============================================================");

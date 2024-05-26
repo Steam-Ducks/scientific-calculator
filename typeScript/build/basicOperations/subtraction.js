@@ -1,56 +1,57 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.subtraction = void 0;
-var promptSync = require("prompt-sync");
-var prompt = promptSync();
+const promptSync = require("prompt-sync");
+const prompt = promptSync();
 function subtraction() {
-  var value = 0;
-  var accumulatedValue = 0;
-  console.log();
-  var counter = parseInt(prompt("Quantos números deseja subtrair? "));
-  if (isNaN(counter) || counter <= 0) {
-    console.log("Por favor, insira um número válido de quantidades.");
-    return;
-  }
-  for (var i = 1; i <= counter; i++) {
-    if (i === counter && accumulatedValue === 0) {
-      console.log("Valor: ");
-      value = parseFloat(prompt("".concat(accumulatedValue, " - ")));
-      if (isNaN(value)) {
-        console.log("Por favor, insira um número válido.");
-        accumulatedValue = 0;
-        i--;
-        continue;
-      }
-      accumulatedValue -= value;
-      break;
+    let value = 0;
+    let accumulatedValue = 0;
+    console.log("");
+    console.log("========== SUBTRAÇÃO ==========");
+    console.log("");
+    const counter = parseInt(prompt("Quantos números deseja subtrair? "));
+    if (isNaN(counter) || counter <= 0) {
+        console.log("Por favor, insira um número válido de quantidades.");
+        return;
     }
-    if (accumulatedValue === 0) {
-      console.log();
-      accumulatedValue = parseFloat(prompt("Valor: "));
-      if (isNaN(accumulatedValue)) {
-        console.log("Por favor, insira um número válido.");
-        accumulatedValue = 0;
-        i--;
-        continue;
-      }
-    } else {
-      console.log();
-      console.log("Valor: ");
-      value = parseFloat(prompt("".concat(accumulatedValue, " - ")));
-      if (isNaN(value)) {
-        console.log("Por favor, insira um número válido.");
-        value = 0;
-        i--;
-        continue;
-      }
+    for (let i = 1; i <= counter; i++) {
+        if (i === counter && accumulatedValue === 0) {
+            console.log("Valor: ");
+            value = parseFloat(prompt(`${accumulatedValue} - `));
+            if (isNaN(value)) {
+                console.log("Por favor, insira um número válido.");
+                accumulatedValue = 0;
+                i--;
+                continue;
+            }
+            accumulatedValue -= value;
+            break;
+        }
+        if (accumulatedValue === 0) {
+            console.log();
+            accumulatedValue = parseFloat(prompt("Valor: "));
+            if (isNaN(accumulatedValue)) {
+                console.log("Por favor, insira um número válido.");
+                accumulatedValue = 0;
+                i--;
+                continue;
+            }
+        }
+        else {
+            console.log();
+            console.log("Valor: ");
+            value = parseFloat(prompt(`${accumulatedValue} - `));
+            if (isNaN(value)) {
+                console.log("Por favor, insira um número válido.");
+                value = 0;
+                i--;
+                continue;
+            }
+        }
+        accumulatedValue -= value;
     }
-    accumulatedValue -= value;
-  }
-  console.log();
-  var formattedValue = accumulatedValue.toFixed(2);
-  console.log(
-    "O resultado da subtra\u00E7\u00E3o \u00E9: ".concat(formattedValue)
-  );
+    console.log();
+    const formattedValue = accumulatedValue.toFixed(2);
+    console.log(`O resultado da subtração é: ${formattedValue}`);
 }
 exports.subtraction = subtraction;

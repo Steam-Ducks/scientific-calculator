@@ -5,7 +5,9 @@ const promptSync = require("prompt-sync");
 const prompt = promptSync();
 function fatorial() {
     let x;
-    console.log();
+    console.log("");
+    console.log("========== CÁLCULO FATORIAL ==========");
+    console.log("");
     x = parseFloat(prompt("Escreva um número: "));
     let n = x;
     let resultado = 1;

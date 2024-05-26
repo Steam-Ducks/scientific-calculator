@@ -10,9 +10,9 @@ function funcaoSegundoGrau() {
     let eq_a, eq_b, eq_c;
     let delta, R1, R2, rdelta, precisao, raiz, nraiz;
     precisao = 0.000001;
-    console.log();
-    console.log("Cálculo de função do segundo grau!");
-    console.log();
+    console.log("");
+    console.log("========== FUNÇÃO DE SEGUNDO GRAU ==========");
+    console.log("");
     console.log("Identifique os valores da função:");
     console.log("f(x) = A.x^2 + B.x + C ");
     console.log();
