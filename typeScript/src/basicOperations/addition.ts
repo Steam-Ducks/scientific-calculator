@@ -4,7 +4,7 @@ const prompt = promptSync();
 
 export function soma(): void {
     console.log("");
-    console.log("========== ADIÇÃO ==========");
+    console.log("========== SOMA ==========");
     console.log("");
     const quantidade = parseInt(prompt("Quantos números deseja somar? "));
     console.log()
