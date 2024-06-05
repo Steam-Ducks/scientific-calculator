@@ -12,12 +12,26 @@ export function fatorial(): void {
     let n = x;
     let resultado = 1;
 
-    if (n >= 0) {
-        while (n >= 1) {
-                resultado *= n;
-                n--;
+    if(n < 0){
+        console.log("Escreva um número maior ou igual a 0")
+    }
+    else{
+        if(n = 0){}
+        else{
+            if (n = 1){}
+            else{
+                if (n >= 2) {
+                    while (n >= 1) {
+                        resultado *= n;
+                        while (n >= 2) {
+                            console.log(n, "x")
+                        }
+                        n--;
+                    }
+                }
             }
+            
+        }
     }
     console.log(`O fatorial de ${x} é ${resultado}.`);
-
 }
