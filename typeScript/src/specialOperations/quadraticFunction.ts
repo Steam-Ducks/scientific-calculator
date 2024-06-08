@@ -27,8 +27,8 @@ const precisao:number = 0.000001;
 
     // o menu força o usuário a inserir valores numericos nas 3 solicitações de valores
     if (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c)) {
-        alert("Por favor, insira valores numéricos válidos.");}
-        
+        console.log("Por favor, insira valores numéricos válidos.");}
+        console.log();
 } while(isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c))
     
 
