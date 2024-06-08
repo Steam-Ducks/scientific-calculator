@@ -3,11 +3,9 @@ import promptSync from 'prompt-sync';
 const prompt = promptSync();
 
 export function funcaoSegundoGrau(): void{
-let eq_a: number, eq_b: number, eq_c: number;
-let delta: number, R1: number, R2: number, rdelta: number, precisao: number, raiz: number, nraiz: number;
 
 // a precisão define a quantidade de casas decimais que a raiz será decomposta
-precisao = 0.000001;
+const precisao:number = 0.000001;
 
     // mensagem para o usuário identificar os valores
     console.log("");
@@ -17,34 +15,44 @@ precisao = 0.000001;
     console.log("f(x) = A.x^2 + B.x + C ");
     console.log();
 
-    // entrada dos valores da função
-    console.log("-----------------------------------");
-    eq_a = parseFloat(prompt("Entre com o valor de A: ") || '0');
-    eq_b = parseFloat(prompt("Entre com o valor de B: ") || '0');
-    eq_c = parseFloat(prompt("Entre com o valor de C: ") || '0');
-    console.log("----------------------------------");
+    let eq_a:number;
+    let eq_b:number;
+    let eq_c:number;
+
+    // entrada dos valores da função 
+    do {
+    eq_a = parseFloat(prompt("Valor de A: ") || '0');
+    eq_b = parseFloat(prompt("Valor de B: ") || '0');
+    eq_c = parseFloat(prompt("Valor de C: ") || '0');
+
+    // o menu força o usuário a inserir valores numericos nas 3 solicitações de valores
+    if (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c)) {
+        alert("Por favor, insira valores numéricos válidos.");}
+        
+} while(isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c))
+    
 
     console.clear();
 
     // cálculo do valor de delta
     console.log("----------------------------------");
-    delta = eq_b * eq_b - 4 * eq_a * eq_c;
-    console.log("O valor de delta é: ", delta);
+    let delta:number = eq_b * eq_b - 4 * eq_a * eq_c;
+    console.log("Delta: ", delta);
     console.log("----------------------------------");
 
     // cálculo das raízes da função
     if (delta < 0) {
-        console.log("Não existem raízes reais da função");
+        console.log("Resulado: Não existem raízes reais da função");
         console.log();
     } else {
         // para calcular a raiz quadrada utilizamos o método de média aproximada
         // para começar decompomos a raiz por 2
-        raiz = delta / 2;
-        rdelta = raiz; // Inicializar rdelta como raiz no começo
+        let raiz:number = delta / 2;
+        let rdelta:number = raiz; // Inicializar rdelta como raiz no começo
 
         // procedimento de decomposição da raiz
         while (raiz > precisao) {
-            nraiz = (raiz + delta / raiz) / 2;
+            let nraiz:number = (raiz + delta / raiz) / 2;
             if ((raiz - nraiz) < precisao) {
                 raiz = nraiz;
                 // assim que a raiz for decomposta até a casa decimal definida
@@ -57,13 +65,11 @@ precisao = 0.000001;
         }
 
         rdelta = raiz
-        R1 = ((-eq_b) + (rdelta)) / (2 * eq_a);
-        R2 = ((-eq_b) - (rdelta)) / (2 * eq_a);
-        console.log("----------------------------------");
-        console.log("A raiz x' é: ", R1.toFixed(2));
-        console.log();
-        console.log("A raiz x'' é: ", R2.toFixed(2));
-        console.log("----------------------------------");
+        const R1:number = ((-eq_b) + (rdelta)) / (2 * eq_a);
+        const R2: number= ((-eq_b) - (rdelta)) / (2 * eq_a);
+        console.log("Resulado: ");
+        console.log("x': ", R1.toFixed(2));
+        console.log("x'': ", R2.toFixed(2));
         console.log();
     }
 }
