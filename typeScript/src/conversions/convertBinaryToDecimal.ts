@@ -40,7 +40,7 @@ export function converterBinarioParaDecimal(): void {
 
     binario = binarioValido();
         
-    console.log("========== Conversão B10 x B2 ==========");
+    console.log("========== Conversão B2 x B10 ==========");
 
 
     // Converter base -----------------------------------------------------------------------------------------------

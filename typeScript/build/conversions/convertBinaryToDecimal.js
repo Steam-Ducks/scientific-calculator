@@ -33,7 +33,7 @@ function converterBinarioParaDecimal() {
     let decimal = 0;
     let potencia = 0;
     binario = binarioValido();
-    console.log("========== Conversão B10 x B2 ==========");
+    console.log("========== Conversão B2 x B10 ==========");
     for (let index = binario.length - 1; index >= 0; index--) {
         if (binario[index] === "1") {
             decimal += 2 ** potencia;
