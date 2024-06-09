@@ -2,7 +2,7 @@
 
     const promp = promptSync();
 
-export function converterOctalparaBinario(): void {
+export function converterBinarioparaOctal(): void {
 
     console.log("");
     console.log("========== Conversão Binario para Octal ==========");

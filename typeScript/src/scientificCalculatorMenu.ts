@@ -9,7 +9,8 @@ import { simpleInterest } from "./interest/simpleInterest";
 import { fatorial } from "./specialOperations/fatorial";
 import { converterBinarioParaDecimal } from "./conversions/convertBinaryToDecimal";
 import { converterDecimalParaBinario } from "./conversions/convertDecimalToBinary";
-import { converterOctalparaBinario } from "./conversions/binariToOctalConverter";
+import { converterOctalparaBinario } from "./conversions/converterOctalToBinari";
+import { converterBinarioparaOctal } from "./conversions/converterBinariToOctal";
 
 
 export const prompt = promptSync();
@@ -108,8 +109,8 @@ function selecionarTipoJuros(): void {
   console.log("======= CALCULO DE JUROS =======");
   console.log("");
   console.log("Qual funcao deseja utilizar?");
-  console.log("1 <- Juros Simples");
-  console.log("2 <- Juros Compostos");
+  console.log("[1] Juros Simples");
+  console.log("[2] Juros Compostos");
   console.log("");
   const resposta: string = prompt("Digite a sua resposta: ");
 
@@ -131,14 +132,14 @@ function selecionarConversao(): void {
   console.log("======= CONVERSÃO DE BASE =======");
   console.log("");
   console.log("Qual funcao deseja utilizar?");
-  console.log("1 <- B2 X B10");
-  console.log("2 <- B10 X B2");
+  console.log("[1] B2 X B10");
+  console.log("[2] B10 X B2");
   console.log("--------------");
-  console.log("3 <- B2 X B8");
-  console.log("4 <- B8 X B2");
+  console.log("[3] B2 X B8");
+  console.log("[4] B8 X B2");
   console.log("--------------");
-  console.log("5 <- B2 X B16");
-  console.log("6 <- B16 X B2");
+  console.log("[5] B2 X B16");
+  console.log("[6] B16 X B2");
   console.log("");
   const resposta: string = prompt("Digite a sua resposta: ");
 
@@ -150,7 +151,7 @@ function selecionarConversao(): void {
       converterDecimalParaBinario();
       break;
     case "3":
-      console.log("TO DO");
+      converterBinarioparaOctal();
       break;
     case "4":
       converterOctalparaBinario();
