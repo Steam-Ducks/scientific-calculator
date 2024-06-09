@@ -6,23 +6,22 @@ function divisao() {
     console.log("");
     console.log("========== DIVISÃO ==========");
     console.log("");
-    const quantidade = parseInt(prompt("Quantos números deseja dividir? "));
-    console.log();
-    if (isNaN(quantidade) || quantidade <= 1) {
-        console.log("Por favor, insira um número válido de quantidades.");
-        return;
-    }
-    ;
-    let divisao = parseFloat(prompt(`Digite o 1º numero: `));
-    if (isNaN(divisao) || divisao <= 0) {
-        console.log("Por favor, insira um número válido.");
-        return;
-    }
-    for (let i = 1; i < quantidade; i++) {
-        const numero = parseFloat(prompt(`Digite o ${i + 1}º numero: `));
-        let valor = numero;
-        if (isNaN(valor) || numero <= 0) {
+    let quantidade = 0;
+    do {
+        quantidade = parseInt(prompt("Quantos números deseja dividir? "));
+        if (isNaN(quantidade) || quantidade <= 1) {
             console.log("Por favor, insira um número válido.");
+            console.log("");
+        }
+    } while (isNaN(quantidade) || quantidade <= 1);
+    let divisao = 0;
+    divisao = parseFloat(prompt(`Valor: `));
+    for (let i = 1; i < quantidade; i++) {
+        const numero = parseFloat(prompt(`Valor: `));
+        if (isNaN(numero) || numero <= 0) {
+            console.log("Não é posspivel dividir por 0");
+            console.log("Por favor, insira um número válido.");
+            console.log("");
             i--;
             continue;
         }

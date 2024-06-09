@@ -16,7 +16,7 @@ export function converterOctalparaBinario(): void {
     do{
 
             console.log()
-            binario = promp("Digite um numero binario para convertet ");
+            binario = promp("Digite um numero binario para converter ");
             console.log()
 
             for (let index = 0; index < binario.length; index++)
@@ -82,4 +82,4 @@ export function converterOctalparaBinario(): void {
         console.log("Octal: ", reverseString(Resul));
    }
 
-    binariToOctalConverter();  
+   converterOctalparaBinario();  

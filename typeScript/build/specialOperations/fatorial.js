@@ -1,15 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fatorial = void 0;
-var promptSync = require("prompt-sync");
-var prompt = promptSync();
+const promptSync = require("prompt-sync");
+const prompt = promptSync();
 function fatorial() {
-    var value;
+    let value;
     console.log("");
     console.log("========== CÁLCULO FATORIAL ==========");
     console.log("");
     do {
-        var input = prompt("Escreva um número: ");
+        let input = prompt("Escreva um número: ");
         value = parseFloat(input);
         if (isNaN(value)) {
             console.log("Por favor, insira um número válido.");
@@ -18,8 +18,8 @@ function fatorial() {
             console.log("Por favor, escreva um número maior ou igual a 0");
         }
     } while (isNaN(value) || value < 0);
-    var holder = value;
-    var resultado = 1;
+    let holder = value;
+    let resultado = 1;
     if (holder > -1) {
         if (holder === 0) { }
         else {
@@ -33,7 +33,7 @@ function fatorial() {
                 }
             }
         }
-        console.log("O resultado do fatorial de ".concat(value, " \u00E9 ").concat(resultado, "."));
+        console.log(`O resultado do fatorial de ${value} é ${resultado}.`);
     }
 }
 exports.fatorial = fatorial;
