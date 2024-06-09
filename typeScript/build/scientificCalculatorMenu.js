@@ -15,7 +15,10 @@ const simpleInterest_1 = require("./interest/simpleInterest");
 const fatorial_1 = require("./specialOperations/fatorial");
 const convertBinaryToDecimal_1 = require("./conversions/convertBinaryToDecimal");
 const convertDecimalToBinary_1 = require("./conversions/convertDecimalToBinary");
-const binariToOctalConverter_1 = require("./conversions/binariToOctalConverter");
+const converterOctalToBinari_1 = require("./conversions/converterOctalToBinari");
+const converterBinariToOctal_1 = require("./conversions/converterBinariToOctal");
+const convertBinaryToHexadecimal_1 = require("./conversions/convertBinaryToHexadecimal");
+const convertHexadecimalToBinary_1 = require("./conversions/convertHexadecimalToBinary");
 exports.prompt = (0, prompt_sync_1.default)();
 let opcao;
 do {
@@ -106,8 +109,8 @@ function selecionarTipoJuros() {
     console.log("======= CALCULO DE JUROS =======");
     console.log("");
     console.log("Qual funcao deseja utilizar?");
-    console.log("1 <- Juros Simples");
-    console.log("2 <- Juros Compostos");
+    console.log("[1] Juros Simples");
+    console.log("[2] Juros Compostos");
     console.log("");
     const resposta = (0, exports.prompt)("Digite a sua resposta: ");
     switch (resposta) {
@@ -127,14 +130,14 @@ function selecionarConversao() {
     console.log("======= CONVERSÃO DE BASE =======");
     console.log("");
     console.log("Qual funcao deseja utilizar?");
-    console.log("1 <- B2 X B10");
-    console.log("2 <- B10 X B2");
+    console.log("[1] B2 X B10");
+    console.log("[2] B10 X B2");
     console.log("--------------");
-    console.log("3 <- B2 X B8");
-    console.log("4 <- B8 X B2");
+    console.log("[3] B2 X B8");
+    console.log("[4] B8 X B2");
     console.log("--------------");
-    console.log("5 <- B2 X B16");
-    console.log("6 <- B16 X B2");
+    console.log("[5] B2 X B16");
+    console.log("[6] B16 X B2");
     console.log("");
     const resposta = (0, exports.prompt)("Digite a sua resposta: ");
     switch (resposta) {
@@ -145,16 +148,16 @@ function selecionarConversao() {
             (0, convertDecimalToBinary_1.converterDecimalParaBinario)();
             break;
         case "3":
-            console.log("TO DO");
+            (0, converterBinariToOctal_1.converterBinarioparaOctal)();
             break;
         case "4":
-            (0, binariToOctalConverter_1.converterOctalparaBinario)();
+            (0, converterOctalToBinari_1.converterOctalparaBinario)();
             break;
         case "5":
-            console.log("TO DO");
+            (0, convertBinaryToHexadecimal_1.converterBinarioParaHexadecimal)();
             break;
         case "6":
-            console.log("TO DO");
+            (0, convertHexadecimalToBinary_1.converterHexadecimalParaBinario)();
             break;
         default:
             console.log("Opção inválida. Por favor, escolha uma opção válida.");

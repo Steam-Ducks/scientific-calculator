@@ -11,7 +11,8 @@ import { converterBinarioParaDecimal } from "./conversions/convertBinaryToDecima
 import { converterDecimalParaBinario } from "./conversions/convertDecimalToBinary";
 import { converterOctalparaBinario } from "./conversions/converterOctalToBinari";
 import { converterBinarioparaOctal } from "./conversions/converterBinariToOctal";
-
+import { converterBinarioParaHexadecimal } from "./conversions/convertBinaryToHexadecimal";
+import { converterHexadecimalParaBinario } from "./conversions/convertHexadecimalToBinary";
 
 export const prompt = promptSync();
 
@@ -157,10 +158,10 @@ function selecionarConversao(): void {
       converterOctalparaBinario();
       break;
     case "5":
-      console.log("TO DO");
+      converterBinarioParaHexadecimal();
       break;
     case "6":
-      console.log("TO DO");
+      converterHexadecimalParaBinario();
       break;
     default:
       console.log("Opção inválida. Por favor, escolha uma opção válida.");
