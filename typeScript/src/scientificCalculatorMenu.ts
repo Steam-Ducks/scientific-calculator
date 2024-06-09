@@ -98,7 +98,7 @@ do {
 
 function repetirOperacao(): boolean {
   console.log();
-  const resposta = prompt("Deseja repetir a mesma operação? (S/N): ");
+  const resposta: string = prompt("Deseja repetir a mesma operação? (S/N): ");
   console.log();
   return resposta.toUpperCase() === "S";
 }
@@ -111,7 +111,7 @@ function selecionarTipoJuros(): void {
   console.log("1 <- Juros Simples");
   console.log("2 <- Juros Compostos");
   console.log("");
-  const resposta = prompt("Digite a sua resposta: ");
+  const resposta: string = prompt("Digite a sua resposta: ");
 
   switch (resposta) {
     case "1":
@@ -140,7 +140,7 @@ function selecionarConversao(): void {
   console.log("5 <- B2 X B16");
   console.log("6 <- B16 X B2");
   console.log("");
-  const resposta = prompt("Digite a sua resposta: ");
+  const resposta: string = prompt("Digite a sua resposta: ");
 
   switch (resposta) {
     case "1":
