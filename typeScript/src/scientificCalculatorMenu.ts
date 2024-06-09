@@ -13,6 +13,7 @@ import { converterOctalparaBinario } from "./conversions/converterOctalToBinari"
 import { converterBinarioparaOctal } from "./conversions/converterBinariToOctal";
 import { converterBinarioParaHexadecimal } from "./conversions/convertBinaryToHexadecimal";
 import { converterHexadecimalParaBinario } from "./conversions/convertHexadecimalToBinary";
+import { concatenacaoStrings } from "./specialOperations/stringConcatenation";
 
 export const prompt = promptSync();
 
@@ -82,7 +83,7 @@ do {
       break;
     case "9":
       do {
-        console.log("TO DO");
+        concatenacaoStrings();
       } while (repetirOperacao());
       break;
     case "10":

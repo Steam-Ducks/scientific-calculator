@@ -7,7 +7,7 @@ function somarStrings(string1: string, string2: string): string {
 }
 
 // Função principal para receber entrada e exibir resultado
-function concatenacaoStrings(): void {
+export function concatenacaoStrings(): void {
     console.log("========== Concatenação de Strings ==========");
     console.log("")
     const string1 = prompt("Digite a primeira string: ");

@@ -19,6 +19,7 @@ const converterOctalToBinari_1 = require("./conversions/converterOctalToBinari")
 const converterBinariToOctal_1 = require("./conversions/converterBinariToOctal");
 const convertBinaryToHexadecimal_1 = require("./conversions/convertBinaryToHexadecimal");
 const convertHexadecimalToBinary_1 = require("./conversions/convertHexadecimalToBinary");
+const stringConcatenation_1 = require("./specialOperations/stringConcatenation");
 exports.prompt = (0, prompt_sync_1.default)();
 let opcao;
 do {
@@ -84,7 +85,7 @@ do {
             break;
         case "9":
             do {
-                console.log("TO DO");
+                (0, stringConcatenation_1.concatenacaoStrings)();
             } while (repetirOperacao());
             break;
         case "10":
