@@ -40,7 +40,8 @@ export function converterBinarioParaDecimal(): void {
 
     binario = binarioValido();
         
-        
+    console.log("========== Conversão B10 x B2 ==========");
+
 
     // Converter base -----------------------------------------------------------------------------------------------
     // Começamos pelo último número binário.
@@ -58,7 +59,8 @@ export function converterBinarioParaDecimal(): void {
 
     // Ao fim do loop, teremos todos os números somados na variável 'decimal',
     // que irá representar corretamente a conversão.
-    console.log("O número decimal é: ", decimal);
+    console.log()
+    console.log("Resultado:")
+    console.log("Binário: ", binario)
+    console.log("Decimal: ", decimal);
 }
-
-converterBinarioParaDecimal();  

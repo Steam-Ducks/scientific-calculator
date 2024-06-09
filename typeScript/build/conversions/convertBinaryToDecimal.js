@@ -33,13 +33,16 @@ function converterBinarioParaDecimal() {
     let decimal = 0;
     let potencia = 0;
     binario = binarioValido();
+    console.log("========== Conversão B10 x B2 ==========");
     for (let index = binario.length - 1; index >= 0; index--) {
         if (binario[index] === "1") {
             decimal += 2 ** potencia;
         }
         potencia++;
     }
-    console.log("O número decimal é: ", decimal);
+    console.log();
+    console.log("Resultado:");
+    console.log("Binário: ", binario);
+    console.log("Decimal: ", decimal);
 }
 exports.converterBinarioParaDecimal = converterBinarioParaDecimal;
-converterBinarioParaDecimal();
