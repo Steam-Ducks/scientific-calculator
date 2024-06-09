@@ -5,6 +5,7 @@ const prompt = promptSync();
 function binarioValido(): string {
     let valido: boolean = false;
     let binario: string = "";
+    console.log("");
     console.log("========== Conversão B2 x B16 ==========");
     while (!valido) {
         valido = true;

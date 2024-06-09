@@ -5,6 +5,7 @@ const prompt = promptSync();
 function hexadecimalValido(): string {
     let valido: boolean = false;
     let hexadecimal: string = "";
+    console.log("");
     console.log("========== Conversão B16 x B2 ==========");
     while (!valido) {
         valido = true;

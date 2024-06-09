@@ -3,6 +3,7 @@ import promptSync from 'prompt-sync';
 const prompt = promptSync();
 
 export function converterDecimalParaBinario(): void {
+    console.log("");
     console.log("========== Conversão B10 para B2 ==========");
     console.log();
     

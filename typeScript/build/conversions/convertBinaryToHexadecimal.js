@@ -9,6 +9,7 @@ const prompt = (0, prompt_sync_1.default)();
 function binarioValido() {
     let valido = false;
     let binario = "";
+    console.log("");
     console.log("========== Conversão B2 x B16 ==========");
     while (!valido) {
         valido = true;

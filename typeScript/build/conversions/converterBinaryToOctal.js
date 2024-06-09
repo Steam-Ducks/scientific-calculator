@@ -5,13 +5,12 @@ const promptSync = require('prompt-sync');
 const promp = promptSync();
 function converterBinarioparaOctal() {
     console.log("");
-    console.log("========== Conversão Binario para Octal ==========");
+    console.log("========== Conversão B2 x B8 ==========");
     console.log("");
     let valido = "Invalido";
     let binario = "";
     do {
-        console.log();
-        binario = promp("Digite um numero binario para converter ");
+        binario = promp("Digite um numero binario para converter: ");
         console.log();
         for (let index = 0; index < binario.length; index++) {
             let letraAtual = binario[index];
@@ -46,7 +45,7 @@ function converterBinarioparaOctal() {
     function reverseString(str = "") {
         return str.split("").reverse().join("");
     }
-    console.log("Resultados: ");
+    console.log("Resultado: ");
     console.log("Binario: ", `${binario}`);
     console.log("Octal: ", reverseString(Resul));
 }

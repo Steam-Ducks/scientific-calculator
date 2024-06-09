@@ -9,6 +9,7 @@ const prompt = (0, prompt_sync_1.default)();
 function hexadecimalValido() {
     let valido = false;
     let hexadecimal = "";
+    console.log("");
     console.log("========== Conversão B16 x B2 ==========");
     while (!valido) {
         valido = true;
