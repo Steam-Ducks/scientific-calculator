@@ -28,7 +28,6 @@ function converterDecimalParaBinario() {
     console.log("Binário:", binario);
 }
 exports.converterDecimalParaBinario = converterDecimalParaBinario;
-converterDecimalParaBinario();
 function numeroValido(texto, minimo = Number.MIN_SAFE_INTEGER) {
     let numero;
     while (true) {

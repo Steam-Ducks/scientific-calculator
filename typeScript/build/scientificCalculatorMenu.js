@@ -13,6 +13,9 @@ const quadraticFunction_1 = require("./specialOperations/quadraticFunction");
 const compoundInterest_1 = require("./interest/compoundInterest");
 const simpleInterest_1 = require("./interest/simpleInterest");
 const fatorial_1 = require("./specialOperations/fatorial");
+const convertBinaryToDecimal_1 = require("./conversions/convertBinaryToDecimal");
+const convertDecimalToBinary_1 = require("./conversions/convertDecimalToBinary");
+const binariToOctalConverter_1 = require("./conversions/binariToOctalConverter");
 exports.prompt = (0, prompt_sync_1.default)();
 let opcao;
 do {
@@ -30,7 +33,9 @@ do {
     console.log("[5] FATORIAL");
     console.log("[6] FUNCAO DE SEGUNDO GRAU");
     console.log("[7] CALCULO DE JUROS");
-    console.log("[8] SAIR");
+    console.log("[8] CONVERSÃO DE BASE");
+    console.log("[9] CONCATENAÇÃO DE STRINGS");
+    console.log("[10] SAIR");
     console.log();
     opcao = (0, exports.prompt)("Opção desejada: ");
     switch (opcao) {
@@ -70,16 +75,26 @@ do {
             } while (repetirOperacao());
             break;
         case "8":
+            do {
+                selecionarConversao();
+            } while (repetirOperacao());
+            break;
+        case "9":
+            do {
+                console.log("TO DO");
+            } while (repetirOperacao());
+            break;
+        case "10":
             console.log("PROGRAMA ENCERRADO!");
             break;
         default:
             console.log("Opção inválida. Por favor, escolha uma opção válida.");
             break;
     }
-    if (opcao !== "8") {
+    if (opcao !== "10") {
         (0, exports.prompt)("Pressione Enter para continuar...");
     }
-} while (opcao !== "8");
+} while (opcao !== "10");
 function repetirOperacao() {
     console.log();
     const resposta = (0, exports.prompt)("Deseja repetir a mesma operação? (S/N): ");
@@ -101,6 +116,45 @@ function selecionarTipoJuros() {
             break;
         case "2":
             (0, compoundInterest_1.compountInterest)();
+            break;
+        default:
+            console.log("Opção inválida. Por favor, escolha uma opção válida.");
+            break;
+    }
+}
+function selecionarConversao() {
+    console.clear();
+    console.log("======= CONVERSÃO DE BASE =======");
+    console.log("");
+    console.log("Qual funcao deseja utilizar?");
+    console.log("1 <- B2 X B10");
+    console.log("2 <- B10 X B2");
+    console.log("--------------");
+    console.log("3 <- B2 X B8");
+    console.log("4 <- B8 X B2");
+    console.log("--------------");
+    console.log("5 <- B2 X B16");
+    console.log("6 <- B16 X B2");
+    console.log("");
+    const resposta = (0, exports.prompt)("Digite a sua resposta: ");
+    switch (resposta) {
+        case "1":
+            (0, convertBinaryToDecimal_1.converterBinarioParaDecimal)();
+            break;
+        case "2":
+            (0, convertDecimalToBinary_1.converterDecimalParaBinario)();
+            break;
+        case "3":
+            console.log("TO DO");
+            break;
+        case "4":
+            (0, binariToOctalConverter_1.converterOctalparaBinario)();
+            break;
+        case "5":
+            console.log("TO DO");
+            break;
+        case "6":
+            console.log("TO DO");
             break;
         default:
             console.log("Opção inválida. Por favor, escolha uma opção válida.");

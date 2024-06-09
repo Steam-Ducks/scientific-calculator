@@ -82,4 +82,3 @@ export function converterOctalparaBinario(): void {
         console.log("Octal: ", reverseString(Resul));
    }
 
-   converterOctalparaBinario();  

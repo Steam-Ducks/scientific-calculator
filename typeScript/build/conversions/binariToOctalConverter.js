@@ -51,4 +51,3 @@ function converterOctalparaBinario() {
     console.log("Octal: ", reverseString(Resul));
 }
 exports.converterOctalparaBinario = converterOctalparaBinario;
-converterOctalparaBinario();

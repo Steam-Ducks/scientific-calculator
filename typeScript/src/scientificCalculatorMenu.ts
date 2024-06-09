@@ -7,6 +7,10 @@ import { funcaoSegundoGrau } from "./specialOperations/quadraticFunction";
 import { compountInterest } from "./interest/compoundInterest";
 import { simpleInterest } from "./interest/simpleInterest";
 import { fatorial } from "./specialOperations/fatorial";
+import { converterBinarioParaDecimal } from "./conversions/convertBinaryToDecimal";
+import { converterDecimalParaBinario } from "./conversions/convertDecimalToBinary";
+import { converterOctalparaBinario } from "./conversions/binariToOctalConverter";
+
 
 export const prompt = promptSync();
 
@@ -27,7 +31,9 @@ do {
   console.log("[5] FATORIAL");
   console.log("[6] FUNCAO DE SEGUNDO GRAU");
   console.log("[7] CALCULO DE JUROS");
-  console.log("[8] SAIR");
+  console.log("[8] CONVERSÃO DE BASE");
+  console.log("[9] CONCATENAÇÃO DE STRINGS");
+  console.log("[10] SAIR");
   console.log();
   opcao = prompt("Opção desejada: ");
 
@@ -68,6 +74,16 @@ do {
       } while (repetirOperacao());
       break;
     case "8":
+      do {
+        selecionarConversao();
+      } while (repetirOperacao());
+      break;
+    case "9":
+      do {
+        console.log("TO DO");
+      } while (repetirOperacao());
+      break;
+    case "10":
       console.log("PROGRAMA ENCERRADO!");
       break;
     default:
@@ -75,10 +91,10 @@ do {
       break;
   }
 
-  if (opcao !== "8") {
+  if (opcao !== "10") {
     prompt("Pressione Enter para continuar...");
   }
-} while (opcao !== "8");
+} while (opcao !== "10");
 
 function repetirOperacao(): boolean {
   console.log();
@@ -103,6 +119,47 @@ function selecionarTipoJuros(): void {
       break;
     case "2":
       compountInterest();
+      break;
+    default:
+      console.log("Opção inválida. Por favor, escolha uma opção válida.");
+      break;
+  }
+}
+
+function selecionarConversao(): void {
+  console.clear();
+  console.log("======= CONVERSÃO DE BASE =======");
+  console.log("");
+  console.log("Qual funcao deseja utilizar?");
+  console.log("1 <- B2 X B10");
+  console.log("2 <- B10 X B2");
+  console.log("--------------");
+  console.log("3 <- B2 X B8");
+  console.log("4 <- B8 X B2");
+  console.log("--------------");
+  console.log("5 <- B2 X B16");
+  console.log("6 <- B16 X B2");
+  console.log("");
+  const resposta = prompt("Digite a sua resposta: ");
+
+  switch (resposta) {
+    case "1":
+      converterBinarioParaDecimal();
+      break;
+    case "2":
+      converterDecimalParaBinario();
+      break;
+    case "3":
+      console.log("TO DO");
+      break;
+    case "4":
+      converterOctalparaBinario();
+      break;
+    case "5":
+      console.log("TO DO");
+      break;
+    case "6":
+      console.log("TO DO");
       break;
     default:
       console.log("Opção inválida. Por favor, escolha uma opção válida.");

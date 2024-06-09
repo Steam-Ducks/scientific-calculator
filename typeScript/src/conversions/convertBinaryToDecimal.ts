@@ -38,9 +38,9 @@ export function converterBinarioParaDecimal(): void {
     let decimal: number = 0;
     let potencia: number = 0;
 
+    console.log("========== Conversão B2 x B10 ==========");
     binario = binarioValido();
         
-    console.log("========== Conversão B2 x B10 ==========");
 
 
     // Converter base -----------------------------------------------------------------------------------------------
