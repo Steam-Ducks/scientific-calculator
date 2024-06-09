@@ -2,7 +2,8 @@
 
     const promp = promptSync();
 
-    
+export function converterOctalparaBinario(): void {
+
     console.log("");
     console.log("========== Conversão Binaio para Octal ==========");
     console.log("");
@@ -40,7 +41,6 @@
 
     } while (`${valido}` === "Invalido");
 
-//export function converterOctalparaBinario(): void {
     let potencia = 0
     let decimal = 0
     let octal = 0
@@ -80,6 +80,6 @@
         console.log("Resultados: ")
         console.log("Binario: ",`${binario}` );
         console.log("Octal: ", reverseString(Resul));
-    //}
+   }
 
-    //binariToOctalConverter();  
+    binariToOctalConverter();  
