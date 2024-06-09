@@ -1,9 +1,46 @@
     const promptSync = require('prompt-sync');
-    const promp = promptSync();
-    console.log()
-    let binario = promp("Digite um numero binario para convertet ");
-    console.log()
 
+    const promp = promptSync();
+
+    
+    console.log("");
+    console.log("========== Conversão Binaio para Octal ==========");
+    console.log("");
+
+    //========================= Solicita binario =================================
+
+    let valido ="Invalido"
+    let binario = ""
+
+    do{
+
+            console.log()
+            binario = promp("Digite um numero binario para convertet ");
+            console.log()
+
+            for (let index = 0; index < binario.length; index++)
+                {
+                    let letraAtual = binario[index];
+                    // caso a letra não seja 1 ou 0, então o input não pode ser marcado como binário
+                    if (letraAtual !== "1" && letraAtual !== "0") 
+                    {
+                        valido ="Invalido";
+                    }
+
+                    if (letraAtual === "1" || letraAtual === "0") 
+                        {
+                            valido ="valido";
+                        }
+                }
+                // Se for invalido, vai informar que que está invalido e reperit o numero
+                if (valido == "Invalido") 
+                    {
+                        console.log("Binario Invalido.");
+                    }
+
+    } while (`${valido}` === "Invalido");
+
+//export function converterOctalparaBinario(): void {
     let potencia = 0
     let decimal = 0
     let octal = 0
@@ -37,8 +74,12 @@
     }
         // O resultado é o numero inverso, a função a baixo separa cada caracter e as reune de forma inversa
         
-        function reverseString(str: string): string {
+        function reverseString(str=""){
             return str.split("").reverse().join("");
         }
+        console.log("Resultados: ")
+        console.log("Binario: ",`${binario}` );
+        console.log("Octal: ", reverseString(Resul));
+    //}
 
-        console.log("O número octal é: ", reverseString(Resul));
+    //binariToOctalConverter();  
