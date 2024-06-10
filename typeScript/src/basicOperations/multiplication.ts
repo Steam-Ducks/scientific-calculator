@@ -1,41 +1,37 @@
-import promptSync from 'prompt-sync';
+import promptSync = require("prompt-sync");
 
 const prompt = promptSync();
 
-export function multiplicacao() {
-  console.log("");
-  console.log("========== MULTIPLICAÇÃO ==========");
-  console.log("");
-  console.log("Insira os valores, e eles serão automaticamente multiplicados.");
-  console.log();
-  console.log("=============================================================");
-  console.log();
+export function multiplication(): void {
+    let value: number = 0;
+    let accumulatedValue: number = 1; // Inicializamos com 1 porque é o elemento neutro da multiplicação
 
-  let valorAcumulado = 1.0;
-  const quantidade = parseInt(prompt("Quantos números deseja multiplicar? "), 10);
+    console.log("");
+    console.log("========== MULTIPLICAÇÃO ==========");
+    console.log("");
+    const counter: number = parseInt(prompt("Quantos números deseja multiplicar? "));
 
-  if (isNaN(quantidade) || quantidade <= 0) {
-    console.log("Por favor, insira um número válido de quantidades.");
-    return;
-  }
-
-  for (let i = 0; i < quantidade; i++) {
-    let valorString = prompt(`Valor ${i + 1}: `);
-    
-    let valor = parseFloat(valorString);
-    if (isNaN(valor)) {
-      console.log("Por favor, insira um número válido.");
-      i--;
-      continue;
+    if (isNaN(counter) || counter <= 0) {
+        console.log("Por favor, insira um número válido de quantidades.");
+        return;
     }
 
-    valorAcumulado *= valor;
-    console.log(`Resultado parcial: ${valorAcumulado}`);
-    console.log();
-  }
+    for (let i = 1; i <= counter; i++) {
+        console.log();
+        value = parseFloat(prompt(`Valor ${i}: `));
+        if (isNaN(value)) {
+            console.log("Por favor, insira um número válido.");
+            i--;
+            continue;
+        }
+        accumulatedValue *= value;
+    }
 
-  console.log();
-  console.log(`O Resultado da multiplicação é: ${valorAcumulado}`);
-  console.log("=============================================================");
-  console.log();
+    console.log();
+    const formattedValue = accumulatedValue.toFixed(2);
+    console.log(`O resultado da multiplicação é: ${formattedValue}`);
+}
+
+// Executar a função de multiplicação
+multiplication();
 }
