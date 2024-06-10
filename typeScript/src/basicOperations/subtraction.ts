@@ -57,5 +57,3 @@ export function subtraction(): void {
   const formattedValue = accumulatedValue.toFixed(2);
   console.log(`O resultado da subtração é: ${formattedValue}`);
 }
-
-subtraction();

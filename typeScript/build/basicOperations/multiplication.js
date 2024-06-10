@@ -1,40 +1,33 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.multiplicacao = void 0;
-const prompt_sync_1 = __importDefault(require("prompt-sync"));
-const prompt = (0, prompt_sync_1.default)();
-function multiplicacao() {
-    console.log("");
-    console.log("========== MULTIPLICAÇÃO ==========");
-    console.log("");
-    console.log("Insira os valores, e eles serão automaticamente multiplicados.");
+exports.multiplication = void 0;
+var promptSync = require("prompt-sync");
+var prompt = promptSync();
+function multiplication() {
+  var value = 0;
+  var accumulatedValue = 1; // Inicializamos com 1 porque é o elemento neutro da multiplicação
+  console.log("");
+  console.log("========== MULTIPLICAÇÃO ==========");
+  console.log("");
+  var counter = parseInt(prompt("Quantos números deseja multiplicar? "));
+  if (isNaN(counter) || counter <= 0) {
+    console.log("Por favor, insira um número válido de quantidades.");
+    return;
+  }
+  for (var i = 1; i <= counter; i++) {
     console.log();
-    console.log("=============================================================");
-    console.log();
-    let valorAcumulado = 1.0;
-    const quantidade = parseInt(prompt("Quantos números deseja multiplicar? "), 10);
-    if (isNaN(quantidade) || quantidade <= 0) {
-        console.log("Por favor, insira um número válido de quantidades.");
-        return;
+    value = parseFloat(prompt("Valor ".concat(i, ": ")));
+    if (isNaN(value)) {
+      console.log("Por favor, insira um número válido.");
+      i--;
+      continue;
     }
-    for (let i = 0; i < quantidade; i++) {
-        let valorString = prompt(`Valor ${i + 1}: `);
-        let valor = parseFloat(valorString);
-        if (isNaN(valor)) {
-            console.log("Por favor, insira um número válido.");
-            i--;
-            continue;
-        }
-        valorAcumulado *= valor;
-        console.log(`Resultado parcial: ${valorAcumulado}`);
-        console.log();
-    }
-    console.log();
-    console.log(`O Resultado da multiplicação é: ${valorAcumulado}`);
-    console.log("=============================================================");
-    console.log();
+    accumulatedValue *= value;
+  }
+  console.log();
+  var formattedValue = accumulatedValue.toFixed(2);
+  console.log(
+    "O resultado da multiplica\u00E7\u00E3o \u00E9: ".concat(formattedValue)
+  );
 }
-exports.multiplicacao = multiplicacao;
+exports.multiplication = multiplication;
