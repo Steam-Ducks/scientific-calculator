@@ -2,7 +2,7 @@ import promptSync = require("prompt-sync");
 
 const prompt = promptSync();
 
-export function multiplication(): void {
+export function multiplicacao(): void {
     let value: number = 0;
     let accumulatedValue: number = 1; // Inicializamos com 1 porque é o elemento neutro da multiplicação
 
@@ -32,6 +32,4 @@ export function multiplication(): void {
     console.log(`O resultado da multiplicação é: ${formattedValue}`);
 }
 
-// Executar a função de multiplicação
-multiplication();
-}
+
