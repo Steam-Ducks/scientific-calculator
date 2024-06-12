@@ -3,6 +3,7 @@ import promptSync from 'prompt-sync';
 const input = promptSync();
 
 export function simpleInterest(): void {
+    console.log("");
     console.log("========== JUROS SIMPLES ==========");
     console.log("");
 
@@ -11,27 +12,26 @@ export function simpleInterest(): void {
         console.log("Por favor digite um valor válido. ");
     }
 
-    let taxa = parseFloat(input("Taxa de juros: "));
+    let taxa: number = parseFloat(input("Taxa de juros/Mensal: "));
     if (isNaN(taxa) || taxa <= 0) {
         console.log("Por favor digite um valor válido. ");
     }
 
-    const tempo = parseInt(input("Tempo (Em meses ou anos de acordo com a sua função original): "));
+    const tempo: number = parseInt(input("Tempo/Meses: "));
     console.log("");
 
     taxa = taxa / 100;
 
-    const juros = valor * taxa * tempo;
-    const montante = valor + juros;
+    const juros: number = valor * (taxa) * tempo;
+    const montante: number = valor + juros;
 
-    console.log("Capital inicial: ", valor);
-    console.log("");
-    console.log("Taxa de juros: ", taxa);
-    console.log("");
-    console.log("Tempo/meses: ", tempo);
-    console.log("");
-    console.log("Montante: R$", montante);
-    console.log("");
-    console.log("Total em juros: ", juros);
-    console.log("====================================");
+    console.log(`Capital Inicial: R$${valor.toFixed(2)}`);
+    console.log("")
+    console.log(`Taxa de Juros: ${taxa*100}%`);
+    console.log("")
+    console.log(`Tempo: ${tempo} meses`);
+    console.log("")
+    console.log(`Montante: R$${montante.toFixed(2)}`);
+    console.log("")
+    console.log(`Total em Juros: R$${juros.toFixed(2)}`);
 }

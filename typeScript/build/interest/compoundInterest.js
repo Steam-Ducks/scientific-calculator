@@ -3,10 +3,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.compountInterest = void 0;
+exports.compoundInterest = void 0;
 const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const prompt = (0, prompt_sync_1.default)();
-function compountInterest() {
+function compoundInterest() {
     let montante;
     let capital;
     let taxa;
@@ -16,12 +16,16 @@ function compountInterest() {
     console.log("");
     console.log("========== JUROS COMPOSTOS ==========");
     console.log("");
-    capital = parseFloat(prompt("Insira o valor do Capital inicial: "));
-    console.log("");
-    taxa = parseFloat(prompt("Agora, insira a Taxa de Juros: "));
-    console.log("");
+    capital = parseFloat(prompt("Capital inicial: "));
+    if (isNaN(capital) || capital <= 0) {
+        console.log("Por favor digite um valor válido. ");
+    }
+    taxa = parseFloat(prompt("Taxa de Juros/Mensal "));
+    if (isNaN(taxa) || taxa <= 0) {
+        console.log("Por favor digite um valor válido. ");
+    }
     i = taxa / 100;
-    tempo = parseFloat(prompt("Escreva o tempo em meses: "));
+    tempo = parseFloat(prompt("Tempo/Meses: "));
     console.log("");
     let fator = 1 + i;
     let potencia = 1;
@@ -30,9 +34,14 @@ function compountInterest() {
     }
     montante = capital * potencia;
     juros = montante - capital;
+    console.log(`Capital Inicial: R$${capital.toFixed(2)}`);
     console.log("");
-    console.log("Seu Montante total final será: R$", montante.toFixed(2));
+    console.log(`Taxa de Juros: ${taxa}%`);
     console.log("");
-    console.log("Total em Juros:", " R$", juros.toFixed(2));
+    console.log(`Tempo: ${tempo} meses`);
+    console.log("");
+    console.log(`Montante: R$${montante.toFixed(2)}`);
+    console.log("");
+    console.log(`Total em Juros: R$${juros.toFixed(2)}`);
 }
-exports.compountInterest = compountInterest;
+exports.compoundInterest = compoundInterest;

@@ -4,7 +4,7 @@ import { subtraction } from "./basicOperations/subtraction";
 import { multiplicacao } from "./basicOperations/multiplication";
 import { divisao } from "./basicOperations/division";
 import { funcaoSegundoGrau } from "./specialOperations/quadraticFunction";
-import { compountInterest } from "./interest/compoundInterest";
+import { compoundInterest } from "./interest/compoundInterest";
 import { simpleInterest } from "./interest/simpleInterest";
 import { fatorial } from "./specialOperations/fatorial";
 import { converterBinarioParaDecimal } from "./conversions/convertBinaryToDecimal";
@@ -121,7 +121,7 @@ function selecionarTipoJuros(): void {
       simpleInterest();
       break;
     case "2":
-      compountInterest();
+      compoundInterest();
       break;
     default:
       console.log("Opção inválida. Por favor, escolha uma opção válida.");

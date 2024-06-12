@@ -3,7 +3,7 @@ import promptSync from 'prompt-sync';
 const prompt = promptSync();
 
 
-export function compountInterest(): void {
+export function compoundInterest(): void {
     let montante: number;
     let capital: number;
     let taxa: number;
@@ -15,30 +15,40 @@ export function compountInterest(): void {
     console.log("");
     console.log("========== JUROS COMPOSTOS ==========");
     console.log("");
-    capital = parseFloat(prompt("Insira o valor do Capital inicial: "));
-    console.log("")
-    taxa = parseFloat(prompt("Agora, insira a Taxa de Juros: "));
-    console.log("")
+    capital = parseFloat(prompt("Capital inicial: "));
+    if (isNaN(capital) || capital <= 0) {
+        console.log("Por favor digite um valor válido. ");
+    }
+    taxa = parseFloat(prompt("Taxa de Juros/Mensal "));
+    if (isNaN(taxa) || taxa <= 0) {
+        console.log("Por favor digite um valor válido. ");
+    }
 
     i = taxa / 100
-    tempo = parseFloat(prompt("Escreva o tempo em meses: "));
+    tempo = parseFloat(prompt("Tempo/Meses: "));
     console.log("")
 
     //-------------------potenciação-----------------------------
-    let fator = 1 + i;
-    let potencia = 1;
+    let fator: number = 1 + i;
+    let potencia: number = 1;
     
-    for (let k = 0; k < tempo; k++) {
+    for (let k: number = 0; k < tempo; k++) {
         potencia *= fator;
     }
     //----------------------------------------------
 
     montante = capital * potencia
     juros = montante - capital
-    console.log("")
-    console.log("Seu Montante total final será: R$", montante.toFixed(2))
-    console.log("")
-    console.log("Total em Juros:", " R$", juros.toFixed(2))
+    
 
+    console.log(`Capital Inicial: R$${capital.toFixed(2)}`);
+    console.log("")
+    console.log(`Taxa de Juros: ${taxa}%`);
+    console.log("")
+    console.log(`Tempo: ${tempo} meses`);
+    console.log("")
+    console.log(`Montante: R$${montante.toFixed(2)}`);
+    console.log("")
+    console.log(`Total em Juros: R$${juros.toFixed(2)}`);
 }
 
