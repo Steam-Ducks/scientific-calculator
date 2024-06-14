@@ -22,18 +22,18 @@ let opcao: string;
 do {
   console.clear();
   console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-  console.log(":                CALCULADORA CIENTIFICA                :");
+  console.log(":                CALCULADORA CIENTÍFICA                :");
   console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
   console.log();
-  console.log("Digite a função que deseja utilizar:");
+  console.log("Digite a opção desejada: ");
   console.log();
   console.log("[1] SOMA");
   console.log("[2] SUBTRAÇÃO");
   console.log("[3] MULTIPLICAÇÃO");
   console.log("[4] DIVISÃO");
   console.log("[5] FATORIAL");
-  console.log("[6] FUNCAO DE SEGUNDO GRAU");
-  console.log("[7] CALCULO DE JUROS");
+  console.log("[6] FUNÇÃO DE SEGUNDO GRAU");
+  console.log("[7] CÁLCULO DE JUROS");
   console.log("[8] CONVERSÃO DE BASE");
   console.log("[9] CONCATENAÇÃO DE STRINGS");
   console.log("[10] SAIR");
@@ -108,13 +108,13 @@ function repetirOperacao(): boolean {
 
 function selecionarTipoJuros(): void {
   console.clear();
-  console.log("======= CALCULO DE JUROS =======");
+  console.log("======= CÁLCULO DE JUROS =======");
   console.log("");
-  console.log("Qual funcao deseja utilizar?");
-  console.log("[1] Juros Simples");
-  console.log("[2] Juros Compostos");
+  console.log("Digite a opção desejada: ");
+  console.log("[1] JUROS SIMPLES");
+  console.log("[2] JUROS COMPOSTOS");
   console.log("");
-  const resposta: string = prompt("Digite a sua resposta: ");
+  const resposta: string = prompt("Opção desejada: ");
 
   switch (resposta) {
     case "1":
@@ -133,17 +133,17 @@ function selecionarConversao(): void {
   console.clear();
   console.log("======= CONVERSÃO DE BASE =======");
   console.log("");
-  console.log("Qual funcao deseja utilizar?");
-  console.log("[1] B2 X B10");
-  console.log("[2] B10 X B2");
+  console.log("Digite a opção desejada: ");
+  console.log("[1] BINÁRIO X DECIMAL");
+  console.log("[2] DECIMAL X BINÁRIO");
   console.log("--------------");
-  console.log("[3] B2 X B8");
-  console.log("[4] B8 X B2");
+  console.log("[3] BINÁRIO X OCTAL");
+  console.log("[4] OCTAL X BINÁRIO");
   console.log("--------------");
-  console.log("[5] B2 X B16");
-  console.log("[6] B16 X B2");
+  console.log("[5] BINÁRIO X HEXADECIMAL");
+  console.log("[6] HEXADECIMAL X BINÁRIO");
   console.log("");
-  const resposta: string = prompt("Digite a sua resposta: ");
+  const resposta: string = prompt("Digite a opção desejada: ");
 
   switch (resposta) {
     case "1":
