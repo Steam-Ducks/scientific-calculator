@@ -20,12 +20,16 @@ export function soma(): void {
 function numeroValido(texto: string, minimo: number = Number.MIN_SAFE_INTEGER): number {
     let numero: number;
     while (true) {
-        numero = parseInt(prompt(texto));
-        if (!isNaN(numero) && numero > minimo)
-        {
-            break;
+        const entrada = prompt(texto);
+
+        if (/^-?\d+(\.\d+)?$/.test(entrada)) {
+            numero = parseFloat(entrada);
+            if (numero > minimo) {
+                break;
+            }
         }
-        console.log("Por favor, insira um número válido.")
+        
+        console.log("Por favor, insira um número válido.");
         console.log();
     }
 
