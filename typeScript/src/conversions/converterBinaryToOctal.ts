@@ -2,7 +2,7 @@
 
     const promp = promptSync();
 
-export function converterBinarioparaOctal(): void {
+//export function converterBinarioparaOctal(): void {
 
     console.log("");
     console.log("========== Conversão B2 x B8 ==========");
@@ -18,7 +18,13 @@ export function converterBinarioparaOctal(): void {
             binario = promp("Digite um numero binario para converter: ");
             console.log()
 
-            for (let index = 0; index < binario.length; index++)
+            // Verifica se tem "." ou "," no binario digitado por usuario
+            let pontouvirgula = binario.includes(".") || binario.includes(",");
+            if (pontouvirgula) {
+                valido ="Invalido";
+            } else {
+            
+                for (let index = 0; index < binario.length; index++)
                 {
                     let letraAtual = binario[index];
                     // caso a letra não seja 1 ou 0, então o input não pode ser marcado como binário
@@ -32,12 +38,12 @@ export function converterBinarioparaOctal(): void {
                             valido ="valido";
                         }
                 }
+            }
                 // Se for invalido, vai informar que que está invalido e reperit o numero
                 if (valido == "Invalido") 
                     {
                         console.log("Binario Invalido.");
-                    }
-
+                                        }     
     } while (`${valido}` === "Invalido");
 
     let potencia = 0
@@ -79,5 +85,5 @@ export function converterBinarioparaOctal(): void {
         console.log("Resultado: ")
         console.log("Binario: ",`${binario}` );
         console.log("Octal: ", reverseString(Resul));
-   }
+        //}
 
