@@ -37,7 +37,7 @@ function numeroValido(texto: string, minimo: number = Number.MIN_SAFE_INTEGER): 
         const entrada = prompt(texto);
 
         if (/^-?\d+$/.test(entrada)) {
-            numero = Number(entrada);
+            numero = parseInt(entrada);
             if (numero > minimo) {
                 break;
             }

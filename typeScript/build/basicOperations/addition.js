@@ -24,9 +24,12 @@ exports.soma = soma;
 function numeroValido(texto, minimo = Number.MIN_SAFE_INTEGER) {
     let numero;
     while (true) {
-        numero = parseInt(prompt(texto));
-        if (!isNaN(numero) && numero > minimo) {
-            break;
+        const entrada = prompt(texto);
+        if (/^-?\d+(\.\d+)?$/.test(entrada)) {
+            numero = parseFloat(entrada);
+            if (numero > minimo) {
+                break;
+            }
         }
         console.log("Por favor, insira um número válido.");
         console.log();
