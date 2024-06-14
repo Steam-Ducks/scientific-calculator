@@ -26,15 +26,20 @@ const precisao:number = 0.000001;
     eq_c = parseFloat(prompt("Valor de C: ") || '0');
 
     // o menu força o usuário a inserir valores numericos nas 3 solicitações de valores
-    if (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c) || eq_a === 0) {
-        console.log("Por favor, insira valores numéricos válidos.");}
+    if (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c)) {
+        console.log();
+        console.log("Por favor, insira valores numéricos válidos.");
+    }
+    if (eq_a === 0){
+        console.log();
+        console.log("A função é de segundo grau, insira um valor válido para A");
+    }
         console.log();
 } while(isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c) || eq_a === 0)
-    
 
-    console.clear();
 
     // cálculo do valor de delta
+    
     console.log("----------------------------------");
     let delta:number = eq_b * eq_b - 4 * eq_a * eq_c;
     console.log("Delta: ", delta);
@@ -55,10 +60,11 @@ const precisao:number = 0.000001;
             let nraiz:number = (raiz + delta / raiz) / 2;
             if ((raiz - nraiz) < precisao) {
                 raiz = nraiz;
-                // assim que a raiz for decomposta até a casa decimal definida
-                // precisão, interrompemos o processo
+
+                // assim que a raiz for decomposta até a casa decimal definida na precisão, interrompemos o processo
                 break;
             }
+
             // definimos o valor de raiz de delta!
             raiz = nraiz;
             rdelta = raiz;
