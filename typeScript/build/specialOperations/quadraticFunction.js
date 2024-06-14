@@ -18,14 +18,14 @@ function funcaoSegundoGrau() {
     let eq_b;
     let eq_c;
     do {
-        eq_a = parseFloat(prompt("Valor de A: ") || '0');
+        eq_a = parseFloat(prompt("Valor de A: "));
         eq_b = parseFloat(prompt("Valor de B: ") || '0');
         eq_c = parseFloat(prompt("Valor de C: ") || '0');
-        if (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c)) {
+        if (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c) || eq_a === 0) {
             console.log("Por favor, insira valores numéricos válidos.");
         }
         console.log();
-    } while (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c));
+    } while (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c) || eq_a === 0);
     console.clear();
     console.log("----------------------------------");
     let delta = eq_b * eq_b - 4 * eq_a * eq_c;
