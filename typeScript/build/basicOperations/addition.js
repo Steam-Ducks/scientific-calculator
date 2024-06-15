@@ -10,22 +10,32 @@ function soma() {
     console.log("");
     console.log("========== SOMA ==========");
     console.log("");
-    let quantidade = numeroValido("Quantos números deseja somar? ", 0);
+    let quantidade = numeroValido("Quantos números deseja somar? ", 1, false);
     console.log();
     let soma = 0;
+    let valor = 0;
     for (let i = 0; i < quantidade; i++) {
-        soma += numeroValido(`Valor ${i + 1}: `);
+        console.log();
+        if (soma === 0) {
+            valor = numeroValido("Valor: ");
+        }
+        else {
+            valor = numeroValido(`${soma.toFixed(2)} + `);
+        }
+        soma += valor;
     }
     console.log();
-    console.log(`O resultado da soma é: ${soma}`);
+    console.log(`O resultado da soma é: ${soma.toFixed(2)}`);
     console.log();
 }
 exports.soma = soma;
-function numeroValido(texto, minimo = Number.MIN_SAFE_INTEGER) {
+function numeroValido(texto, minimo = Number.MIN_SAFE_INTEGER, decimal = true) {
     let numero;
+    let regex;
+    decimal ? regex = /^-?\d+(\.\d+)?$/ : regex = /^-?\d+$/;
     while (true) {
         const entrada = prompt(texto);
-        if (/^-?\d+(\.\d+)?$/.test(entrada)) {
+        if (regex.test(entrada)) {
             numero = parseFloat(entrada);
             if (numero > minimo) {
                 break;
