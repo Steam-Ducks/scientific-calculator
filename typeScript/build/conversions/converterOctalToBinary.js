@@ -12,14 +12,20 @@ function converterOctalparaBinario() {
     do {
         octal = promp("Digite um numero octal para converter: ");
         console.log();
-        for (let index = 0; index < octal.length; index++) {
-            let letraAtual = octal[index];
-            (letraAtual !== "0" && letraAtual !== "1" && letraAtual !== "2" && letraAtual !== "3" && letraAtual !== "4" && letraAtual !== "5" && letraAtual !== "6" && letraAtual !== "7");
-            {
-                valido = "Invalido";
-            }
-            if (letraAtual === "0" || letraAtual === "1" || letraAtual === "2" || letraAtual === "3" || letraAtual === "4" || letraAtual === "5" || letraAtual === "6" || letraAtual === "7") {
-                valido = "valido";
+        let pontouvirgula = octal.includes(".") || octal.includes(",");
+        if (pontouvirgula) {
+            valido = "Invalido";
+        }
+        else {
+            for (let index = 0; index < octal.length; index++) {
+                let letraAtual = octal[index];
+                (letraAtual !== "0" && letraAtual !== "1" && letraAtual !== "2" && letraAtual !== "3" && letraAtual !== "4" && letraAtual !== "5" && letraAtual !== "6" && letraAtual !== "7");
+                {
+                    valido = "Invalido";
+                }
+                if (letraAtual === "0" || letraAtual === "1" || letraAtual === "2" || letraAtual === "3" || letraAtual === "4" || letraAtual === "5" || letraAtual === "6" || letraAtual === "7") {
+                    valido = "valido";
+                }
             }
         }
         if (valido == "Invalido") {

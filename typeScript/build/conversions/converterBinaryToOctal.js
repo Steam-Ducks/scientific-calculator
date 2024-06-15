@@ -12,13 +12,19 @@ function converterBinarioparaOctal() {
     do {
         binario = promp("Digite um numero binario para converter: ");
         console.log();
-        for (let index = 0; index < binario.length; index++) {
-            let letraAtual = binario[index];
-            if (letraAtual !== "1" && letraAtual !== "0") {
-                valido = "Invalido";
-            }
-            if (letraAtual === "1" || letraAtual === "0") {
-                valido = "valido";
+        let pontouvirgula = binario.includes(".") || binario.includes(",");
+        if (pontouvirgula) {
+            valido = "Invalido";
+        }
+        else {
+            for (let index = 0; index < binario.length; index++) {
+                let letraAtual = binario[index];
+                if (letraAtual !== "1" && letraAtual !== "0") {
+                    valido = "Invalido";
+                }
+                if (letraAtual === "1" || letraAtual === "0") {
+                    valido = "valido";
+                }
             }
         }
         if (valido == "Invalido") {
