@@ -15,8 +15,8 @@ const simpleInterest_1 = require("./interest/simpleInterest");
 const fatorial_1 = require("./specialOperations/fatorial");
 const convertBinaryToDecimal_1 = require("./conversions/convertBinaryToDecimal");
 const convertDecimalToBinary_1 = require("./conversions/convertDecimalToBinary");
-const converterOctalToBinary_1 = require("./conversions/converterOctalToBinary");
-const converterBinaryToOctal_1 = require("./conversions/converterBinaryToOctal");
+const convertOctalToBinary_1 = require("./conversions/convertOctalToBinary");
+const convertBinaryToOctal_1 = require("./conversions/convertBinaryToOctal");
 const convertBinaryToHexadecimal_1 = require("./conversions/convertBinaryToHexadecimal");
 const convertHexadecimalToBinary_1 = require("./conversions/convertHexadecimalToBinary");
 const stringConcatenation_1 = require("./specialOperations/stringConcatenation");
@@ -149,10 +149,10 @@ function selecionarConversao() {
             (0, convertDecimalToBinary_1.converterDecimalParaBinario)();
             break;
         case "3":
-            (0, converterBinaryToOctal_1.converterBinarioparaOctal)();
+            (0, convertBinaryToOctal_1.converterBinarioparaOctal)();
             break;
         case "4":
-            (0, converterOctalToBinary_1.converterOctalparaBinario)();
+            (0, convertOctalToBinary_1.converterOctalparaBinario)();
             break;
         case "5":
             (0, convertBinaryToHexadecimal_1.converterBinarioParaHexadecimal)();

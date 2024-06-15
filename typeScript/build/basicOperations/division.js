@@ -15,7 +15,13 @@ function divisao() {
         }
     } while (isNaN(quantidade) || quantidade <= 1);
     let divisao = 0;
-    divisao = parseFloat(prompt(`Valor: `));
+    do {
+        divisao = parseFloat(prompt(`Valor: `));
+        if (isNaN(divisao)) {
+            console.log("Por favor, insira um número válido.");
+            console.log("");
+        }
+    } while (isNaN(divisao));
     for (let i = 1; i < quantidade; i++) {
         const numero = parseFloat(prompt(`Valor: `));
         if (isNaN(numero) || numero <= 0) {
