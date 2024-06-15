@@ -8,7 +8,7 @@ const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const prompt = (0, prompt_sync_1.default)();
 function converterDecimalParaBinario() {
     console.log("");
-    console.log("========== Conversão B10 para B2 ==========");
+    console.log("========== CONVERSÃO DECIMAL X BINÁRIO ==========");
     console.log();
     let binario = "";
     const numeroOriginal = numeroValido("Digite um número para converter: ", -1);

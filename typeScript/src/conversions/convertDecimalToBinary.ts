@@ -4,7 +4,7 @@ const prompt = promptSync();
 
 export function converterDecimalParaBinario(): void {
     console.log("");
-    console.log("========== Conversão B10 para B2 ==========");
+    console.log("========== CONVERSÃO DECIMAL X BINÁRIO ==========");
     console.log();
     
     let binario: string = "";

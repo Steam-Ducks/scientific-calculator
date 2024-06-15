@@ -10,7 +10,7 @@ function binarioValido() {
     let valido = false;
     let binario = "";
     console.log("");
-    console.log("========== Conversão B2 x B16 ==========");
+    console.log("========== CONVERSÃO BINÁRIO X HEXADECIMAL ==========");
     while (!valido) {
         valido = true;
         console.log();

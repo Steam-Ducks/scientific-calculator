@@ -6,7 +6,7 @@ function binarioValido(): string {
     let valido: boolean = false;
     let binario: string = "";
     console.log("");
-    console.log("========== Conversão B2 x B16 ==========");
+    console.log("========== CONVERSÃO BINÁRIO X HEXADECIMAL ==========");
     while (!valido) {
         valido = true;
         console.log();

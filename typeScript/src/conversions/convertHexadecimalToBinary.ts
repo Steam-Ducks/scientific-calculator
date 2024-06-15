@@ -6,7 +6,7 @@ function hexadecimalValido(): string {
     let valido: boolean = false;
     let hexadecimal: string = "";
     console.log("");
-    console.log("========== Conversão B16 x B2 ==========");
+    console.log("========== CONVERSÃO HEXADECIMAL X BINÁRIO ==========");
     while (!valido) {
         valido = true;
         console.log();
