@@ -15,17 +15,11 @@ export function compoundInterest(): void {
     console.log("");
     console.log("========== JUROS COMPOSTOS ==========");
     console.log("");
-    capital = parseFloat(prompt("Capital inicial: "));
-    if (isNaN(capital) || capital <= 0) {
-        console.log("Por favor digite um valor válido. ");
-    }
-    taxa = parseFloat(prompt("Taxa de Juros/Mensal "));
-    if (isNaN(taxa) || taxa <= 0) {
-        console.log("Por favor digite um valor válido. ");
-    }
+    capital = numeroValido("Capital inicial: ");
+    taxa = numeroValido("Taxa de Juros/Mensal ");
 
     i = taxa / 100
-    tempo = parseFloat(prompt("Tempo/Meses: "));
+    tempo = numeroValido("Tempo/Meses: ");
     console.log("")
 
     //-------------------potenciação-----------------------------
@@ -52,3 +46,20 @@ export function compoundInterest(): void {
     console.log(`Total em Juros: R$${juros.toFixed(2)}`);
 }
 
+function numeroValido(texto: string): number {
+    let numero: number;
+    while (true) {
+        const entrada = prompt(texto);
+
+        if (/^-?\d+(\.\d+)?$/.test(entrada)) {
+            numero = parseFloat(entrada);
+            if (numero > 0) {
+                break;
+            }
+        }
+        
+        console.log("Por favor, insira um número válido.");
+        console.log();
+    }
+    return numero;
+}

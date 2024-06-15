@@ -1,25 +1,20 @@
 import promptSync from 'prompt-sync';
 
-const input = promptSync();
+const prompt = promptSync();
 
 export function simpleInterest(): void {
     console.log("");
     console.log("========== JUROS SIMPLES ==========");
     console.log("");
 
-    const valor = parseFloat(input("Capital inicial: "));
-    if (isNaN(valor) || valor <= 0) {
-        console.log("Por favor digite um valor válido. ");
-    }
+    const valor: number = numeroValido("Capital inicial: ");
 
-    let taxa: number = parseFloat(input("Taxa de juros/Mensal: "));
-    if (isNaN(taxa) || taxa <= 0) {
-        console.log("Por favor digite um valor válido. ");
-    }
+    let taxa: number = numeroValido("Taxa de juros/Mensal: ");
 
-    const tempo: number = parseInt(input("Tempo/Meses: "));
+    const tempo: number = numeroValido("Tempo/Meses: ");
+
     console.log("");
-
+    
     taxa = taxa / 100;
 
     const juros: number = valor * (taxa) * tempo;
@@ -34,4 +29,22 @@ export function simpleInterest(): void {
     console.log(`Montante: R$${montante.toFixed(2)}`);
     console.log("")
     console.log(`Total em Juros: R$${juros.toFixed(2)}`);
+}
+
+function numeroValido(texto: string): number {
+    let numero: number;
+    while (true) {
+        const entrada = prompt(texto);
+
+        if (/^-?\d+(\.\d+)?$/.test(entrada)) {
+            numero = parseFloat(entrada);
+            if (numero > 0) {
+                break;
+            }
+        }
+        
+        console.log("Por favor, insira um número válido.");
+        console.log();
+    }
+    return numero;
 }
