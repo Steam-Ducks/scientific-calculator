@@ -9,16 +9,13 @@ export function fatorial(): void {
     console.log("");
     
     do {
-        let input: string = prompt("Escreva um número: ");
+        let input: string = prompt("Valor: ");
         value = parseFloat(input);
 
-        if (isNaN(value)) {
+        if (isNaN(value) || value < 0 || value%1 !==0) {
             console.log("Por favor, insira um número válido.");
         }
-        if (value < 0){
-            console.log("Por favor, escreva um número maior ou igual a 0")
-        }
-    } while (isNaN(value) || value < 0); 
+    } while (isNaN(value) || value < 0 || value%1 !==0); 
 
     let holder = value;
     let resultado = 1;
@@ -36,6 +33,6 @@ export function fatorial(): void {
                 }
             }   
         }
-        console.log(`O resultado do fatorial de ${value} é ${resultado}.`);
+        console.log(`O fatorial de ${value} é ${resultado}.`);
     }
 }
