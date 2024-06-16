@@ -35,6 +35,11 @@ export function multiplication(): void {
       }
       accumulatedValue *= value;
     }
+    // Mostrar o resultado parcial após cada multiplicação
+    const partialResult = Number.isInteger(accumulatedValue)
+      ? accumulatedValue.toFixed(0)
+      : accumulatedValue.toFixed(2);
+    console.log(`Resultado parcial: ${partialResult}`);
   }
 
   console.log();
