@@ -9,7 +9,7 @@ function fatorial() {
     console.log("========== CÁLCULO FATORIAL ==========");
     console.log("");
     do {
-        let input = prompt("Qual número deseja saber da sua fatorial? ");
+        var input = prompt("Valor: ");
         value = parseFloat(input);
         if (isNaN(value) || value < 0 || value % 1 !== 0) {
             console.log("Por favor, insira um número válido.");
@@ -30,7 +30,7 @@ function fatorial() {
                 }
             }
         }
-        console.log("O resultado do fatorial de ".concat(value, " \u00E9 ").concat(resultado, "."));
+        console.log("O fatorial de ".concat(value, " \u00E9 ").concat(resultado, "."));
     }
 }
 exports.fatorial = fatorial;
