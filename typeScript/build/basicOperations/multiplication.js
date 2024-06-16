@@ -17,16 +17,16 @@ function multiplication() {
         }
     } while (isNaN(counter) || counter <= 1);
     for (var i = 1; i <= counter; i++) {
-        if (i === counter && accumulatedValue === 1) { // Primeira entrada
+        if (i === counter && accumulatedValue === 1) {
             console.log("Informe um número: ");
             value = parseFloat(prompt("".concat(accumulatedValue, " * ")));
             while (isNaN(value)) {
                 console.log("Por favor, insira um número válido.");
                 value = parseFloat(prompt("".concat(accumulatedValue, " * ")));
             }
-            accumulatedValue *= value; // Multiplicação ao invés de subtração
+            accumulatedValue *= value;
         }
-        else if (accumulatedValue === 1) { // Primeira entrada
+        else if (accumulatedValue === 1) {
             console.log();
             accumulatedValue = parseFloat(prompt("Valor: "));
             while (isNaN(accumulatedValue)) {
@@ -42,17 +42,13 @@ function multiplication() {
                 console.log("Por favor, insira um número válido.");
                 value = parseFloat(prompt("".concat(accumulatedValue, " * ")));
             }
-            accumulatedValue *= value; // Multiplicação ao invés de subtração
+            accumulatedValue *= value;
         }
-        var formattedValue = Number.isInteger(accumulatedValue)
-            ? accumulatedValue.toFixed(0)
-            : accumulatedValue.toFixed(2);
-        console.log("Resultado parcial: ".concat(formattedValue));
     }
     console.log();
     var finalFormattedValue = Number.isInteger(accumulatedValue)
         ? accumulatedValue.toFixed(0)
         : accumulatedValue.toFixed(2);
-    console.log("O resultado da multiplica\u00E7\u00E3o \u00E9: ".concat(finalFormattedValue));
+    console.log("O resultado da multiplicação é: ".concat(finalFormattedValue));
 }
 exports.multiplication = multiplication;
