@@ -73,10 +73,12 @@ export function divisao(): void {
 
     // Realiza a operação
     dividendo /= divisor;
-
+      
     //fecha o loop
     }
 
+    dividendo = dividendo.Tofixed(2);
+    
  //Exibe o resultado
     console.log()
     console.log(`O resultado da divisao é: ${dividendo}`);
