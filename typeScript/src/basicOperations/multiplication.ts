@@ -1,35 +1,50 @@
-import promptSync = require("prompt-sync");
-
-const prompt = promptSync();
+const prompt = require('prompt-sync')();
 
 export function multiplicacao(): void {
-    let value: number = 0;
-    let accumulatedValue: number = 1; // Inicializamos com 1 porque é o elemento neutro da multiplicação
 
     console.log("");
     console.log("========== MULTIPLICAÇÃO ==========");
     console.log("");
-    const counter: number = parseInt(prompt("Quantos números deseja multiplicar? "));
 
-    if (isNaN(counter) || counter <= 0) {
-        console.log("Por favor, insira um número válido de quantidades.");
-        return;
-    }
-
-    for (let i = 1; i <= counter; i++) {
-        console.log();
-        value = parseFloat(prompt(`Valor ${i}: `));
-        if (isNaN(value)) {
+    //==================================================================================
+    // Declara a variável de quantidade
+    let quantidade = 0;
+    do {
+        quantidade = parseInt(prompt("Quantos números deseja multiplicar? "));
+        // Checa se o número é maior que 1
+        if (isNaN(quantidade) || quantidade <= 1) {
             console.log("Por favor, insira um número válido.");
-            i--;
-            continue;
+            console.log("");
         }
-        accumulatedValue *= value;
+        // Aqui está a regra de ser maior ou igual a 1. Não dá para multiplicar menos de dois números
+    } while (isNaN(quantidade) || quantidade <= 1);
+  
+    //==================================================================================
+    // Recebe o primeiro número
+    let multiplicacao = 1; // Inicializa com 1 porque é o elemento neutro da multiplicação
+    let numero = 0;
+    for (let i = 0; i < quantidade; i++) {
+        do {
+            numero = parseFloat(prompt(`Valor ${i + 1}: `));
+            if (isNaN(numero)) {
+                console.log("Por favor, insira um número válido.");
+                console.log("");
+            }
+            // Aqui está a regra de ser um número
+        } while (isNaN(numero));
+
+        // Realiza a operação
+        multiplicacao *= numero;
     }
 
+    // Exibe o resultado
     console.log();
-    const formattedValue = accumulatedValue.toFixed(2);
-    console.log(`O resultado da multiplicação é: ${formattedValue}`);
+    console.log(`O resultado da multiplicação é: ${multiplicacao}`);
+    console.log();
 }
+
+// Executar a função de multiplicação
+multiplicacao();
+
 
 
