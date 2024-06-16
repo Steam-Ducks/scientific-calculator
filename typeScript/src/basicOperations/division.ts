@@ -1,6 +1,6 @@
     const prompt = require('prompt-sync')();
 
-    //export function divisao(): void {
+export function divisao(): void {
 
     console.log("");
     console.log("========== DIVISÃO ==========");
@@ -53,7 +53,9 @@
 
     do{
          i++
-         divisor = prompt(`Valor: ${dividendo} / `);
+         console.log()
+         console.log('Valor:')
+         divisor = prompt(`${dividendo} / `);
          // Verifica se não está sendo dividido por 0
          validInput = /^[0-9]+(\.[0-9]+)?$/.test(divisor); // Verifica se a entrada contém apenas dígitos
 
@@ -78,4 +80,4 @@
     console.log()
     console.log(`O resultado da divisao é: ${dividendo}`);
     console.log()
-//}
+}
