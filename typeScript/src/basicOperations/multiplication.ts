@@ -20,24 +20,38 @@ export function multiplication(): void {
   } while (isNaN(counter) || counter <= 1);
 
   for (let i = 1; i <= counter; i++) {
-    console.log();
-    if (accumulatedValue === 1 && i === 1) {  // Primeira iteração
+    if (i === counter && accumulatedValue === 1) {
+      console.log("Informe um número: ");
+      value = parseFloat(prompt(`${accumulatedValue} * `));
+      while (isNaN(value)) {
+        console.log("Por favor, insira um número válido.");
+        value = parseFloat(prompt(`${accumulatedValue} * `));
+      }
+      accumulatedValue *= value;
+      // Adicionando exibição do resultado parcial
+      console.log(`Resultado parcial: ${accumulatedValue}`);
+      break;
+    }
+
+    if (accumulatedValue === 1 && i === 1) {
+      console.log();
       accumulatedValue = parseFloat(prompt("Valor: "));
       while (isNaN(accumulatedValue)) {
         console.log("Por favor, insira um número válido.");
         accumulatedValue = parseFloat(prompt("Valor: "));
       }
     } else {
+      console.log();
+      console.log("Valor: ");
       value = parseFloat(prompt(`${accumulatedValue} * `));
       while (isNaN(value)) {
         console.log("Por favor, insira um número válido.");
         value = parseFloat(prompt(`${accumulatedValue} * `));
       }
-      // Mostrar o cálculo passo a passo
-      const previousValue = accumulatedValue;
       accumulatedValue *= value;
-      console.log(`${previousValue} * ${value} = ${accumulatedValue}`);
     }
+    // Adicionando exibição do resultado parcial
+    console.log(`Resultado parcial: ${accumulatedValue}`);
   }
 
   console.log();
@@ -46,7 +60,3 @@ export function multiplication(): void {
     : accumulatedValue.toFixed(2);
   console.log(`O resultado da multiplicação é: ${formattedValue}`);
 }
-
-
-
-
