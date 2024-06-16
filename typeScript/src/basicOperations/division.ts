@@ -8,7 +8,7 @@
 
     //==================================================================================
     // declara a variavel de quantidade
-    let quantidade: character ="";
+    let quantidade="";
     let validInput;
     do {
       quantidade = prompt("Quantos números deseja dividir? ");
