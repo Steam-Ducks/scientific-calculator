@@ -1,6 +1,6 @@
     const prompt = require('prompt-sync')();
 
-    //export function divisao(): void {
+export function divisao(): void {
 
     console.log("");
     console.log("========== DIVISÃO ==========");
@@ -80,4 +80,4 @@
     console.log()
     console.log(`O resultado da divisao é: ${dividendo}`);
     console.log()
-//}
+}
