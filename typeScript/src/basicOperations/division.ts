@@ -1,6 +1,6 @@
     const prompt = require('prompt-sync')();
 
-//export function divisao(): void {
+export function divisao(): void {
 
     console.log("");
     console.log("========== DIVISÃO ==========");
@@ -8,7 +8,7 @@
 
     //==================================================================================
     // declara a variavel de quantidade
-    let quantidade="";
+    let quantidade:character;
     let validInput;
     do {
       quantidade = prompt("Quantos números deseja dividir? ");
@@ -29,7 +29,7 @@
   
     //==================================================================================
     //Recebe o numero dividendo
-      let dividendo="";
+      let dividendo:character;
       do {
          dividendo = prompt(`Valor: `); 
       validInput = /^[0-9]+(\.[0-9]+)?$/.test(dividendo); // Verifica se a entrada contém apenas dígitos
@@ -48,7 +48,7 @@
     //==================================================================================
 
     // Recebe os divisores
-    let divisor="";
+    let divisor:character;
    for (let i = 1; i < quantidade;) {
 
     do{
@@ -80,4 +80,4 @@
     console.log()
     console.log(`O resultado da divisao é: ${dividendo}`);
     console.log()
-//}
+}
