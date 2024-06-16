@@ -38,7 +38,8 @@ export function converterBinarioParaDecimal(): void {
     let decimal: number = 0;
     let potencia: number = 0;
     console.log("");
-    console.log("========== CONVERSÃO BINÁRIO X DECIMAL ==========");
+    console.log("═════════════════════════════════════");
+    console.log("     CONVERSÃO BINÁRIO X DECIMAL     ");
     binario = binarioValido();
         
 
@@ -63,4 +64,6 @@ export function converterBinarioParaDecimal(): void {
     console.log("Resultado:")
     console.log("Binário: ", binario)
     console.log("Decimal: ", decimal);
+    console.log("═════════════════════════════════════");
+
 }

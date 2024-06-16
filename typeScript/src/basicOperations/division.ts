@@ -3,7 +3,9 @@ const prompt = promptSync();
 
 export function divisao(): void {
     console.log("");
-    console.log("========== DIVISÃO ==========");
+    
+    console.log("═════════════════════════════════════");
+    console.log("               DIVISÃO               ");
     console.log("");
 
     //==================================================================================
@@ -78,4 +80,6 @@ export function divisao(): void {
     // Exibe o resultado
     console.log();
     console.log(`O resultado da divisao é: ${resul}`);
+    console.log("═════════════════════════════════════");
+
 }

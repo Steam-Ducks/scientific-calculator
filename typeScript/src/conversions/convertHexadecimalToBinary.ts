@@ -6,7 +6,8 @@ function hexadecimalValido(): string {
     let valido: boolean = false;
     let hexadecimal: string = "";
     console.log("");
-    console.log("========== CONVERSÃO HEXADECIMAL X BINÁRIO ==========");
+    console.log("═════════════════════════════════════");
+    console.log("   CONVERSÃO HEXADECIMAL X BINÁRIO   ");
     while (!valido) {
         valido = true;
         console.log();
@@ -68,5 +69,8 @@ export function converterHexadecimalParaBinario(): void {
     console.log("Resultado:");
     console.log("Hexadecimal:", hexadecimal);
     console.log("Binário:", binario);
+
+    console.log("═════════════════════════════════════");
+
 }
 

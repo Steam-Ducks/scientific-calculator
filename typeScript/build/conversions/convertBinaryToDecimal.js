@@ -33,7 +33,8 @@ function converterBinarioParaDecimal() {
     let decimal = 0;
     let potencia = 0;
     console.log("");
-    console.log("========== CONVERSÃO BINÁRIO X DECIMAL ==========");
+    console.log("═════════════════════════════════════");
+    console.log("     CONVERSÃO BINÁRIO X DECIMAL     ");
     binario = binarioValido();
     for (let index = binario.length - 1; index >= 0; index--) {
         if (binario[index] === "1") {
@@ -45,5 +46,6 @@ function converterBinarioParaDecimal() {
     console.log("Resultado:");
     console.log("Binário: ", binario);
     console.log("Decimal: ", decimal);
+    console.log("═════════════════════════════════════");
 }
 exports.converterBinarioParaDecimal = converterBinarioParaDecimal;

@@ -5,7 +5,8 @@
 export function converterOctalparaBinario(): void {
 
     console.log("");
-    console.log("========== CONVERSÃO OCTAL X BINÁRIO ==========");
+    console.log("═════════════════════════════════════");
+    console.log("      CONVERSÃO OCTAL X BINÁRIO      ");
     console.log("");
 
     //========================= Solicita Octal =================================

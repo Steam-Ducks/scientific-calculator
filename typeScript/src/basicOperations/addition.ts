@@ -4,11 +4,11 @@ const prompt = promptSync();
 
 export function soma(): void {
     console.log("");
-    console.log("========== SOMA ==========");
+    console.log("═════════════════════════════════════");
+    console.log("                 SOMA                ");
     console.log("");
     
     let quantidade: number = numeroValido("Quantos números deseja somar? ", 1, false);
-    console.log();
     
     let soma:number = 0;
     let valor: number = 0;
@@ -32,6 +32,7 @@ export function soma(): void {
 
     console.log();
     console.log(`O resultado da soma é: ${somaFinal}`);
+    console.log("═════════════════════════════════════");
 
 }
 function numeroValido(texto: string, minimo: number = Number.MIN_SAFE_INTEGER, decimal: boolean = true): number {

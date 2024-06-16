@@ -7,7 +7,8 @@ export function multiplication(): void {
     let accumulatedValue: number = 1; // Inicializamos com 1 para multiplicação
 
     console.log("");
-    console.log("========== MULTIPLICAÇÃO ==========");
+    console.log("═════════════════════════════════════");
+    console.log("            MULTIPLICAÇÃO            ");
     console.log("");
 
     let counter: number = 0;
@@ -52,4 +53,6 @@ export function multiplication(): void {
         ? accumulatedValue.toFixed(0)
         : accumulatedValue.toFixed(2);
     console.log(`O resultado da multiplicação é: ${finalFormattedValue}`);
+    console.log("═════════════════════════════════════");
+
 }

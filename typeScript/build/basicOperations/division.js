@@ -8,7 +8,8 @@ const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const prompt = (0, prompt_sync_1.default)();
 function divisao() {
     console.log("");
-    console.log("========== DIVISÃO ==========");
+    console.log("═════════════════════════════════════");
+    console.log("               DIVISÃO               ");
     console.log("");
     let num = "";
     let validInput;
@@ -55,5 +56,6 @@ function divisao() {
     const resul = parseFloat(dividendo.toFixed(2));
     console.log();
     console.log(`O resultado da divisao é: ${resul}`);
+    console.log("═════════════════════════════════════");
 }
 exports.divisao = divisao;

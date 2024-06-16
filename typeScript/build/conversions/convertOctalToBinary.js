@@ -5,7 +5,8 @@ const promptSync = require('prompt-sync');
 const promp = promptSync();
 function converterOctalparaBinario() {
     console.log("");
-    console.log("========== CONVERSÃO OCTAL X BINÁRIO ==========");
+    console.log("═════════════════════════════════════");
+    console.log("      CONVERSÃO OCTAL X BINÁRIO      ");
     console.log("");
     let valido = "Invalido";
     let octal = "";

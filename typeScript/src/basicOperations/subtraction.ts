@@ -7,7 +7,8 @@ export function subtraction(): void {
   let accumulatedValue: number = 0;
 
   console.log("");
-  console.log("========== SUBTRAÇÃO ==========");
+  console.log("═════════════════════════════════════");
+  console.log("              SUBTRAÇÃO              ");
   console.log("");
 
   let counter = 0;
@@ -55,4 +56,7 @@ export function subtraction(): void {
     ? accumulatedValue.toFixed(0)
     : accumulatedValue.toFixed(2);
   console.log(`O resultado da subtração é: ${formattedValue}`);
+
+  console.log("═════════════════════════════════════");
+
 }

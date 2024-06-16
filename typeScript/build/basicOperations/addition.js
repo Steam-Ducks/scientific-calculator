@@ -8,10 +8,10 @@ const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const prompt = (0, prompt_sync_1.default)();
 function soma() {
     console.log("");
-    console.log("========== SOMA ==========");
+    console.log("═════════════════════════════════════");
+    console.log("                 SOMA                ");
     console.log("");
     let quantidade = numeroValido("Quantos números deseja somar? ", 1, false);
-    console.log();
     let soma = 0;
     let valor = 0;
     for (let i = 0; i < quantidade; i++) {
@@ -29,6 +29,7 @@ function soma() {
     let somaFinal = Number.isInteger(soma) ? soma.toFixed(0) : soma.toFixed(2);
     console.log();
     console.log(`O resultado da soma é: ${somaFinal}`);
+    console.log("═════════════════════════════════════");
 }
 exports.soma = soma;
 function numeroValido(texto, minimo = Number.MIN_SAFE_INTEGER, decimal = true) {

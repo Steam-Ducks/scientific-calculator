@@ -4,7 +4,8 @@ const prompt = promptSync();
 
 export function converterDecimalParaBinario(): void {
     console.log("");
-    console.log("========== CONVERSÃO DECIMAL X BINÁRIO ==========");
+    console.log("═════════════════════════════════════");
+    console.log("     CONVERSÃO DECIMAL X BINÁRIO     ");
     console.log();
     
     let binario: string = "";
@@ -29,6 +30,9 @@ export function converterDecimalParaBinario(): void {
     console.log("Resultado:");
     console.log("Decimal: ", numeroOriginal);
     console.log("Binário:", binario);
+
+    console.log("═════════════════════════════════════");
+
 }
 
 function numeroValido(texto: string, minimo: number = Number.MIN_SAFE_INTEGER): number {

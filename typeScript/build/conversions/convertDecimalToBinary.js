@@ -8,7 +8,8 @@ const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const prompt = (0, prompt_sync_1.default)();
 function converterDecimalParaBinario() {
     console.log("");
-    console.log("========== CONVERSÃO DECIMAL X BINÁRIO ==========");
+    console.log("═════════════════════════════════════");
+    console.log("     CONVERSÃO DECIMAL X BINÁRIO     ");
     console.log();
     let binario = "";
     const numeroOriginal = numeroValido("Digite um número para converter: ", -1);
@@ -27,6 +28,7 @@ function converterDecimalParaBinario() {
     console.log("Resultado:");
     console.log("Decimal: ", numeroOriginal);
     console.log("Binário:", binario);
+    console.log("═════════════════════════════════════");
 }
 exports.converterDecimalParaBinario = converterDecimalParaBinario;
 function numeroValido(texto, minimo = Number.MIN_SAFE_INTEGER) {
