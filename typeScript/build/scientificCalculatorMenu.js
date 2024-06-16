@@ -74,14 +74,10 @@ do {
             } while (repetirOperacao());
             break;
         case "7":
-            do {
-                selecionarTipoJuros();
-            } while (repetirOperacao());
+            selecionarTipoJuros();
             break;
         case "8":
-            do {
-                selecionarConversao();
-            } while (repetirOperacao());
+            selecionarConversao();
             break;
         case "9":
             do {
@@ -117,16 +113,23 @@ function selecionarTipoJuros() {
     console.log("║                                     ║");
     console.log("║ [1] JUROS SIMPLES                   ║");
     console.log("║ [2] JUROS COMPOSTOS                 ║");
+    console.log("║ [0] SAIR                            ║");
     console.log("╚═════════════════════════════════════╝");
     console.log("");
     const resposta = (0, exports.prompt)("Opção desejada: ");
     switch (resposta) {
         case "1":
-            (0, simpleInterest_1.simpleInterest)();
+            do {
+                (0, simpleInterest_1.simpleInterest)();
+            } while (repetirOperacao());
             break;
         case "2":
-            (0, compoundInterest_1.compoundInterest)();
+            do {
+                (0, compoundInterest_1.compoundInterest)();
+            } while (repetirOperacao());
             break;
+        case "0":
+            return;
         default:
             console.log("Opção inválida. Por favor, escolha uma opção válida.");
             break;
@@ -147,28 +150,44 @@ function selecionarConversao() {
     console.log("║ ----------------------------------- ║");
     console.log("║ [5] BINÁRIO X HEXADECIMAL           ║");
     console.log("║ [6] HEXADECIMAL X BINÁRIO           ║");
+    console.log("║ ----------------------------------- ║");
+    console.log("║ [0] SAIR                            ║");
     console.log("╚═════════════════════════════════════╝");
     console.log("");
     const resposta = (0, exports.prompt)("Opção desejada: ");
     switch (resposta) {
         case "1":
-            (0, convertBinaryToDecimal_1.converterBinarioParaDecimal)();
+            do {
+                (0, convertBinaryToDecimal_1.converterBinarioParaDecimal)();
+            } while (repetirOperacao());
             break;
         case "2":
-            (0, convertDecimalToBinary_1.converterDecimalParaBinario)();
+            do {
+                (0, convertDecimalToBinary_1.converterDecimalParaBinario)();
+            } while (repetirOperacao());
             break;
         case "3":
-            (0, convertBinaryToOctal_1.converterBinarioparaOctal)();
+            do {
+                (0, convertBinaryToOctal_1.converterBinarioparaOctal)();
+            } while (repetirOperacao());
             break;
         case "4":
-            (0, convertOctalToBinary_1.converterOctalparaBinario)();
+            do {
+                (0, convertOctalToBinary_1.converterOctalparaBinario)();
+            } while (repetirOperacao());
             break;
         case "5":
-            (0, convertBinaryToHexadecimal_1.converterBinarioParaHexadecimal)();
+            do {
+                (0, convertBinaryToHexadecimal_1.converterBinarioParaHexadecimal)();
+            } while (repetirOperacao());
             break;
         case "6":
-            (0, convertHexadecimalToBinary_1.converterHexadecimalParaBinario)();
+            do {
+                (0, convertHexadecimalToBinary_1.converterHexadecimalParaBinario)();
+            } while (repetirOperacao());
             break;
+        case "0":
+            return;
         default:
             console.log("Opção inválida. Por favor, escolha uma opção válida.");
             break;

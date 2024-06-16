@@ -14,10 +14,11 @@ function compoundInterest() {
     let i;
     let juros;
     console.log("");
-    console.log("========== JUROS COMPOSTOS ==========");
+    console.log("═════════════════════════════════════");
+    console.log("           JUROS COMPOSTOS           ");
     console.log("");
     capital = numeroValido("Capital inicial: ");
-    taxa = numeroValido("Taxa de Juros/Mensal ");
+    taxa = numeroValido("Taxa de Juros/Mensal: ");
     i = taxa / 100;
     tempo = numeroValido("Tempo/Meses: ");
     console.log("");
@@ -28,15 +29,14 @@ function compoundInterest() {
     }
     montante = capital * potencia;
     juros = montante - capital;
-    console.log(`Capital Inicial: R$${capital.toFixed(2)}`);
     console.log("");
-    console.log(`Taxa de Juros: ${taxa}%`);
-    console.log("");
-    console.log(`Tempo: ${tempo} meses`);
-    console.log("");
-    console.log(`Montante: R$${montante.toFixed(2)}`);
-    console.log("");
-    console.log(`Total em Juros: R$${juros.toFixed(2)}`);
+    console.log("Resultado:");
+    console.log(`• Capital Inicial: R$${capital.toFixed(2)}`);
+    console.log(`• Taxa de Juros: ${taxa}%`);
+    console.log(`• Tempo: ${tempo} meses`);
+    console.log(`• Montante: R$${montante.toFixed(2)}`);
+    console.log(`• Total em Juros: R$${juros.toFixed(2)}`);
+    console.log("═════════════════════════════════════");
 }
 exports.compoundInterest = compoundInterest;
 function numeroValido(texto) {

@@ -8,7 +8,8 @@ const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const prompt = (0, prompt_sync_1.default)();
 function simpleInterest() {
     console.log("");
-    console.log("========== JUROS SIMPLES ==========");
+    console.log("═════════════════════════════════════");
+    console.log("            JUROS SIMPLES            ");
     console.log("");
     const valor = numeroValido("Capital inicial: ");
     let taxa = numeroValido("Taxa de juros/Mensal: ");
@@ -17,15 +18,14 @@ function simpleInterest() {
     taxa = taxa / 100;
     const juros = valor * (taxa) * tempo;
     const montante = valor + juros;
-    console.log(`Capital Inicial: R$${valor.toFixed(2)}`);
     console.log("");
-    console.log(`Taxa de Juros: ${taxa * 100}%`);
-    console.log("");
-    console.log(`Tempo: ${tempo} meses`);
-    console.log("");
-    console.log(`Montante: R$${montante.toFixed(2)}`);
-    console.log("");
-    console.log(`Total em Juros: R$${juros.toFixed(2)}`);
+    console.log("Resultado:");
+    console.log(`• Capital Inicial: R$${valor.toFixed(2)}`);
+    console.log(`• Taxa de Juros: ${taxa * 100}%`);
+    console.log(`• Tempo: ${tempo} meses`);
+    console.log(`• Montante: R$${montante.toFixed(2)}`);
+    console.log(`• Total em Juros: R$${juros.toFixed(2)}`);
+    console.log("═════════════════════════════════════");
 }
 exports.simpleInterest = simpleInterest;
 function numeroValido(texto) {

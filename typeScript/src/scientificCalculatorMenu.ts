@@ -72,14 +72,10 @@ do {
       } while (repetirOperacao());
       break;
     case "7":
-      do {
-        selecionarTipoJuros();
-      } while (repetirOperacao());
+      selecionarTipoJuros();
       break;
     case "8":
-      do {
-        selecionarConversao();
-      } while (repetirOperacao());
+      selecionarConversao();
       break;
     case "9":
       do {
@@ -118,22 +114,30 @@ function selecionarTipoJuros(): void {
   console.log("║                                     ║");
   console.log("║ [1] JUROS SIMPLES                   ║");
   console.log("║ [2] JUROS COMPOSTOS                 ║");
+  console.log("║ [0] SAIR                            ║");
   console.log("╚═════════════════════════════════════╝");
   console.log("");
   const resposta: string = prompt("Opção desejada: ");
 
   switch (resposta) {
     case "1":
-      simpleInterest();
+      do {
+        simpleInterest();
+      } while (repetirOperacao());
       break;
     case "2":
-      compoundInterest();
+      do {
+        compoundInterest();
+      } while (repetirOperacao());
       break;
+    case "0":
+      return;
     default:
       console.log("Opção inválida. Por favor, escolha uma opção válida.");
       break;
   }
 }
+
 
 function selecionarConversao(): void {
   console.clear();
@@ -150,31 +154,48 @@ function selecionarConversao(): void {
   console.log("║ ----------------------------------- ║");
   console.log("║ [5] BINÁRIO X HEXADECIMAL           ║");
   console.log("║ [6] HEXADECIMAL X BINÁRIO           ║");
+  console.log("║ ----------------------------------- ║");
+  console.log("║ [0] SAIR                            ║");
   console.log("╚═════════════════════════════════════╝");
   console.log("");
   const resposta: string = prompt("Opção desejada: ");
 
   switch (resposta) {
     case "1":
-      converterBinarioParaDecimal();
+      do {
+        converterBinarioParaDecimal();
+      } while (repetirOperacao());
       break;
     case "2":
-      converterDecimalParaBinario();
+      do {
+        converterDecimalParaBinario();
+      } while (repetirOperacao());
       break;
     case "3":
-      converterBinarioparaOctal();
+      do {
+        converterBinarioparaOctal();
+      } while (repetirOperacao());
       break;
     case "4":
-      converterOctalparaBinario();
+      do {
+        converterOctalparaBinario();
+      } while (repetirOperacao());
       break;
     case "5":
-      converterBinarioParaHexadecimal();
+      do {
+        converterBinarioParaHexadecimal();
+      } while (repetirOperacao());
       break;
     case "6":
-      converterHexadecimalParaBinario();
+      do {
+        converterHexadecimalParaBinario();
+      } while (repetirOperacao());
       break;
+    case "0":
+      return;
     default:
       console.log("Opção inválida. Por favor, escolha uma opção válida.");
       break;
   }
 }
+
