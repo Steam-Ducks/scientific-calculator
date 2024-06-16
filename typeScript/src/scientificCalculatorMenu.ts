@@ -21,22 +21,22 @@ let opcao: string;
 
 do {
   console.clear();
-  console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-  console.log(":                CALCULADORA CIENTÍFICA                :");
-  console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-  console.log();
-  console.log("Digite a opção desejada: ");
-  console.log();
-  console.log("[1] SOMA");
-  console.log("[2] SUBTRAÇÃO");
-  console.log("[3] MULTIPLICAÇÃO");
-  console.log("[4] DIVISÃO");
-  console.log("[5] FATORIAL");
-  console.log("[6] FUNÇÃO DE SEGUNDO GRAU");
-  console.log("[7] CÁLCULO DE JUROS");
-  console.log("[8] CONVERSÃO DE BASE");
-  console.log("[9] CONCATENAÇÃO DE STRINGS");
-  console.log("[10] SAIR");
+  console.log("╔════════════════════════════════════════════════════╗");
+  console.log("║         ➕ ➖  CALCULADORA CIENTÍFICA ✖️  ➗        ║");
+  console.log("║                                                    ║");
+  console.log("║ Digite a opção desejada:                           ║");
+  console.log("║                                                    ║");
+  console.log("║ [1] SOMA                                           ║");
+  console.log("║ [2] SUBTRAÇÃO                                      ║");
+  console.log("║ [3] MULTIPLICAÇÃO                                  ║");
+  console.log("║ [4] DIVISÃO                                        ║");
+  console.log("║ [5] FATORIAL                                       ║");
+  console.log("║ [6] FUNÇÃO DE SEGUNDO GRAU                         ║");
+  console.log("║ [7] CÁLCULO DE JUROS                               ║");
+  console.log("║ [8] CONVERSÃO DE BASE                              ║");
+  console.log("║ [9] CONCATENAÇÃO DE STRINGS                        ║");
+  console.log("║ [0] SAIR                                           ║");
+  console.log("╚════════════════════════════════════════════════════╝");
   console.log();
   opcao = prompt("Opção desejada: ");
 
@@ -86,18 +86,21 @@ do {
         concatenacaoStrings();
       } while (repetirOperacao());
       break;
-    case "10":
+    case "0":
+      console.log("");
       console.log("PROGRAMA ENCERRADO!");
+      console.log("Obrigada por usar nossa calculadora! ☻");
+      console.log("");
       break;
     default:
       console.log("Opção inválida. Por favor, escolha uma opção válida.");
       break;
   }
 
-  if (opcao !== "10") {
+  if (opcao !== "0") {
     prompt("Pressione Enter para continuar...");
   }
-} while (opcao !== "10");
+} while (opcao !== "0");
 
 function repetirOperacao(): boolean {
   console.log();
@@ -108,11 +111,14 @@ function repetirOperacao(): boolean {
 
 function selecionarTipoJuros(): void {
   console.clear();
-  console.log("======= CÁLCULO DE JUROS =======");
-  console.log("");
-  console.log("Digite a opção desejada: ");
-  console.log("[1] JUROS SIMPLES");
-  console.log("[2] JUROS COMPOSTOS");
+  console.log("╔═════════════════════════════════════╗");
+  console.log("║          CÁLCULO DE JUROS           ║");
+  console.log("║                                     ║");
+  console.log("║ Digite a opção desejada:            ║");
+  console.log("║                                     ║");
+  console.log("║ [1] JUROS SIMPLES                   ║");
+  console.log("║ [2] JUROS COMPOSTOS                 ║");
+  console.log("╚═════════════════════════════════════╝");
   console.log("");
   const resposta: string = prompt("Opção desejada: ");
 
@@ -131,19 +137,22 @@ function selecionarTipoJuros(): void {
 
 function selecionarConversao(): void {
   console.clear();
-  console.log("======= CONVERSÃO DE BASE =======");
+  console.log("╔═════════════════════════════════════╗");
+  console.log("║          CONVERSÃO DE BASE          ║");
+  console.log("║                                     ║");
+  console.log("║ Digite a opção desejada:            ║");
+  console.log("║                                     ║");
+  console.log("║ [1] BINÁRIO X DECIMAL               ║");
+  console.log("║ [2] DECIMAL X BINÁRIO               ║");
+  console.log("║ ----------------------------------- ║");
+  console.log("║ [3] BINÁRIO X OCTAL                 ║");
+  console.log("║ [4] OCTAL X BINÁRIO                 ║");
+  console.log("║ ----------------------------------- ║");
+  console.log("║ [5] BINÁRIO X HEXADECIMAL           ║");
+  console.log("║ [6] HEXADECIMAL X BINÁRIO           ║");
+  console.log("╚═════════════════════════════════════╝");
   console.log("");
-  console.log("Digite a opção desejada: ");
-  console.log("[1] BINÁRIO X DECIMAL");
-  console.log("[2] DECIMAL X BINÁRIO");
-  console.log("--------------");
-  console.log("[3] BINÁRIO X OCTAL");
-  console.log("[4] OCTAL X BINÁRIO");
-  console.log("--------------");
-  console.log("[5] BINÁRIO X HEXADECIMAL");
-  console.log("[6] HEXADECIMAL X BINÁRIO");
-  console.log("");
-  const resposta: string = prompt("Digite a opção desejada: ");
+  const resposta: string = prompt("Opção desejada: ");
 
   switch (resposta) {
     case "1":
