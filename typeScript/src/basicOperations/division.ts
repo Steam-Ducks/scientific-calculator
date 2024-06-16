@@ -18,6 +18,7 @@ export function divisao(): void {
 
     // Converte a quantidade para um número inteiro
       quantidade = parseInt(quantidade);
+      
 
     // Checa se o número é maior que 1 e se a entrada é válida (somente números)
        if (!validInput || isNaN(quantidade) || quantidade <= 1) {
@@ -35,7 +36,7 @@ export function divisao(): void {
       validInput = /^[0-9]+(\.[0-9]+)?$/.test(dividendo); // Verifica se a entrada contém apenas dígitos
 
     // Converte a quantidade para um número inteiro
-      dividendo = parseFloat(dividendo);
+      dividendo = parseFloat(dividendo.toFixed(2));
 
     // Checa se o número é maior que 1 e se a entrada é válida (somente números)
        if (!validInput || isNaN(dividendo)) {
@@ -60,7 +61,7 @@ export function divisao(): void {
          validInput = /^[0-9]+(\.[0-9]+)?$/.test(divisor); // Verifica se a entrada contém apenas dígitos
 
          // Converte a quantidade para um número inteiro
-         divisor = parseFloat(divisor);
+         divisor = parseFloat(divisor.toFixed(2));
 
          // Checa se o número é maior que 1 e se a entrada é válida (somente números)
          if (!validInput || isNaN(divisor) || divisor <= 0) {
