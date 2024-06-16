@@ -1,6 +1,6 @@
-import * as promptSync from "prompt-sync";
+import promptSync = require("prompt-sync");
 
-const prompt = promptSync();
+const prompt = require("prompt-sync")();
 
 export function multiplication(): void {
     let value: number = 0;
