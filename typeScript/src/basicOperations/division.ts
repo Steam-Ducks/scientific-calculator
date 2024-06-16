@@ -8,16 +8,17 @@ export function divisao(): void {
 
     //==================================================================================
     // declara a variavel de quantidade
-    let quantidade:character;
+    let num="";
     let validInput;
+    let quantidade = 0;
     do {
-      quantidade = prompt("Quantos números deseja dividir? ");
+      num = prompt("Quantos números deseja dividir? ");
     // checa se o nuero é maior que 1
       
-      validInput = /^\d+$/.test(quantidade); // Verifica se a entrada contém apenas dígitos
+      validInput = /^\d+$/.test(num); // Verifica se a entrada contém apenas dígitos
 
     // Converte a quantidade para um número inteiro
-      quantidade = parseInt(quantidade);
+      quantidade = parseInt(num);
       
 
     // Checa se o número é maior que 1 e se a entrada é válida (somente números)
@@ -30,13 +31,14 @@ export function divisao(): void {
   
     //==================================================================================
     //Recebe o numero dividendo
-      let dividendo:character;
+      let dividendo=0;
       do {
-         dividendo = prompt(`Valor: `); 
-      validInput = /^[0-9]+(\.[0-9]+)?$/.test(dividendo); // Verifica se a entrada contém apenas dígitos
+         num = prompt(`Valor: `); 
+      validInput = /^[0-9]+(\.[0-9]+)?$/.test(num); // Verifica se a entrada contém apenas dígitos
 
     // Converte a quantidade para um número inteiro
-      dividendo = parseFloat(dividendo.toFixed(2));
+     dividendo = parseFloat(num)
+     dividendo = parseFloat(dividendo.toFixed(2));
 
     // Checa se o número é maior que 1 e se a entrada é válida (somente números)
        if (!validInput || isNaN(dividendo)) {
@@ -49,18 +51,19 @@ export function divisao(): void {
     //==================================================================================
 
     // Recebe os divisores
-    let divisor:character;
+    let divisor=0;
    for (let i = 1; i < quantidade;) {
 
     do{
          i++
          console.log()
          console.log('Valor:')
-         divisor = prompt(`${dividendo} / `);
+         num = prompt(`${dividendo} / `);
          // Verifica se não está sendo dividido por 0
-         validInput = /^[0-9]+(\.[0-9]+)?$/.test(divisor); // Verifica se a entrada contém apenas dígitos
+         validInput = /^[0-9]+(\.[0-9]+)?$/.test(num); // Verifica se a entrada contém apenas dígitos
 
          // Converte a quantidade para um número inteiro
+         divisor = parseFloat(num)
          divisor = parseFloat(divisor.toFixed(2));
 
          // Checa se o número é maior que 1 e se a entrada é válida (somente números)
@@ -73,14 +76,16 @@ export function divisao(): void {
 
     // Realiza a operação
     dividendo /= divisor;
+    dividendo = parseFloat(dividendo.toFixed(2));
       
     //fecha o loop
     }
 
-    dividendo = dividendo.Tofixed(2);
-    
+    let resul = dividendo;
+    resul = parseFloat(resul.toFixed(2));
+
  //Exibe o resultado
     console.log()
-    console.log(`O resultado da divisao é: ${dividendo}`);
+    console.log(`O resultado da divisao é: ${resul}`);
     console.log()
 }
