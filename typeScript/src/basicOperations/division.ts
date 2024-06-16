@@ -78,5 +78,4 @@ export function divisao(): void {
     // Exibe o resultado
     console.log();
     console.log(`O resultado da divisao é: ${resul}`);
-    console.log();
 }

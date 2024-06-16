@@ -20,14 +20,18 @@ export function soma(): void {
         }
         else
         {
-            valor = numeroValido(`${soma.toFixed(2)} + `);
+            let somaAtual: string = Number.isInteger(soma) ? soma.toFixed(0) : soma.toFixed(2);
+            console.log("Valor: ");
+            valor = numeroValido(`${somaAtual} + `);
         }
 
         soma += valor;
     }
+
+    let somaFinal: string = Number.isInteger(soma) ? soma.toFixed(0) : soma.toFixed(2);
+
     console.log();
-    console.log(`O resultado da soma é: ${soma.toFixed(2)}`);
-    console.log();
+    console.log(`O resultado da soma é: ${somaFinal}`);
 
 }
 function numeroValido(texto: string, minimo: number = Number.MIN_SAFE_INTEGER, decimal: boolean = true): number {

@@ -20,13 +20,15 @@ function soma() {
             valor = numeroValido("Valor: ");
         }
         else {
-            valor = numeroValido(`${soma.toFixed(2)} + `);
+            let somaAtual = Number.isInteger(soma) ? soma.toFixed(0) : soma.toFixed(2);
+            console.log("Valor: ");
+            valor = numeroValido(`${somaAtual} + `);
         }
         soma += valor;
     }
+    let somaFinal = Number.isInteger(soma) ? soma.toFixed(0) : soma.toFixed(2);
     console.log();
-    console.log(`O resultado da soma é: ${soma.toFixed(2)}`);
-    console.log();
+    console.log(`O resultado da soma é: ${somaFinal}`);
 }
 exports.soma = soma;
 function numeroValido(texto, minimo = Number.MIN_SAFE_INTEGER, decimal = true) {

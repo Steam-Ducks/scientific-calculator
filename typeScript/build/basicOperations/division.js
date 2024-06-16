@@ -55,6 +55,5 @@ function divisao() {
     const resul = parseFloat(dividendo.toFixed(2));
     console.log();
     console.log(`O resultado da divisao é: ${resul}`);
-    console.log();
 }
 exports.divisao = divisao;
