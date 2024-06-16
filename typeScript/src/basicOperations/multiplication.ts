@@ -33,13 +33,11 @@ export function multiplication(): void {
         console.log("Por favor, insira um número válido.");
         value = parseFloat(prompt(`${accumulatedValue} * `));
       }
+      // Mostrar o cálculo passo a passo
+      const previousValue = accumulatedValue;
       accumulatedValue *= value;
+      console.log(`${previousValue} * ${value} = ${accumulatedValue}`);
     }
-    // Mostrar o resultado parcial após cada multiplicação
-    const partialResult = Number.isInteger(accumulatedValue)
-      ? accumulatedValue.toFixed(0)
-      : accumulatedValue.toFixed(2);
-    console.log(`Resultado parcial: ${partialResult}`);
   }
 
   console.log();
@@ -48,6 +46,7 @@ export function multiplication(): void {
     : accumulatedValue.toFixed(2);
   console.log(`O resultado da multiplicação é: ${formattedValue}`);
 }
+
 
 
 
