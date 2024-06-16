@@ -53,7 +53,9 @@
 
     do{
          i++
-         divisor = prompt(`Valor: ${dividendo} / `);
+         console.log()
+         console.log('Valor:')
+         divisor = prompt(`${dividendo} / `);
          // Verifica se não está sendo dividido por 0
          validInput = /^[0-9]+(\.[0-9]+)?$/.test(divisor); // Verifica se a entrada contém apenas dígitos
 
