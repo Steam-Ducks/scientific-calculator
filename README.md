@@ -46,26 +46,26 @@
 ## Backlog do Produto
 <a href="https://docs.google.com/spreadsheets/d/1PA5yh4sCJ6KSowhACZ4_-C3lhVtEf_mpU07Nn4njLW8/edit?usp=sharing" target="_blank">♦ Backlog Dinâmico</a>
 
-| Sprint | ID | Descrição                                                             | Priorização | Nível de priorização |
-|--------|----|-----------------------------------------------------------------------|-------------|----------------------|
-| 1      | 1  | Operações Básicas (Soma, Subtração, Multiplicação, Divisão)          | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |1       |
-| 1      | 2  | Cálculo Fatorial                                                      | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |2       |
-| 1      | 3  | Função de 2º grau                                                     | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |3      |
-| 1      | 4  | Função de Juros Simples                                               | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |4      |
-| 1      | 5  | Função de Juros Composto                                              | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |5      |
-| 1      | 6  | Conversão de base numérica - B2 X B16 / B16 X B2                      | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |7      |
-| 2      | 7  | Conversão de base numérica - B10 X B2 / B2 X B10                      | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |8      |
-| 2      | 8  | Conversão de base numérica - B2 X B8 / B8 X B2                        | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |9      |
-| 2      | 9  | Função de concatenação de 2 strings                                   | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |6      |
-| 3      | 10 | Conversão para Typescript - Operações Básicas (Soma, Subtração, Multiplicação, Divisão) | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |10      |
-| 3      | 14 | Conversão para Typescript - Cálculo Fatorial                          | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |11      |
-| 3      | 15 | Conversão para Typescript - Função de 2º grau                         | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |12      |
-| 3      | 16 | Conversão para Typescript - Função de Juros Simples                   | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |13      |
-| 3      | 17 | Conversão para Typescript - Função de Juros Composto                  | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |14      |
-| 4      | 18 | Conversão para Typescript - Conversão de base numérica - B2 X B16 / B16 X B2 | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |16      |
-| 4      | 19 | Conversão para Typescript - Conversão de base numérica - B10 X B2 / B2 X B10 | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |17      |
-| 4      | 20 | Conversão para Typescript - Conversão de base numérica - B2 X B8 / B8 X B2 | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |18      |
-| 4      | 21 | Conversão para Typescript - Função de concatenação de 2 strings        | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |15      |
+| Sprint | ID | Status | Descrição                                                             | Priorização | Nível de priorização |
+|--------|----|----|-----------------------------------------------------------------------|-------------|----------------------|
+| 1      | 1  | ✅ | Operações Básicas (Soma, Subtração, Multiplicação, Divisão)          | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |1       |
+| 1      | 2  | ✅ | Cálculo Fatorial                                                      | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |2       |
+| 1      | 3  | ✅ | Função de 2º grau                                                     | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |3      |
+| 1      | 4  | ✅ | Função de Juros Simples                                               | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |4      |
+| 1      | 5  | ✅ | Função de Juros Composto                                              | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |5      |
+| 1      | 6  | ✅ | Conversão de base numérica - B2 X B16 / B16 X B2                      | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |7      |
+| 2      | 7  | ✅ | Conversão de base numérica - B10 X B2 / B2 X B10                      | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |8      |
+| 2      | 8  | ✅ | Conversão de base numérica - B2 X B8 / B8 X B2                        | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |9      |
+| 2      | 9  | ✅ | Função de concatenação de 2 strings                                   | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |6      |
+| 3      | 10 | ✅ | Conversão para Typescript - Operações Básicas (Soma, Subtração, Multiplicação, Divisão) | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |10      |
+| 3      | 14 | ✅ | Conversão para Typescript - Cálculo Fatorial                          | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) Alta  |11      |
+| 3      | 15 | ✅ | Conversão para Typescript - Função de 2º grau                         | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |12      |
+| 3      | 16 | ✅ | Conversão para Typescript - Função de Juros Simples                   | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |13      |
+| 3      | 17 | ✅ | Conversão para Typescript - Função de Juros Composto                  | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) Média |14      |
+| 4      | 18 | ✅ | Conversão para Typescript - Conversão de base numérica - B2 X B16 / B16 X B2 | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |16      |
+| 4      | 19 | ✅ | Conversão para Typescript - Conversão de base numérica - B10 X B2 / B2 X B10 | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |17      |
+| 4      | 20 | ✅ | Conversão para Typescript - Conversão de base numérica - B2 X B8 / B8 X B2 | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |18      |
+| 4      | 21 | ✅ | Conversão para Typescript - Função de concatenação de 2 strings        | ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) Baixa |15      |
 
 ## Validações feitas com o Cliente
 
@@ -80,6 +80,8 @@
 | 3          | Durante a Sprint 3 podemos acoplar as operações básicas e um só menu? | Sim |
 | 3          | Podemos acoplar em 1 menu, as conversões de base? | Não |
 | 3          | Podemos usar a função math.pow ou precisamos cria-la? | Criar a função |
+| 4          | Podemos manter no nosso menu principal, um sub-menu dentro de juros, ou seja, o usuário escolhe se vai querer acessar, simples ou composto | Sim |
+| 4          | Para sprint 3, não podíamos juntar as conversões de base num sub-menu, podemos criar esse sub-menu nessa última sprint pro menu ficar mais organizado? | Pode |
 
 ## Requisitos de Permanência
 Conversamos sobre alguns pontos importantes para que ninguém seja retirado do grupo e eles podem se atualizar durante o desenvolvimento do projeto.
