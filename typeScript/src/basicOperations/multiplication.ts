@@ -4,7 +4,7 @@ const prompt = require("prompt-sync")();
 
 export function multiplication(): void {
   let value: number = 0;
-  let accumulatedValue: number = 1;  // Inicializa com 1 para a multiplicação
+  let accumulatedValue: number = 1; // Inicializamos com 1 para multiplicação
 
   console.log("");
   console.log("========== MULTIPLICAÇÃO ==========");
@@ -20,20 +20,15 @@ export function multiplication(): void {
   } while (isNaN(counter) || counter <= 1);
 
   for (let i = 1; i <= counter; i++) {
-    if (i === counter && accumulatedValue === 1) {
+    if (i === counter && accumulatedValue === 1) { // Primeira entrada
       console.log("Informe um número: ");
       value = parseFloat(prompt(`${accumulatedValue} * `));
       while (isNaN(value)) {
         console.log("Por favor, insira um número válido.");
         value = parseFloat(prompt(`${accumulatedValue} * `));
       }
-      accumulatedValue *= value;
-      // Adicionando exibição do resultado parcial
-      console.log(`Resultado parcial: ${accumulatedValue}`);
-      break;
-    }
-
-    if (accumulatedValue === 1 && i === 1) {
+      accumulatedValue *= value; // Multiplicação ao invés de subtração
+    } else if (accumulatedValue === 1) { // Primeira entrada
       console.log();
       accumulatedValue = parseFloat(prompt("Valor: "));
       while (isNaN(accumulatedValue)) {
@@ -48,15 +43,18 @@ export function multiplication(): void {
         console.log("Por favor, insira um número válido.");
         value = parseFloat(prompt(`${accumulatedValue} * `));
       }
-      accumulatedValue *= value;
+      accumulatedValue *= value; // Multiplicação ao invés de subtração
     }
-    // Adicionando exibição do resultado parcial
-    console.log(`Resultado parcial: ${accumulatedValue}`);
+
+    const formattedValue = Number.isInteger(accumulatedValue)
+      ? accumulatedValue.toFixed(0)
+      : accumulatedValue.toFixed(2);
+    console.log(`Resultado parcial: ${formattedValue}`);
   }
 
   console.log();
-  const formattedValue = Number.isInteger(accumulatedValue)
+  const finalFormattedValue = Number.isInteger(accumulatedValue)
     ? accumulatedValue.toFixed(0)
     : accumulatedValue.toFixed(2);
-  console.log(`O resultado da multiplicação é: ${formattedValue}`);
+  console.log(`O resultado da multiplicação é: ${finalFormattedValue}`);
 }
