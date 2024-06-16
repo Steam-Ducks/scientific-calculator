@@ -57,7 +57,7 @@ do {
       break;
     case "3":
       do {
-        (0, multiplication_1.multiplicacao)();
+        (0, multiplication_1.multiplication)();
       } while (repetirOperacao());
       break;
     case "4":
