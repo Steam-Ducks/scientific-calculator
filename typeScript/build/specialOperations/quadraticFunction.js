@@ -9,7 +9,8 @@ const prompt = (0, prompt_sync_1.default)();
 function funcaoSegundoGrau() {
     const precisao = 0.000001;
     console.log("");
-    console.log("========== FUNÇÃO DE SEGUNDO GRAU ==========");
+    console.log("═════════════════════════════════════");
+    console.log("        FUNÇÃO DE SEGUNDO GRAU       ");
     console.log("");
     console.log("Identifique os valores da função:");
     console.log("f(x) = A.x^2 + B.x + C ");
@@ -19,15 +20,15 @@ function funcaoSegundoGrau() {
     let eq_c;
     do {
         eq_a = parseFloat(prompt("Valor de A: "));
-        eq_b = parseFloat(prompt("Valor de B: ") || '0');
-        eq_c = parseFloat(prompt("Valor de C: ") || '0');
+        eq_b = parseFloat(prompt("Valor de B: ") || "0");
+        eq_c = parseFloat(prompt("Valor de C: ") || "0");
         if (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c)) {
             console.log();
             console.log("Por favor, insira valores numéricos válidos.");
         }
         if (eq_a === 0) {
             console.log();
-            console.log("A função é de segundo grau, insira um valor válido para A");
+            console.log("A função é de segundo grau, insira um valor válido para A.");
         }
         console.log();
     } while (isNaN(eq_a) || isNaN(eq_b) || isNaN(eq_c) || eq_a === 0);
@@ -36,7 +37,9 @@ function funcaoSegundoGrau() {
     console.log("Delta: ", delta);
     console.log("----------------------------------");
     if (delta < 0) {
-        console.log("Resulado: Não existem raízes reais da função");
+        console.log("Resultado: ");
+        console.log("Não existem raízes reais da função.");
+        console.log("═════════════════════════════════════");
         console.log();
     }
     else {
@@ -44,7 +47,7 @@ function funcaoSegundoGrau() {
         let rdelta = raiz;
         while (raiz > precisao) {
             let nraiz = (raiz + delta / raiz) / 2;
-            if ((raiz - nraiz) < precisao) {
+            if (raiz - nraiz < precisao) {
                 raiz = nraiz;
                 break;
             }
@@ -52,11 +55,12 @@ function funcaoSegundoGrau() {
             rdelta = raiz;
         }
         rdelta = raiz;
-        const R1 = ((-eq_b) + (rdelta)) / (2 * eq_a);
-        const R2 = ((-eq_b) - (rdelta)) / (2 * eq_a);
-        console.log("Resulado: ");
+        const R1 = (-eq_b + rdelta) / (2 * eq_a);
+        const R2 = (-eq_b - rdelta) / (2 * eq_a);
+        console.log("Resultado: ");
         console.log("x': ", R1.toFixed(2));
         console.log("x'': ", R2.toFixed(2));
+        console.log("═════════════════════════════════════");
         console.log();
     }
 }

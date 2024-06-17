@@ -6,7 +6,8 @@ const prompt = promptSync();
 function fatorial() {
     let value;
     console.log("");
-    console.log("========== CÁLCULO FATORIAL ==========");
+    console.log("═════════════════════════════════════");
+    console.log("          CÁLCULO FATORIAL           ");
     console.log("");
     do {
         let input = prompt("Valor: ");
@@ -18,9 +19,11 @@ function fatorial() {
     let holder = value;
     let resultado = 1;
     if (holder > -1) {
-        if (holder === 0) { }
+        if (holder === 0) {
+        }
         else {
-            if (holder === 1) { }
+            if (holder === 1) {
+            }
             else {
                 if (holder >= 2) {
                     while (holder >= 1) {
@@ -31,6 +34,7 @@ function fatorial() {
             }
         }
         console.log(`O fatorial de ${value} é ${resultado}.`);
+        console.log("═════════════════════════════════════");
     }
 }
 exports.fatorial = fatorial;

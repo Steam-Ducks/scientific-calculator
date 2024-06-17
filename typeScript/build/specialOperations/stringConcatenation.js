@@ -10,12 +10,15 @@ function somarStrings(string1, string2) {
     return `${string1} ${string2}`;
 }
 function concatenacaoStrings() {
-    console.log("========== Concatenação de Strings ==========");
+    console.log("");
+    console.log("═════════════════════════════════════");
+    console.log("       CONCATENAÇÃO DE STRINGS       ");
     console.log("");
     const string1 = prompt("Digite a primeira string: ");
     const string2 = prompt("Digite a segunda string: ");
     const resultado = somarStrings(string1, string2);
     console.log("");
     console.log("Resultado:", resultado);
+    console.log("═════════════════════════════════════");
 }
 exports.concatenacaoStrings = concatenacaoStrings;
