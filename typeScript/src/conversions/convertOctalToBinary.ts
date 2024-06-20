@@ -38,13 +38,14 @@ export function converterOctalparaBinario(): void {
                         {
                             valido ="valido";
                         }
-                }
-            }
                 // Se for invalido, vai informar que que está invalido e reperit o numero
                 if (valido == "Invalido") 
                     {
                         console.log("Octal Invalido.");
+                        break
                     }
+                }
+                }
 
 // Vai ficar pedindo um numero octal novo até que seja válido
     } while (`${valido}` === "Invalido");
