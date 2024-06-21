@@ -26,7 +26,7 @@ function divisao() {
     let dividendo = 0;
     do {
         num = prompt(`Valor: `);
-        validInput = /^[0-9]+(\.[0-9]+)?$/.test(num);
+        validInput = /^-?\d*\.?\d+$/.test(num);
         dividendo = parseFloat(num);
         dividendo = parseFloat(dividendo.toFixed(2));
         if (!validInput || isNaN(dividendo)) {
@@ -41,15 +41,15 @@ function divisao() {
             console.log();
             console.log('Valor:');
             num = prompt(`${dividendo} / `);
-            validInput = /^[0-9]+(\.[0-9]+)?$/.test(num);
+            validInput = /^-?\d*\.?\d+$/.test(num);
             divisor = parseFloat(num);
             divisor = parseFloat(divisor.toFixed(2));
-            if (!validInput || isNaN(divisor) || divisor <= 0) {
+            if (!validInput || isNaN(divisor) || divisor == 0) {
                 console.log("Por favor, insira um número válido.");
                 console.log("");
                 i--;
             }
-        } while (!validInput || isNaN(divisor) || divisor <= 0);
+        } while (!validInput || isNaN(divisor) || divisor == 0);
         dividendo /= divisor;
         dividendo = parseFloat(dividendo.toFixed(2));
     }
